@@ -55,7 +55,7 @@
         </div>
         <!-- Buttons -->
         <div class="md:col-span-2 col-span-1 flex justify-end gap-4">
-          <a href="#" class="btn btn-secondary">Back</a>
+          <a href="{{ route('login') }}" class="btn btn-secondary">Back</a>
           <button type="button" class="btn btn-primary">
             Next
           </button>
