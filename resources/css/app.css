@@ -1,75 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&family=Montserrat:wght@700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  header {
-    @apply bg-zinc-900 text-white shadow-lg;
-  }
+    body {
+        @apply bg-neutral-50;
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+    }
+    h1 {
+        @apply text-4xl font-bold;
+    }
+    h2 {
+        @apply text-3xl font-bold;
+    }
+    h3 {
+        @apply text-2xl font-semibold;
+    }
+    h4 {
+        @apply text-xl font-semibold;
+    }
+    h5 {
+        @apply text-lg font-medium;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply text-neutral-700;
+    }
+    p,
+    label {
+        @apply text-neutral-700;
+    }
+    header {
+        @apply bg-zinc-900 text-white shadow-lg;
+    }
 
-  nav {
-    @apply p-4 flex items-center justify-between mx-auto max-w-screen-lg;
-  }
-
-  main {
-    @apply p-4;
-  }
-
-  h1 {
-    @apply font-bold text-3xl mb-6;
-  }
-
-  input {
-    @apply block w-full p-2 rounded-md border-0 outline-0 ring-1 ring-indigo-600 focus:ring-2 ring-inset;
-  }
-
-  .text-btn {
-    @apply px-3 py-2 bg-indigo-600 text-white rounded-md active:bg-indigo-700 w-full block;
-  }
-
-  .icon-btn {
-    @apply min-h-10 min-w-10 w-10 h-10 overflow-hidden rounded-md bg-indigo-600 active:bg-indigo-700 grid place-items-center;
-  }
-
-  .card {
-    @apply py-10 px-8 rounded-md shadow-lg bg-white ring-1 ring-zinc-900/5;
-  }
+    nav {
+        @apply p-4 flex items-center justify-between mx-auto max-w-screen-lg;
+    }
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  header {
-    @apply bg-zinc-900 text-white shadow-lg;
-  }
-
-  nav {
-    @apply p-4 flex items-center justify-between mx-auto max-w-screen-lg;
-  }
-
-  main {
-    @apply p-4;
-  }
-
-  h1 {
-    @apply font-bold text-3xl mb-6;
-  }
-
-  input {
-    @apply block w-full p-2 rounded-md border-0 outline-0 ring-1 ring-indigo-600 focus:ring-2 ring-inset;
-  }
-
-  .text-btn {
-    @apply px-3 py-2 bg-indigo-600 text-white rounded-md active:bg-indigo-700 w-full block;
-  }
-
-  .icon-btn {
-    @apply min-h-10 min-w-10 w-10 h-10 overflow-hidden rounded-md bg-indigo-600 active:bg-indigo-700 grid place-items-center;
-  }
-
-  .card {
-    @apply py-10 px-8 rounded-md shadow-lg bg-white ring-1 ring-zinc-900/5;
-  }
+@layer components {
+    /* ---------------- // Button Component ---------------- */
+    /* Button base */
+    .btn {
+        @apply py-2.5 px-4 inline-flex justify-center items-center gap-2 text-sm font-medium rounded-lg transition duration-300 ease-in-out;
+        &:focus {
+            @apply ring-2 outline-none;
+        }
+        &:disabled {
+            @apply opacity-50 pointer-events-none;
+        }
+    }
+    /* Primary Variant */
+    .btn-primary {
+        @apply border border-transparent bg-neutral-700 text-white;
+        &:hover {
+            @apply hover:bg-neutral-800;
+        }
+        &:focus {
+            @apply ring-2 ring-neutral-700/50;
+        }
+    }
+    /* Link */
+    .link {
+        @apply underline text-sm text-neutral-800;
+    }
+    /* ---------------- // Button Component ---------------- */
+    /* ---------------- Input Component ---------------- */
+    /* Default Input */
+    .default-input {
+        @apply py-2.5 px-4 block w-full bg-neutral-100/40 border-neutral-200 rounded-lg text-sm placeholder:text-neutral-400 transition duration-300 ease-in-out;
+        &:focus {
+            @apply border-neutral-500 ring-neutral-500;
+        }
+        &:disabled {
+            @apply opacity-50 pointer-events-none;
+        }
+    }
+    /* Input Label */
+    .input-label {
+        @apply block text-sm font-medium;
+    }
+    /* Checkbox Input */
+    .checkbox-input {
+        @apply shrink-0 bg-neutral-100/40 border-neutral-200 rounded text-neutral-600  transition duration-300 ease-in-out;
+        &:focus {
+            @apply ring-neutral-500;
+        }
+        &:disabled {
+            @apply opacity-50 pointer-events-none;
+        }
+    }
+    /* ---------------- // Input Component ---------------- */
 }
