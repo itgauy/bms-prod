@@ -12,19 +12,19 @@
         font-style: normal;
     }
     h1 {
-        @apply text-4xl font-bold;
+        @apply md:text-4xl text-3xl font-bold;
     }
     h2 {
-        @apply text-3xl font-bold;
+        @apply md:text-3xl text-2xl font-bold;
     }
     h3 {
-        @apply text-2xl font-semibold;
+        @apply md:text-2xl text-xl font-semibold;
     }
     h4 {
-        @apply text-xl font-semibold;
+        @apply md:text-xl text-lg font-semibold;
     }
     h5 {
-        @apply text-lg font-medium;
+        @apply md:text-lg text-base font-medium;
     }
     h1,
     h2,
@@ -35,7 +35,7 @@
     }
     p,
     label {
-        @apply text-neutral-700;
+        @apply text-neutral-700 md:text-base text-sm;
     }
     header {
         @apply bg-zinc-900 text-white shadow-lg;
@@ -66,6 +66,16 @@
         }
         &:focus {
             @apply ring-2 ring-neutral-700/50;
+        }
+    }
+    /* Secondary Variant */
+    .btn-secondary {
+        @apply border border-transparent bg-neutral-100 text-neutral-700;
+        &:hover {
+            @apply hover:bg-neutral-200;
+        }
+        &:focus {
+            @apply ring-2 ring-neutral-500/30;
         }
     }
     /* Link */
