@@ -10,47 +10,52 @@
   @vite('resources/js/app.js')
 </head>
 
-<body class="h-screen">
-  <main class="flex justify-center items-center h-full p-4">
+<body class="md:h-screen h-auto">
+  <main class="flex justify-center items-center h-full md:p-6 p-0">
     <!-- Main Container -->
-    <div class="bg-neutral-100 grid grid-cols-2 rounded-[1.9rem] w-full max-w-[70rem] p-2 gap-2">
+    <div class="bg-neutral-100 grid md:grid-cols-2 grid-cols-1 rounded-[1.9rem] w-full max-w-[70rem] md:p-2 p-4 gap-2">
       <!-- Left Child Container -->
-      <div class="flex flex-col">
+      <div class="md:order-1 order-2 flex flex-col">
         <div class="px-5 py-4">
           <div class="flex items-center gap-3">
             <span class="block rounded-full size-7 bg-neutral-300 ring-2 ring-neutral-400"></span>
             <h5>Name ng anes diney</h5>
           </div>
         </div>
-        <div class="flex-grow flex justify-center items-center">
-          <p class="max-w-md mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati nemo nulla vero perspiciatis. Et, officia, voluptas nesciunt amet eos eaque dolorum soluta qui quia fuga, culpa iure! Aut, fuga?</p>
+        <div class="flex-grow flex min-h-48 justify-center items-center">
+          <p class="max-w-md mx-auto">Illustration diney</p>
         </div>
         <div class="border border-neutral-300/50 bg-neutral-200/40 py-4 px-5 rounded-[1.6rem] space-y-1.5">
           <h4>Womp Womp</h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati nemo nulla vero perspiciatis. Et, officia, voluptas nesciunt amet eos eaque dolorum sol.</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati nemo nulla vero perspiciatis. Et,
+            officia, voluptas nesciunt amet eos eaque dolorum sol.</p>
         </div>
       </div>
       <!-- Form -->
-      <form class="p-12 bg-white rounded-3xl space-y-6">
+      <form class="md:order-2 order-1 md:p-12 lg:p-16 p-6 py-12 bg-white rounded-3xl space-y-6">
         <div class="space-y-2">
           <h2 class="text-center">Sample lang naman - Ma'am Manandeg</h2>
           <h4 class="text-center">Login to continue</h4>
         </div>
         <!-- Username -->
-        <div class="space-y-2.5">
+        <div class="md:space-y-2.5 space-y-1.5">
           <label for="username" class="input-label">Username</label>
           <input type="text" id="username" class="default-input" placeholder="Your username">
         </div>
-        <div class="space-y-2.5">
+        <div class="md:space-y-2.5 space-y-1.5">
           <!-- Password -->
           <label for="password" class="input-label">Password</label>
           <div class="relative w-full">
             <input type="password" id="password" class="default-input" placeholder="Your password">
             <!-- Toggle Password Button -->
-            <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 end-0 flex items-center pe-3">
-              <svg id="password-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-neutral-500">
+            <button type="button" onclick="togglePasswordVisibility()"
+              class="absolute inset-y-0 end-0 flex items-center pe-3">
+              <svg id="password-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                class="size-4 text-neutral-500">
                 <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                <path fill-rule="evenodd" d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z" clip-rule="evenodd" />
+                <path fill-rule="evenodd"
+                  d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z"
+                  clip-rule="evenodd" />
               </svg>
             </button>
           </div>
