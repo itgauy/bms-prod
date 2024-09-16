@@ -2,7 +2,7 @@
   class="hs-overlay hs-overlay-backdrop-open:bg-neutral-600/50 hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
   role="dialog" tabindex="-1" aria-labelledby="signup-modal-label">
   <div
-    class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+    class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-300 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
     <!-- Modal Card -->
     <div class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto">
       <!-- Modal Header -->

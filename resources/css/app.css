@@ -10,6 +10,11 @@
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+        @apply [&::-webkit-scrollbar]:w-2
+        [&::-webkit-scrollbar-track]:rounded-full
+        [&::-webkit-scrollbar-track]:bg-neutral-100
+        [&::-webkit-scrollbar-thumb]:rounded-full
+        [&::-webkit-scrollbar-thumb]:bg-neutral-300;
     }
     h1 {
         @apply md:text-4xl text-3xl font-bold;
