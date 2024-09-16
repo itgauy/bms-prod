@@ -37,13 +37,6 @@
     label {
         @apply text-neutral-700 md:text-base text-sm;
     }
-    header {
-        @apply bg-zinc-900 text-white shadow-lg;
-    }
-
-    nav {
-        @apply p-4 flex items-center justify-between mx-auto max-w-screen-lg;
-    }
 }
 
 @layer components {

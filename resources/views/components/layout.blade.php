@@ -9,19 +9,18 @@
   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-slate-100 text-slate-900">
-  <header class="bg-slate-800 shadow-lg">
-    <nav>
-      <a href="{{ route('home') }}">Home</a>
-
+<body class="bg-neutral-50">
+  <header class="fixed top-0 w-full bg-white shadow-lg shadow-neutral-100/80 z-50">
+    <nav class="p-6 flex items-center justify-between w-full lg:px-36 md:px-16">
+      <a href="{{ route('home') }}" class="text-neutral-700">Home</a>
       <div class="flex items-center gap-4">
-        <a href="{{ route('login') }}">Login</a>
-        <a href="{{ route('register') }}">Register</a>
+        <a href="{{ route('login') }}" class="text-neutral-700">Login</a>
+        <a href="{{ route('register') }}" class="text-neutral-700">Register</a>
       </div>
     </nav>
   </header>
 
-  <main class="py-8 px-4 mx-auto max-w-s-lg">
+  <main class="border pt-28 py-24 mx-auto max-w-s-lg">
     {{ $slot }}
   </main>
 </body>
