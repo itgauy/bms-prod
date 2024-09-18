@@ -5,7 +5,7 @@
     <main class="flex justify-center items-center h-full md:p-6 p-4">
       <!-- Main Container -->
       <form class="md:p-12 lg:p-16 p-6 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-6 w-full max-w-3xl">
-        <h2>Home Owner Registration</h2>
+        <h2>Renter/Tenant Registration Form</h2>
         <div class="flex items-start gap-4">
           <span class="flex items-center justify-center w-8 h-8 border border-neutral-300 rounded-full shrink-0">
             1

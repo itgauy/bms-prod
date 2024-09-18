@@ -1,5 +1,5 @@
 <div id="signup-modal"
-  class="hs-overlay hs-overlay-backdrop-open:bg-neutral-600/50 hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto pointer-events-none"
+  class="hs-overlay hs-overlay-backdrop-open:bg-neutral-600/50 hidden size-full fixed top-0 start-0 z-50 overflow-x-hidden overflow-y-auto pointer-events-none"
   role="dialog" tabindex="-1" aria-labelledby="signup-modal-label">
   <div
     class="hs-overlay-animation-target hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-300 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
@@ -22,12 +22,12 @@
       </div>
       <!-- Modal Content -->
       <div class="overflow-y-aut p-7 flex gap-7">
-        <a href="{{ route('register') }}"
+        <a href="{{ route('auth.homeowner-register') }}"
           class="btn btn-secondary w-full p-14 flex flex-col justify-center items-center">
           Illustration diney
           <p class="text-center">Home Owner</p>
         </a>
-        <a href="{{ route('login') }}" type="button"
+        <a href="{{ route('auth.renter-register') }}" type="button"
           class="btn btn-secondary w-full p-14 flex flex-col justify-center items-center">
           Illustration diney
           <p class="text-center">Renter</p>
