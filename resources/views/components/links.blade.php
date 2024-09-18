@@ -1,6 +1,6 @@
 <!-- Links -->
 <ul class="flex items-center gap-10 {{ $extraClasses ?? '' }}">
-  <li><a href="#">Announcements</a></li>
+  <li><a href="{{ route('home') }}#announcements">Announcements</a></li>
   <li><a href="#">Services</a></li>
   <li><a href="#">Officials</a></li>
   <li><a href="#">About us</a></li>
