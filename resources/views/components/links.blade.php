@@ -16,6 +16,3 @@
     </svg>
   </button>
 </div>
-
-{{-- signup-modal --}}
-<x-modals.signup-modal />

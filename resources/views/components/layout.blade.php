@@ -10,7 +10,7 @@
 </head>
 
 <body class="bg-neutral-50">
-  <header class="fixed top-0 w-full bg-white shadow-lg shadow-neutral-300/10 z-50">
+  <header class="fixed top-0 w-full bg-white shadow-lg shadow-neutral-300/10 z-40">
     <nav class="p-6 flex items-center justify-between w-full md:px-16">
       <!-- Logo/Home -->
       <a href="{{ route('home') }}" class="flex items-center gap-4">
@@ -48,6 +48,10 @@
       @include('components.links', ['extraClasses' => 'lg:flex hidden'])
     </nav>
   </header>
+
+
+  {{-- signup-modal --}}
+  <x-modals.signup-modal />
 
   <main class="border pt-36 py-24 mx-auto max-w-s-lg">
     {{ $slot }}
