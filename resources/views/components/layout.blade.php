@@ -35,6 +35,7 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
         </svg>
       </button>
+
       <!-- FOR LOGGED IN USERS: User Dropdown Button -->
       <!-- <div class="hs-dropdown relative inline-flex">
         <button id="user-dropdown" class="btn btn-secondary flex items-center" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
@@ -70,27 +71,10 @@
 
   <!-- Main Sidebar -->
   <div id="main-sidebar" class="hs-overlay hs-overlay-open:translate-x-0 hs-overlay-backdrop-open:bg-neutral-600/50 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-64 w-full p-5 space-y-7 z-50 bg-white border-e" role="dialog" tabindex="-1" aria-labelledby="main-sidebar-label">
-    <!-- WAIT LANG DINEYYYYY -->
-    <!-- <div class="flex flex-col border">
-      <h3>Sample lang naman - Ma'am manandeg antok na kooo</h3>
-      Links
-      <ul class="flex flex-col items-start gap-6">
-        <li><a href="{{ route('home') }}#announcements" data-hs-overlay="#mobile-sidebar">Announcements</a></li>
-        <li><a href="#" data-hs-overlay="#mobile-sidebar">Services</a></li>
-        <li><a href="#" data-hs-overlay="#mobile-sidebar">Officials</a></li>
-        <li><a href="#" data-hs-overlay="#mobile-sidebar">About us</a></li>
-        <li><a href="#" data-hs-overlay="#mobile-sidebar">Contact us</a></li>
-      </ul>
-      Login and Register Buttons
-      <div class="flex flex-col items-center gap-4">
-        <a href="{{ route('login') }}" class="btn btn-secondary" data-hs-overlay="#mobile-sidebar">Login</a>
-        <button class="btn btn-primary" data-hs-overlay="#mobile-sidebar">Register
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-            <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
-          </svg>
-        </button>
-      </div>
-    </div> -->
+    <!-- FOR LOGGED IN USERS: Sidebar Content -->
+    <!-- <x-resident.logged-in-sidebar /> -->
+    <!-- FOR LOGGED OUT USERS: Sidebar Content -->
+    <x-resident.logged-out-sidebar />
   </div>
 
   <!-- Signup Modal -->
