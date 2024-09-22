@@ -8,17 +8,25 @@
     <div class="border py-12">
       <h1>Announcements</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus itaque delectus illum fuga culpa dolore ab dignissimos! Inventore iusto excepturi veniam voluptates quam ipsa, reiciendis earum temporibus. Vero, vel?</p>
+      <div id="services" class="border border-red-500 md:h-16 h-12"></div>
     </div>
     <div class="border py-12" id="services">
       <h1>Services</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus itaque delectus illum fuga culpa dolore ab dignissimos! Inventore iusto excepturi veniam voluptates quam ipsa, reiciendis earum temporibus. Vero, vel?</p>
+      <div id="officials" class="border border-red-500 md:h-16 h-12"></div>
     </div>
     <div class="border py-12" id="services">
-      <h1>Services</h1>
+      <h1>Officials</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus itaque delectus illum fuga culpa dolore ab dignissimos! Inventore iusto excepturi veniam voluptates quam ipsa, reiciendis earum temporibus. Vero, vel?</p>
+      <div id="about-us" class="border border-red-500 md:h-16 h-12"></div>
     </div>
     <div class="border py-12" id="services">
-      <h1>Services</h1>
+      <h1>About Us</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus itaque delectus illum fuga culpa dolore ab dignissimos! Inventore iusto excepturi veniam voluptates quam ipsa, reiciendis earum temporibus. Vero, vel?</p>
+      <div id="contact-us" class="border border-red-500 md:h-16 h-12"></div>
+    </div>
+    <div class="border py-12" id="services">
+      <h1>Contact Us</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus itaque delectus illum fuga culpa dolore ab dignissimos! Inventore iusto excepturi veniam voluptates quam ipsa, reiciendis earum temporibus. Vero, vel?</p>
     </div>
   </div>

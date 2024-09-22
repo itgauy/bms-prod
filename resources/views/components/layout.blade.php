@@ -50,10 +50,10 @@
       <!-- FOR LOGGED OUT USERS: Navigation Links -->
       <ul class="items-center gap-10 lg:flex hidden">
         <li><a href="{{ route('home') }}#announcements">Announcements</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Officials</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Contact us</a></li>
+        <li><a href="{{ route('home') }}#services">Services</a></li>
+        <li><a href="{{ route('home') }}#officials">Officials</a></li>
+        <li><a href="{{ route('home') }}#about-us">About us</a></li>
+        <li><a href="{{ route('home') }}#contact-us">Contact us</a></li>
       </ul>
 
       <!-- FOR LOGGED OUT USERS: Login and Register Buttons -->
