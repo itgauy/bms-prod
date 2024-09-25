@@ -4,8 +4,8 @@
       JC
     </span>
     <div class="text-center">
-      <h3 class="text-stone-700 text-md">Juan Dela Cruz</h3>
-      <p class="text-stone-600 text-xs">juan.delacruz@email.com</p>
+      <h4 class="text-md">Juan Dela Cruz</h4>
+      <p class="text-xs">juan.delacruz@email.com</p>
     </div>
   </div>
   <div class="mt-2 py-2 first:pt-0 last:pb-0">
@@ -21,11 +21,12 @@
       </svg>
       Notifications
     </a>
-    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300" href="#">
+    <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="logout-modal"
+      data-hs-overlay="#logout-modal" class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="shrink-0 size-4">
         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
       </svg>
       Logout
-    </a>
+    </button>
   </div>
 </div>

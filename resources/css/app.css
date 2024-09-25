@@ -63,7 +63,7 @@
     .btn-primary {
         @apply border border-transparent bg-neutral-700 text-white;
         &:hover {
-            @apply hover:bg-neutral-800;
+            @apply bg-neutral-800;
         }
         &:focus {
             @apply ring-2 ring-neutral-700/50;
@@ -73,10 +73,20 @@
     .btn-secondary {
         @apply border border-transparent bg-neutral-100 text-neutral-700;
         &:hover {
-            @apply hover:bg-neutral-200;
+            @apply bg-neutral-200;
         }
         &:focus {
             @apply ring-2 ring-neutral-500/30;
+        }
+    }
+    /* Danger Variant */
+    .btn-danger {
+        @apply border border-transparent bg-red-500 text-neutral-100;
+        &:hover {
+            @apply bg-red-500/80 text-white;
+        }
+        &:focus {
+            @apply ring-2 ring-red-500/30;
         }
     }
     /* Link */

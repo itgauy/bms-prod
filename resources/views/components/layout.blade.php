@@ -98,8 +98,11 @@
     <!-- x-resident.logged-out-sidebar /> -->
   </div>
 
-  <!-- Signup Modal -->
+  <!-- FOR LOGGED OUT USERS: Signup Modal -->
   <x-modals.signup-modal />
+
+  <!-- FOR LOGGED IN USERS: Logout Modal -->
+  <x-modals.logout-modal />
 
   <!-- Main Content -->
   <main class="border md:pt-36 py-24 mx-auto max-w-s-lg">

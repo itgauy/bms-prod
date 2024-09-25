@@ -55,7 +55,8 @@
 
   <!-- Logout and User Info -->
   <div class="flex flex-col items-center gap-2.5">
-    <button type="button" class="btn btn-secondary w-full" data-hs-overlay="#">
+    <button type="button" class="btn btn-secondary w-full" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="logout-modal"
+      data-hs-overlay="#logout-modal">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="shrink-0 size-4">
         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
       </svg>
