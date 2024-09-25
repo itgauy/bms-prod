@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>{{ env('APP_NAME') }}</title>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
+  @vite(['resources/js/navLink.js'])
 </head>
 
 <!-- UNCOMMENT and COMMENT to see the magic: May mga indicator akong nilagay LOGGED IN and OUT -->
@@ -49,11 +50,31 @@
 
       <!-- FOR LOGGED OUT USERS: Navigation Links -->
       <ul class="items-center gap-10 lg:flex hidden">
-        <li><a href="{{ route('home') }}#announcements">Announcements</a></li>
-        <li><a href="{{ route('home') }}#services">Services</a></li>
-        <li><a href="{{ route('home') }}#officials">Officials</a></li>
-        <li><a href="{{ route('home') }}#about-us">About us</a></li>
-        <li><a href="{{ route('home') }}#contact-us">Contact us</a></li>
+        <li>
+          <a href="{{ route('home') }}#announcements" class="default-nav-link">
+            Announcements
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('home') }}#services" class="default-nav-link">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('home') }}#officials" class="default-nav-link">
+            Officials
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('home') }}#about-us" class="default-nav-link">
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('home') }}#contact-us" class="default-nav-link">
+            Contact Us
+          </a>
+        </li>
       </ul>
 
       <!-- FOR LOGGED OUT USERS: Login and Register Buttons -->
@@ -89,6 +110,7 @@
   <footer class="border p-6 md:px-16">
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis accusantium soluta commodi ab, praesentium harum ad id rem delectus minus rerum architecto obcaecati minima laboriosam sint ullam voluptates hic non!</p>
   </footer>
+
 </body>
 
 </html>
