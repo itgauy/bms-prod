@@ -2,7 +2,7 @@
   {{-- instead na ilagay pa lahat, alisin nalang kasi sa components/layout pwede na kunin --}}
 
   <body class="md:h-screen h-auto">
-    <main class="flex justify-center items-center h-full md:p-6 p-0">
+    <main class="flex justify-center items-center h-full md:p-6 p-0 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
       <div class="bg-neutral-100 grid md:grid-cols-2 grid-cols-1 rounded-[1.9rem] w-full max-w-[70rem] md:p-2 p-4 gap-2">
         <!-- Left Child Container -->

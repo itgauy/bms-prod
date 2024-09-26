@@ -2,7 +2,7 @@
   {{-- instead na ilagay pa lahat, alisin nalang kasi sa components/layout pwede na kunin --}}
 
   <body class="md:h-screen h-auto">
-    <main class="flex justify-center items-center h-full md:p-6 p-4">
+    <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
       <form class="md:p-12 lg:p-16 p-6 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-6 w-full max-w-3xl">
         <h2>Home Owner Registration Form</h2>
