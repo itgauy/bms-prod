@@ -26,14 +26,16 @@
             <div class="grid grid-cols-2 gap-x-5">
               <label for="home-owner" class="grouped-radio @error('user_type') !border-red-500 !bg-red-500/5 @enderror">
                 <div class="flex items-center gap-3">
-                  <input id="home-owner" type="radio" name="user_type" value="home-owner" class="radio-input" />
+                  <input id="home-owner" type="radio" name="user_type" value="home-owner" class="radio-input"
+                    {{ old('user_type') == 'home-owner' ? 'checked' : '' }} />
                   <span class="font-medium">Home Owner</span>
                 </div>
               </label>
               <label for="renter-tenant"
                 class="grouped-radio @error('user_type') !border-red-500 !bg-red-500/5 @enderror">
                 <div class="flex items-center gap-3">
-                  <input id="renter-tenant" type="radio" name="user_type" value="renter-tenant" class="radio-input" />
+                  <input id="renter-tenant" type="radio" name="user_type" value="renter-tenant" class="radio-input"
+                    {{ old('user_type') == 'renter-tenant' ? 'checked' : '' }} />
                   <span class="font-medium">Renter/Tenant</span>
                 </div>
               </label>
@@ -49,7 +51,7 @@
             <label for="username" class="input-label">Username</label>
             <input type="text" name="username" id="username"
               class="default-input @error('username') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. JohnDoe123">
+              placeholder="E.g. JohnDoe123" value="{{ old('username') }}">
             @error('username')
               <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
             @enderror
@@ -59,7 +61,7 @@
             <label for="email" class="input-label">Email Address</label>
             <input type="text" name="email" id="email"
               class="default-input @error('email') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. john.doe@email.com">
+              placeholder="E.g. john.doe@email.com" value="{{ old('email') }}">
             @error('email')
               <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
             @enderror

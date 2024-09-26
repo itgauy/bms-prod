@@ -13,7 +13,7 @@ class AuthController extends Controller
         // Validate
         $fields = $request->validate([
             'username' => ['required', 'max:255'],
-            'user_type' => ['required', 'in:home-owner, renter-tenant'],
+            'user_type' => ['required', 'in:home-owner,renter-tenant'],
             'email' => ['required', 'max:255', 'email', 'unique:users'],
             'password' => ['required', 'min:3', 'confirmed']
         ]);
