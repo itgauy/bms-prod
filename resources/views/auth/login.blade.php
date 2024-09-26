@@ -24,21 +24,32 @@
           </div>
         </div>
         <!-- Form -->
-        <form class="md:order-2 order-1 md:p-12 lg:p-16 p-6 py-12 bg-white rounded-3xl space-y-6">
+        <form action="{{ route('login') }}" method="post"
+          class="md:order-2 order-1 md:p-12 lg:p-16 p-6 py-12 bg-white rounded-3xl space-y-6">
+          @csrf
           <div class="space-y-2">
             <h2 class="text-center">Sample lang naman - Ma'am Manandeg</h2>
             <h4 class="text-center">Login to continue</h4>
           </div>
-          <!-- Username -->
+          <!-- Email -->
           <div class="md:space-y-2.5 space-y-1.5">
-            <label for="username" class="input-label">Username</label>
-            <input type="text" id="username" class="default-input" placeholder="Your username">
+            <label for="email" class="input-label">Email</label>
+            <input type="text" name="email" id="email" value="{{ old('email') }}"
+              class="default-input @error('email') !border-red-500 !bg-red-500/5 @enderror" placeholder="Your email">
+            @error('email')
+              <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+            @enderror
           </div>
           <div class="md:space-y-2.5 space-y-1.5">
             <!-- Password -->
             <label for="password" class="input-label">Password</label>
             <div class="relative w-full">
-              <input type="password" id="password" class="default-input" placeholder="Your password">
+              <input type="password" name="password" id="password"
+                class="default-input @error('password') !border-red-500 !bg-red-500/5 @enderror"
+                placeholder="Your password">
+              @error('password')
+                <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+              @enderror
               <!-- Toggle Password Button -->
               <button type="button" onclick="togglePasswordVisibility()"
                 class="absolute inset-y-0 end-0 flex items-center pe-3">
@@ -54,19 +65,23 @@
             <div class="flex justify-between items-center">
               <!-- Checkbox -->
               <div class="flex items-center">
-                <input type="checkbox" class="checkbox-input" id="remember-me">
-                <label for="remember-me" class="text-sm ms-3">Remember me?</label>
+                <input type="checkbox" class="checkbox-input" name="remember" id="remember">
+                <label for="remember" class="text-sm ms-3">Remember me?</label>
               </div>
               <!-- Forgot Password -->
               <a href="#" class="link">Forgot Password?</a>
             </div>
           </div>
+          @error('failed')
+            <p style="color:red;font-size:0.8rem;">{{ $message }}</p>
+          @enderror
           <!-- Submit -->
-          <button type="button" class="btn btn-primary w-full">
+          <button class="btn btn-primary w-full">
             Login
           </button>
           <!-- Additionals -->
-          <p class="text-sm text-center">Don't have an account yet? <br><a href="{{ route('register') }}" class="link">Sign up here</a></p>
+          <p class="text-sm text-center">Don't have an account yet? <br><a href="{{ route('register') }}"
+              class="link">Sign up here</a></p>
         </form>
         <!-- End of Form -->
       </div>
