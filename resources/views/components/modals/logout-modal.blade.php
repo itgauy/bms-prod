@@ -18,6 +18,10 @@
             data-hs-overlay="#logout-modal">Cancel</button>
           <!-- TO BE CHANGED by our Head Master Lead Backend Developer with Cybersecurity Defense -->
           <button type="button" class="btn btn-danger">Logout</button>
+          {{-- <form action="" method="post">
+      @csrf
+
+    </form> --}}
         </div>
       </div>
     </div>

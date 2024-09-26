@@ -1,22 +1,21 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'landing.index')->name('home');
 
 // ------ Authentication Pages ------
 
-
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
-
 Route::view('/register', 'auth.register')->name('register');
 Route::post('/register', [AuthController::class, 'register']);
 
 Route::view('/login', 'auth.login')->name('login');
 Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('resident');
+Route::post('/logout', [AuthController::class, 'logout']);
 
 
 // ------ Admin Pages ------
@@ -26,6 +25,6 @@ Route::get('/admin', function () {
 
 
 // ------ Resident Pages ------
-Route::get('/dashboard', function () {
-    return view('resident.index');
-})->name('resident');
+// Route::get('/dashboard', function () {
+//     return view('resident.index');
+// })->name('resident');
