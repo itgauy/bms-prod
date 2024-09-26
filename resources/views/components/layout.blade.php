@@ -109,6 +109,9 @@
     {{ $slot }}
   </main>
 
+  <!-- FOR LOGGED IN USERS: A Service Modal -->
+  <x-modals.A-modal />
+
   <!-- Footer -->
   <footer class="bg-neutral-700 p-6 md:px-36 md:py-16 gap-6 flex lg:flex-row flex-col lg:justify-between justify-start lg:items-end items-start">
     <!-- Logo, Title and description -->
