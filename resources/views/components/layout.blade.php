@@ -110,8 +110,20 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border p-6 md:px-16">
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis accusantium soluta commodi ab, praesentium harum ad id rem delectus minus rerum architecto obcaecati minima laboriosam sint ullam voluptates hic non!</p>
+  <footer class="bg-neutral-700 p-6 md:px-36 md:py-16 gap-6 flex lg:flex-row flex-col lg:justify-between justify-start lg:items-end items-start">
+    <!-- Logo, Title and description -->
+    <div class="space-y-4">
+      <a href="{{ route('home') }}" class="inline-flex flex-col gap-3">
+        <span class="block rounded-full size-12 bg-neutral-300 ring-2 ring-neutral-400"></span>
+        <h3 class="text-neutral-200">BNN Chuchu</h3>
+      </a>
+      <p class="w-full max-w-md text-neutral-300">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis accusantium soluta commodi ab, praesentium harum ad id remum harum ad id.</p>
+    </div>
+    <!-- Links if any -->
+    <div class="flex gap-3">
+      <a href="#" class="link text-xs text-neutral-400">Terms and condition</a>
+      <a href="#" class="link text-xs text-neutral-400">Privacy Policy</a>
+    </div>
   </footer>
 
 </body>
