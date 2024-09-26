@@ -33,10 +33,8 @@
       </div>
 
       <!-- FOR LOGGED OUT USERS: Sidebar Toggle Button for Mobile -->
-      <button type="button" class="lg:hidden flex shrink-0 btn btn-secondary px-2 py-2" aria-haspopup="dialog"
-        aria-expanded="false" aria-controls="main-sidebar" data-hs-overlay="#main-sidebar">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-          stroke="currentColor" class="size-5">
+      <button type="button" class="lg:hidden flex shrink-0 btn btn-secondary px-2 py-2" aria-haspopup="dialog" aria-expanded="false" aria-controls="main-sidebar" data-hs-overlay="#main-sidebar">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
         </svg>
       </button>
@@ -87,12 +85,10 @@
       <!-- FOR LOGGED OUT USERS: Login and Register Buttons -->
       <div class="items-center gap-4 lg:flex hidden">
         <a href="{{ route('login') }}" class="btn btn-secondary">Login</a>
-        <button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false"
-          aria-controls="signup-modal" data-hs-overlay="#signup-modal">Register
+        <button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="signup-modal"
+          data-hs-overlay="#signup-modal">Register
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
-            <path fill-rule="evenodd"
-              d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
-              clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z" clip-rule="evenodd" />
           </svg>
         </button>
       </div>
