@@ -5,7 +5,7 @@
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
       <form class="md:p-12 lg:p-16 p-6 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-6 w-full max-w-3xl">
-        <h2>Home Owner Registration Form</h2>
+        <h2>Registration Form</h2>
         <div class="flex items-start gap-4">
           <span class="flex items-center justify-center w-8 h-8 border border-neutral-300 rounded-full shrink-0">
             1
@@ -17,6 +17,24 @@
         </div>
         </div>
         <div class="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-6 gap-y-5 pt-4">
+          <!-- User -->
+          <div class="md:col-span-2 col-span-1 md:space-y-2.5 space-y-1.5">
+            <label for="username" class="input-label">Are you registering as?</label>
+            <div class="grid grid-cols-2 gap-x-5">
+              <label for="home-owner" class="grouped-radio">
+                <div class="flex items-center gap-3">
+                  <input id="home-owner" type="radio" name="language" class="radio-input" />
+                  <span class="font-medium">Home Owner</span>
+                </div>
+              </label>
+              <label for="renter-tenant" class="grouped-radio">
+                <div class="flex items-center gap-3">
+                  <input id="renter-tenant" type="radio" name="language" class="radio-input" />
+                  <span class="font-medium">Renter/Tenant</span>
+                </div>
+              </label>
+            </div>
+          </div>
           <!-- Username -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="username" class="input-label">Username</label>

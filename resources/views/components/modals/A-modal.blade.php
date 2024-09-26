@@ -22,12 +22,12 @@
       </div>
       <!-- Modal Content -->
       <div class="overflow-y-aut p-7 flex gap-7">
-        <a href="{{ route('auth.homeowner-register') }}"
+        <a href="#"
           class="btn btn-secondary w-full p-14 flex flex-col justify-center items-center">
           Illustration diney
           <p class="text-center">Home Owner</p>
         </a>
-        <a href="{{ route('auth.renter-register') }}" type="button"
+        <a href="#" type="button"
           class="btn btn-secondary w-full p-14 flex flex-col justify-center items-center">
           Illustration diney
           <p class="text-center">Renter</p>

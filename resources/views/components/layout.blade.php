@@ -87,14 +87,13 @@
       <!-- FOR LOGGED OUT USERS: Login and Register Buttons -->
       <div class="items-center gap-4 lg:flex hidden">
         <a href="{{ route('login') }}" class="btn btn-secondary">Login</a>
-        <button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false"
-          aria-controls="signup-modal" data-hs-overlay="#signup-modal">Register
+        <a href="{{ route('register') }}" class="btn btn-primary">Register
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
             <path fill-rule="evenodd"
               d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
               clip-rule="evenodd" />
           </svg>
-        </button>
+        </a>
       </div>
     </nav>
   </header>
@@ -108,9 +107,6 @@
     <!-- FOR LOGGED OUT USERS: Sidebar Content -->
     <x-resident.logged-out-sidebar />
   </div>
-
-  <!-- FOR LOGGED OUT USERS: Signup Modal -->
-  <x-modals.signup-modal />
 
   <!-- FOR LOGGED IN USERS: Logout Modal -->
   <x-modals.logout-modal />

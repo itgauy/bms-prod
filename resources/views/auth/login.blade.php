@@ -66,16 +66,12 @@
             Login
           </button>
           <!-- Additionals -->
-          <p class="text-sm text-center">Don't have an account yet? <br><button type="button" class="link"
-              aria-haspopup="dialog" aria-expanded="false" aria-controls="signup-modal"
-              data-hs-overlay="#signup-modal">Sign up here</button></p>
+          <p class="text-sm text-center">Don't have an account yet? <br><a href="{{ route('register') }}" class="link">Sign up here</a></p>
         </form>
         <!-- End of Form -->
       </div>
       <!-- End of Main Container -->
 
-      {{-- signup-modal --}}
-      <x-modals.signup-modal />
     </main>
     <!-- Toggle Password Script -->
     <script>

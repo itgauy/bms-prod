@@ -9,13 +9,9 @@ Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
-Route::get('/homeowner-register', function () {
-    return view('auth.homeowner-register');
-})->name('auth.homeowner-register');
-
-Route::get('/renter-register', function () {
-    return view('auth.renter-register');
-})->name('auth.renter-register');
+Route::get('/register', function () {
+    return view('auth.register');
+})->name('register');
 // ------ // Authentication Pages ------
 
 // ------ Admin Pages ------

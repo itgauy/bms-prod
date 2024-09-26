@@ -119,5 +119,21 @@
             @apply opacity-50 pointer-events-none;
         }
     }
+    /* Radio Input */
+    .radio-input {
+        @apply shrink-0 bg-gray-100/70 border-gray-200 rounded-full text-neutral-600 transition duration-300 ease-in-out;
+        &:focus {
+            @apply ring-neutral-500;
+        }
+        &:disabled {
+            @apply opacity-50 pointer-events-none;
+        }
+    }
+    .grouped-radio {
+        @apply inline-flex cursor-pointer flex-col items-start gap-4 rounded-lg border border-neutral-200 p-4 transition has-[:checked]:bg-neutral-100 has-[:checked]:border-neutral-300;
+        &:hover {
+            @apply bg-neutral-50;
+        }
+    }
     /* ---------------- // Input Component ---------------- */
 }
