@@ -9,37 +9,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     defaultNavLinks.forEach(link => {
-      link.classList.remove('!text-blue-800');
+      link.classList.remove('!text-blue-700');
     });
 
 
     sideNavLinks.forEach(link => {
-      link.classList.remove('!text-blue-800', 'font-medium', 'bg-blue-500/5', 'hover:bg-blue-500/5');
+      link.classList.remove('!text-blue-700', 'font-medium', 'bg-blue-500/5', 'hover:bg-blue-500/5');
     });
 
 
     if (currentHash) {
       const activeDefaultLink = document.querySelector(`.default-nav-link[href$="${currentHash}"]`);
       if (activeDefaultLink) {
-        activeDefaultLink.classList.add('!text-blue-800');
+        activeDefaultLink.classList.add('!text-blue-700');
       }
 
       const activeSideLink = document.querySelector(`.side-nav-link[href$="${currentHash}"]`);
       if (activeSideLink) {
-        activeSideLink.classList.add('!text-blue-800', 'font-medium', 'bg-blue-500/5', 'hover:bg-blue-500/5');
+        activeSideLink.classList.add('!text-blue-700', 'font-medium', 'bg-blue-500/5', 'hover:bg-blue-500/5');
       }
     }
 
 
     defaultNavLinks.forEach(link => {
       if (link.href === currentUrl) {
-        link.classList.add('!text-blue-800');
+        link.classList.add('!text-blue-700');
       }
     });
 
     sideNavLinks.forEach(link => {
       if (link.href === currentUrl) {
-        link.classList.add('!text-blue-800', 'font-medium', 'bg-blue-500/5', 'hover:bg-blue-500/5');
+        link.classList.add('!text-blue-700', 'font-medium', 'bg-blue-500/5', 'hover:bg-blue-500/5');
       }
     });
   }
