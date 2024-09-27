@@ -13,7 +13,7 @@
       </div>
       <!-- Modal Content -->
       <div class="overflow-y-auto p-7 flex justify-end gap-7">
-        <div class="items-center gap-4 lg:flex hidden">
+        <div class="items-center gap-4 flex">
           <button class="btn btn-secondary aria-haspopup=" dialog" aria-expanded="false" aria-controls="logout-modal"
             data-hs-overlay="#logout-modal">Cancel</button>
           <!-- TO BE CHANGED by our Head Master Lead Backend Developer with Cybersecurity Defense -->
