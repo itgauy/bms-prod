@@ -15,7 +15,7 @@ Route::view('/login', 'auth.login')->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('resident');
-Route::post('/logout', [AuthController::class, 'logout']);
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 
 // ------ Admin Pages ------
