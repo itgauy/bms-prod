@@ -14,14 +14,14 @@
       <!-- Modal Content -->
       <div class="overflow-y-auto p-7 flex justify-end gap-7">
         <div class="items-center gap-4 flex">
-          <button class="btn btn-secondary aria-haspopup=" dialog" aria-expanded="false" aria-controls="logout-modal"
+          <button class="btn btn-secondary" aria-haspopup="dialog" aria-expanded="false" aria-controls="logout-modal"
             data-hs-overlay="#logout-modal">Cancel</button>
           <!-- TO BE CHANGED by our Head Master Lead Backend Developer with Cybersecurity Defense -->
-          <button type="button" class="btn btn-danger">Logout</button>
-          {{-- <form action="" method="post">
-      @csrf
 
-    </form> --}}
+          <form action="{{ route('logout1') }}" method="post">
+            @csrf
+            <button class="btn btn-danger">Logout</button>
+          </form>
         </div>
       </div>
     </div>
