@@ -5,20 +5,65 @@
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
       <form action="{{ route('register') }}" method="post"
-        class="md:p-12 lg:p-8 p-6 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-6 w-full max-w-3xl">
+        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-6 w-full max-w-3xl">
         @csrf
-
         <h2>Registration Form</h2>
-        <div class="flex items-start gap-4">
-          <span class="flex items-center justify-center w-8 h-8 border border-neutral-300 rounded-full shrink-0">
-            1
-          </span>
-          <div>
-            <h3 class="font-medium">Account Information</h3>
-            <p>Wachu gana du we du bip.</p>
-          </div>
-        </div>
-        </div>
+
+        <!-- Stepper -->
+        <ul class="relative flex flex-row gap-x-2">
+          <!-- Step 1 / Account Information -->
+          <li class="shrink basis-0 flex-1 group">
+            <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
+              <span class="size-10 flex justify-center items-center shrink-0 bg-blue-500 font-bold text-white rounded-full">
+                1
+              </span>
+              <div class="ms-2 w-full h-px flex-1 bg-neutral-200 group-last:hidden"></div>
+            </div>
+            <div class="mt-3">
+              <span class="block font-medium">
+                Step
+              </span>
+              <p class="text-neutral-500">
+                Account Info.
+              </p>
+            </div>
+          </li>
+          <!-- Step 2 / Personal Information -->
+          <li class="shrink basis-0 flex-1 group">
+            <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
+              <span class="size-10 flex justify-center items-center shrink-0 bg-neutral-100 font-medium text-neutral-800 rounded-full">
+                2
+              </span>
+              <div class="ms-2 w-full h-px flex-1 bg-neutral-200 group-last:hidden"></div>
+            </div>
+            <div class="mt-3">
+              <span class="block font-medium">
+                Step
+              </span>
+              <p class="text-neutral-500">
+                Personal Info.
+              </p>
+            </div>
+          </li>
+          <!-- Step 3 / Submit -->
+          <li class="shrink basis-0 flex-1 group">
+            <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
+              <span class="size-10 flex justify-center items-center shrink-0 bg-neutral-100 font-medium text-neutral-800 rounded-full">
+                3
+              </span>
+            </div>
+            <div class="mt-3">
+              <span class="block font-medium">
+                Step
+              </span>
+              <p class="text-neutral-500">
+                Submit
+              </p>
+            </div>
+          </li>
+        </ul>
+        <!-- End Stepper -->
+
         <div class="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-6 gap-y-5 pt-4">
           <!-- User Type -->
           <div class="md:col-span-2 col-span-1 md:space-y-2.5 space-y-1.5">
@@ -41,7 +86,7 @@
                 </div>
               </label>
               @error('user_type')
-                <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ 'Choose at least one category.' }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ 'Choose at least one category.' }}</p>
               @enderror
             </div>
           </div>
@@ -55,7 +100,7 @@
               class="default-input @error('username') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. JohnDoe123" value="{{ old('username') }}">
             @error('username')
-              <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Email -->
@@ -65,7 +110,7 @@
               class="default-input @error('email') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. john.doe@email.com" value="{{ old('email') }}">
             @error('email')
-              <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
             @enderror
           </div>
           <div class="md:col-span-2 col-span-1 gap-x-5 grid md:grid-cols-2 grid-cols-1">
@@ -76,7 +121,7 @@
                 class="default-input @error('password') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="Your Password">
               @error('password')
-                <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Confirm Password -->
@@ -86,17 +131,12 @@
                 class="default-input  @error('password') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="Your Password">
             </div>
-            <!-- Checkbox -->
-            <div class="flex items-center pt-2.5">
-              <input type="checkbox" class="checkbox-input" id="remember-me">
-              <label for="remember-me" class="text-sm ms-3">Show password</label>
-            </div>
           </div>
           <!-- Buttons -->
-          <div class="md:col-span-2 col-span-1 flex justify-end gap-4">
+          <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
             <a href="{{ route('login') }}" class="btn btn-secondary">Back</a>
             <button class="btn btn-primary">
-              Register
+              Next
             </button>
           </div>
         </div>
