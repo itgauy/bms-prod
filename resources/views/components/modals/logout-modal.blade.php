@@ -18,7 +18,7 @@
             data-hs-overlay="#logout-modal">Cancel</button>
           <!-- TO BE CHANGED by our Head Master Lead Backend Developer with Cybersecurity Defense -->
 
-          <form action="{{ route('logout1') }}" method="post">
+          <form action="{{ route('logout') }}" method="post">
             @csrf
             <button class="btn btn-danger">Logout</button>
           </form>

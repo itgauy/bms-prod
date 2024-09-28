@@ -10,7 +10,7 @@
   @vite('resources/js/app.js')
 </head>
 
-<body class="bg-slate-50">
+<body class="bg-blue-50/30">
   <!-- Desktop Sidebar -->
   <aside class="lg:block hidden w-64 fixed h-screen p-5 space-y-7 overflow-y-auto invisible-scrollbar">
     <x-admin.sidebar />
