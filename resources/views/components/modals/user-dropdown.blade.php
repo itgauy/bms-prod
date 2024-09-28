@@ -4,7 +4,7 @@
   <div class="py-5 flex flex-col justify-center items-center gap-3">
     <span
       class="inline-flex items-center justify-center size-12 text-sm font-semibold rounded-full leading-none border border-stone-300 bg-stone-600 text-white">
-      JC
+      {{ strtoupper(substr(auth()->user()->username, 0, 1)) }}
     </span>
     <div class="text-center">
       <h4 class="text-md">{{ auth()->user()->username }}</h4>
