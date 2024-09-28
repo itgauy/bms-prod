@@ -5,9 +5,12 @@
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
       <form action="{{ route('register') }}" method="post"
-        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-6 w-full max-w-3xl">
+        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
         @csrf
-        <h2>Registration Form</h2>
+        <div class="space-y-1">
+          <h2>Registration Form</h2>
+          <p>Fill out the form to proceed. Fields marked with * are required.</p>
+        </div>
 
         <!-- Stepper -->
         <ul class="relative flex flex-row gap-x-2">
@@ -21,9 +24,9 @@
             </div>
             <div class="mt-3">
               <span class="block font-medium">
-                Step
+                Step 1
               </span>
-              <p class="text-neutral-500">
+              <p class="text-neutral-500 text-sm">
                 Account Info.
               </p>
             </div>
@@ -38,9 +41,9 @@
             </div>
             <div class="mt-3">
               <span class="block font-medium">
-                Step
+                Step 2
               </span>
-              <p class="text-neutral-500">
+              <p class="text-neutral-500 text-sm">
                 Personal Info.
               </p>
             </div>
@@ -54,9 +57,9 @@
             </div>
             <div class="mt-3">
               <span class="block font-medium">
-                Step
+                Step 3
               </span>
-              <p class="text-neutral-500">
+              <p class="text-neutral-500 text-sm">
                 Submit
               </p>
             </div>
@@ -67,7 +70,7 @@
         <div class="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-6 gap-y-5 pt-4">
           <!-- User Type -->
           <div class="md:col-span-2 col-span-1 md:space-y-2.5 space-y-1.5">
-            <label for="home-owner" class="input-label">Are you registering as?</label>
+            <label for="home-owner" class="input-label">Are you registering as? <span class="text-red-500">*</span></label>
             <div class="grid grid-cols-2 gap-x-5">
               <label for="home-owner"
                 class="grouped-radio {{ $errors->has('user_type') ? '!border-red-500 !bg-red-500/5' : '' }}">
@@ -86,7 +89,7 @@
                 </div>
               </label>
               @error('user_type')
-              <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ 'Choose at least one category.' }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ 'Choose at least one category.' }}</p>
               @enderror
             </div>
           </div>
@@ -95,38 +98,38 @@
 
           <!-- Username -->
           <div class="md:space-y-2.5 space-y-1.5">
-            <label for="username" class="input-label">Username</label>
+            <label for="username" class="input-label">Username <span class="text-red-500">*</span></label>
             <input type="text" name="username" id="username"
               class="default-input @error('username') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. JohnDoe123" value="{{ old('username') }}">
             @error('username')
-            <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Email -->
           <div class="md:space-y-2.5 space-y-1.5">
-            <label for="email" class="input-label">Email Address</label>
+            <label for="email" class="input-label">Email Address <span class="text-red-500">*</span></label>
             <input type="text" name="email" id="email"
               class="default-input @error('email') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. john.doe@email.com" value="{{ old('email') }}">
             @error('email')
-            <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <div class="md:col-span-2 col-span-1 gap-x-5 grid md:grid-cols-2 grid-cols-1">
             <!-- Password -->
             <div class="md:space-y-2.5 space-y-1.5 md:pb-0 pb-5">
-              <label for="password" class="input-label">Password</label>
+              <label for="password" class="input-label">Password <span class="text-red-500">*</span></label>
               <input type="password" name="password" id="password"
                 class="default-input @error('password') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="Your Password">
               @error('password')
-              <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Confirm Password -->
             <div class="md:space-y-2.5 space-y-1.5">
-              <label for="password_confirmation" class="input-label">Confirm Password</label>
+              <label for="password_confirmation" class="input-label">Confirm Password <span class="text-red-500">*</span></label>
               <input type="password" name="password_confirmation" id="password_confirmation"
                 class="default-input  @error('password') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="Your Password">
