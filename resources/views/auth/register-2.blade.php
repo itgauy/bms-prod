@@ -4,7 +4,7 @@
   <body class="md:h-screen h-auto">
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
-      <form action="{{ route('register-1') }}" method="post"
+      <form action="{{ route('register-2') }}" method="post"
         class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
         @csrf
         <div class="space-y-1">
@@ -137,7 +137,17 @@
           </div>
           <!-- Village -->
           <div class="md:space-y-2.5 space-y-1.5">
-            <label for="village" class="input-label">Village <span class="text-red-500">*</span></label>
+            <div class="flex justify-between items-end">
+              <label for="village" class="input-label">Village <span class="text-red-500">*</span></label>
+              <div class="hs-tooltip inline-block">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hs-tooltip-toggle shrink-0 size-4 text-blue-500">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                </svg>
+                <span class="hs-tooltip-content hs-tooltip-shown:opacity-100 hs-tooltip-shown:visible opacity-0 transition-opacity inline-block absolute invisible z-10 py-2 px-3 bg-white text-xs text-center font-medium text-neutral-800 rounded shadow-sm" role="tooltip">
+                  Please select a Sitio to display <br> the corresponding Villages.
+                </span>
+              </div>
+            </div>
             <select id="village" name="village"
               class="select-input custom-scrollbar @error('village') !border-red-500 !bg-red-500/5 @enderror" value="{{ old('village') }}">
               <option selected="" disabled>Select Village</option>
@@ -147,8 +157,126 @@
             <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
-
           <!-- End of Address -->
+
+          <!-- Contact Details -->
+          <h5 class="md:col-span-2 col-span-1 border-t pt-2 mt-4 font-medium">Contact Details</h5>
+          <!-- Contact Number -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="contact-num" class="input-label">Contact number <span class="text-red-500">*</span></label>
+            <input type="text" name="contact-num" id="contact-num"
+              class="default-input @error('contact-num') !border-red-500 !bg-red-500/5 @enderror"
+              placeholder="E.g. 09123456789" value="{{ old('contact-num') }}">
+            @error('contact-num')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Emergency Contact's Name -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="em-contact-name" class="input-label">Emergency contact's name <span class="text-red-500">*</span></label>
+            <input type="text" name="em-contact-name" id="em-contact-name"
+              class="default-input @error('em-contact-name') !border-red-500 !bg-red-500/5 @enderror"
+              placeholder="E.g. Antonio Dela Cruz" value="{{ old('em-contact-name') }}">
+            @error('em-contact-name')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Emergency Contact's Number -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="em-contact-num" class="input-label">Emergency contact's number <span class="text-red-500">*</span></label>
+            <input type="text" name="em-contact-num" id="em-contact-num"
+              class="default-input @error('em-contact-num') !border-red-500 !bg-red-500/5 @enderror"
+              placeholder="E.g. 09987654321" value="{{ old('em-contact-num') }}">
+            @error('em-contact-num')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- End of Contact Details -->
+
+          <!-- Other Relevant Information -->
+          <h5 class="md:col-span-2 col-span-1 border-t pt-2 mt-4 font-medium">Other Relevant Information</h5>
+          <!-- Birthdate -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="birthdate" class="input-label">Birthdate <span class="text-red-500">*</span></label>
+            <input type="text" name="birthdate" id="birthdate"
+              class="default-input @error('birthdate') !border-red-500 !bg-red-500/5 @enderror"
+              placeholder="E.g. 09123456789" value="{{ old('birthdate') }}">
+            @error('birthdate')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Birth Place -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="birth-place" class="input-label">Birth place <span class="text-red-500">*</span></label>
+            <input type="text" name="birth-place" id="birth-place"
+              class="default-input @error('birth-place') !border-red-500 !bg-red-500/5 @enderror"
+              placeholder="E.g. Quezon City" value="{{ old('birth-place') }}">
+            @error('birth-place')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Civil Status -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="civil-status" class="input-label">Civil Status <span class="text-red-500">*</span></label>
+            <select id="civil-status" name="civil-status"
+              class="select-input @error('civil-status') !border-red-500 !bg-red-500/5 @enderror" value="{{ old('civil-status') }}">
+              <option selected="" disabled>Select Civil Status</option>
+              <option value="Single">Single</option>
+              <option value="Married">Married</option>
+              <option value="Divorced">Divorced</option>
+              <option value="Widowed">Widowed</option>
+            </select>
+            @error('civil-status')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Gender -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="gender" class="input-label">Gender <span class="text-red-500">*</span></label>
+            <select id="gender" name="gender"
+              class="select-input @error('gender') !border-red-500 !bg-red-500/5 @enderror" value="{{ old('gender') }}">
+              <option selected="" disabled>Select Gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="LGBTQs">LGBTQ+</option>
+              <option value="Prefer not to say">Prefer not to say</option>
+            </select>
+            @error('gender')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Religion -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="religion" class="input-label">Religion <span class="text-red-500">*</span></label>
+            <select id="religion" name="religion"
+              class="select-input @error('religion') !border-red-500 !bg-red-500/5 @enderror" value="{{ old('religion') }}">
+              <option selected="" disabled>Select Religion</option>
+              <option value="Christian">Christian</option>
+              <option value="Catholic">Catholic</option>
+              <option value="Protestant">Protestant</option>
+              <option value="Iglesia ni Cristo">Iglesia ni Cristo</option>
+              <option value="Islam">Islam</option>
+              <option value="Buddhism">Buddhism</option>
+              <option value="Other Chirstian Denominations">Other Chirstian Denominations</option>
+              <option value="Other Indigenous Religions">Other Indigenous Religions</option>
+              <option value="No Religion/Atheis">No Religion/Atheist</option>
+              <option value="Other">Other</option>
+            </select>
+            @error('religion')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Occupation -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="occupation" class="input-label">Occupation <span class="text-red-500">*</span></label>
+            <input type="text" name="occupation" id="occupation"
+              class="default-input @error('occupation') !border-red-500 !bg-red-500/5 @enderror"
+              placeholder="E.g. Factory Worker" value="{{ old('occupation') }}">
+            @error('occupation')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- End of Other Relevant Information -->
 
           <!-- Buttons -->
           <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
