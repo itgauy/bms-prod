@@ -198,7 +198,7 @@
           <!-- Birthdate -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="birthdate" class="input-label">Birthdate <span class="text-red-500">*</span></label>
-            <input type="text" name="birthdate" id="birthdate"
+            <input type="date" name="birthdate" id="birthdate"
               class="default-input @error('birthdate') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('birthdate') }}">
             @error('birthdate')
@@ -268,19 +268,72 @@
           </div>
           <!-- Occupation -->
           <div class="md:space-y-2.5 space-y-1.5">
-            <label for="occupation" class="input-label">Occupation <span class="text-red-500">*</span></label>
+            <label for="occupation" class="input-label">Occupation</label>
             <input type="text" name="occupation" id="occupation"
-              class="default-input @error('occupation') !border-red-500 !bg-red-500/5 @enderror"
+              class="default-input"
               placeholder="E.g. Factory Worker" value="{{ old('occupation') }}">
-            @error('occupation')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
-            @enderror
           </div>
           <!-- End of Other Relevant Information -->
 
+          <!-- Verification Details -->
+          <h5 class="md:col-span-2 col-span-1 border-t pt-2 mt-4 font-medium">Verification Details</h5>
+          <!-- Classification Status -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="classification-status" class="input-label">Classification Status <span class="text-red-500">*</span></label>
+            <select id="classification-status" name="classification-status"
+              class="select-input @error('classification-status') !border-red-500 !bg-red-500/5 @enderror" value="{{ old('classification-status') }}">
+              <option selected="" disabled>Select Classification Status</option>
+              <option value="Resident">Resident</option>
+              <option value="4PS">4PS</option>
+              <option value="PWD">PWD</option>
+              <option value="Solo Parent">Solo Parent</option>
+              <option value="Senior Citizen">Senior Citizen</option>
+            </select>
+            @error('classification-status')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Residency Status -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="recidency-status" class="input-label">Recidency Status</label>
+            <input type="text" name="recidency-status" id="recidency-status"
+              class="default-input" value="{{ old('recidency-status') }}" disabled>
+          </div>
+          <!-- Valid ID -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <label for="valid-id" class="input-label">Valid ID <span class="text-red-500">*</span></label>
+            <select id="valid-id" name="valid-id"
+              class="select-input @error('valid-id') !border-red-500 !bg-red-500/5 @enderror" value="{{ old('valid-id') }}">
+              <option selected="" disabled>Select Valid ID</option>
+              <option value="Barangay ID">Barangay ID</option>
+            </select>
+            @error('valid-id')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Picture of Barangay ID -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <p class="input-label">Picture of Barangay ID <span class="text-red-500">*</span></p>
+            <label for="picture-id" class="sr-only">Choose file</label>
+            <input type="file" name="picture-id" id="picture-id" class="file-input file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture-id') !border-red-500 !bg-red-500/5 @enderror" value="{{ old('picture-id') }}">
+            @error('picture-id')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- Picture of Barangay ID while holding -->
+          <div class="md:space-y-2.5 space-y-1.5">
+            <p class="input-label">Picture of Barangay ID while holding <span class="text-red-500">*</span></p>
+            <label for="picture-holding-id" class="sr-only">Choose file</label>
+            <input type="file" name="picture-holding-id" id="picture-holding-id" class="file-input file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture-holding-id') !border-red-500 !bg-red-500/5 @enderror" value="{{ old('picture-holding-id') }}">
+            @error('picture-holding-id')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
+          </div>
+          <!-- End of Verification Details -->
+
           <!-- Buttons -->
           <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
-            <a href="{{ route('login') }}" class="btn btn-secondary">Back</a>
+            <a href="{{ route('register-1') }}" class="btn btn-secondary">Back</a>
             <button class="btn btn-primary">
               Next
             </button>
