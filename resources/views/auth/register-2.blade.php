@@ -22,7 +22,7 @@
                   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                 </svg>
               </span>
-              <div class="ms-2 w-full h-px flex-1 bg-blue-500 group-last:hidden"></div>
+              <div class="ms-2 w-full h-px flex-1 bg-blue-300 group-last:hidden"></div>
             </div>
             <div class="mt-3">
               <span class="block font-medium">
@@ -50,7 +50,7 @@
               </p>
             </div>
           </li>
-          <!-- Step 3 / Submit -->
+          <!-- Step 3 /Check & Submit -->
           <li class="shrink basis-0 flex-1 group">
             <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
               <span class="size-10 flex justify-center items-center shrink-0 bg-neutral-100 font-medium text-neutral-800 rounded-full">
@@ -62,7 +62,7 @@
                 Step 3
               </span>
               <p class="text-neutral-500 text-sm">
-                Submit
+                Check & Submit
               </p>
             </div>
           </li>

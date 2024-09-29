@@ -48,7 +48,7 @@
               </p>
             </div>
           </li>
-          <!-- Step 3 / Submit -->
+          <!-- Step 3 / Check & Submit -->
           <li class="shrink basis-0 flex-1 group">
             <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
               <span class="size-10 flex justify-center items-center shrink-0 bg-neutral-100 font-medium text-neutral-800 rounded-full">
@@ -60,7 +60,7 @@
                 Step 3
               </span>
               <p class="text-neutral-500 text-sm">
-                Submit
+                Check & Submit
               </p>
             </div>
           </li>
