@@ -17,8 +17,10 @@
           <!-- Step 1 / Account Information -->
           <li class="shrink basis-0 flex-1 group">
             <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
-              <span class="size-10 flex justify-center items-center shrink-0 bg-green-500 font-bold text-white rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-4">
+              <span
+                class="size-10 flex justify-center items-center shrink-0 bg-green-500 font-bold text-white rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                  stroke="currentColor" class="size-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                 </svg>
               </span>
@@ -36,8 +38,10 @@
           <!-- Step 2 / Personal Information -->
           <li class="shrink basis-0 flex-1 group">
             <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
-              <span class="size-10 flex justify-center items-center shrink-0 bg-green-500 font-bold text-white rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="size-4">
+              <span
+                class="size-10 flex justify-center items-center shrink-0 bg-green-500 font-bold text-white rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
+                  stroke="currentColor" class="size-4">
                   <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                 </svg>
               </span>
@@ -55,7 +59,8 @@
           <!-- Step 3 / Check & Submit -->
           <li class="shrink basis-0 flex-1 group">
             <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
-              <span class="size-10 flex justify-center items-center shrink-0 bg-green-500 font-bold text-white rounded-full">
+              <span
+                class="size-10 flex justify-center items-center shrink-0 bg-green-500 font-bold text-white rounded-full">
                 3
               </span>
             </div>
@@ -151,7 +156,11 @@
               <p class="text-neutral-500/80">Valid ID</p>
               <p>Barangay ID</p>
             </div>
-            <div class="opacity-0"></div> <!-- Block lang iteyyyy for alignment ng imeyds -->
+            <div>
+              <p class="text-neutral-500/80">ID Number</p>
+              <p>12345678</p>
+            </div>
+            {{-- <div class="opacity-0"></div> <!-- Block lang iteyyyy for alignment ng imeyds --> Di na need!!!!! --}}
             <div>
               <p class="text-neutral-500/80">Picture of Barangay ID</p>
               <img src="https://placeholder.co/300x200" alt="Sample ID" class="mt-2 w-full h-auto rounded-md">
@@ -163,9 +172,9 @@
           </div>
           <!-- Buttons -->
           <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
-            <a href="{{ route('register-3') }}" class="btn btn-secondary">Back</a>
-            <button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="register-modal"
-              data-hs-overlay="#register-modal">
+            <a href="{{ route('register-2') }}" class="btn btn-secondary">Back</a>
+            <button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false"
+              aria-controls="register-modal" data-hs-overlay="#register-modal">
               Submit
             </button>
           </div>

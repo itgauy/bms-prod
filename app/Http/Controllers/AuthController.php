@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    // Register User
-    public function register(Request $request) {
-        // Validate
+    // Register User - Step 1
+    public function registerStep1(Request $request) {
+        // Validate (lahat ng nasa baba ay yung validation para makuha error pag sakaling invalid)
         $fields = $request->validate([
             'username' => ['required', 'max:255'],
             'user_type' => ['required', 'in:home-owner,renter-tenant'],
