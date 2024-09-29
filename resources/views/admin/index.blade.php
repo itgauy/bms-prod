@@ -8,6 +8,7 @@
   <title>{{ env('APP_NAME') }}</title>
   @vite('resources/css/app.css')
   @vite('resources/js/app.js')
+  @vite('resources/js/sidebarNav.js')
 </head>
 
 <body class="bg-blue-50/30">
