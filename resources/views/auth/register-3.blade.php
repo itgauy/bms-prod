@@ -6,7 +6,7 @@
       <!-- Main Container -->
       <form action="{{ route('register-3') }}" method="post"
         class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-7 w-full max-w-3xl"
-        enctype="multipart/form-data">>
+        enctype="multipart/form-data">
         @csrf
         <div class="space-y-1">
           <h2>Registration Form</h2>
@@ -82,8 +82,8 @@
           <div class="grid md:grid-cols-2 grid-cols-1 gap-4 border-t pt-2">
             <div>
               <p class="text-neutral-500/80">Complete Name</p>
-              {{ $registerData['first_name'] ?? '' }} {{ $registerData['middle_name'] ?? '' }}
-              {{ $registerData['last_name'] ?? '' }} {{ $registerData['suffix'] ?? '' }}
+              <p>{{ $registerData['first_name'] ?? '' }} {{ $registerData['middle_name'] ?? '' }}
+                {{ $registerData['last_name'] ?? '' }} {{ $registerData['suffix'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Email Address</p>
@@ -91,27 +91,28 @@
             </div>
             <div>
               <p class="text-neutral-500/80">Username</p>
-              <p>JuanDelaCruz123</p>
+              <p>{{ $registerData['username'] ?? '' }}</p>
             </div>
           </div>
 
           <!-- Address -->
           <p class="border-t pt-2 mt-4 font-medium  text-neutral-500">Address</p>
-          <p>1023 Pedro Street, Capri, Amparo Subdivision</p>
+          <p>{{ $registerData['street'] ?? '' }} {{ $registerData['sitio'] ?? '' }} {{ $registerData['village'] ?? '' }}
+          </p>
 
           <!-- Contact, Emergency Contact Number, Emergency Contact Name -->
           <div class="grid md:grid-cols-2 grid-cols-1 gap-4 border-t pt-2 mt-4">
             <div>
               <p class="text-neutral-500/80">Contact number</p>
-              <p>09123456789</p>
+              <p>{{ $registerData['contact_num'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Emergency contact's name</p>
-              <p>Antonio Dela Cruz</p>
+              <p>{{ $registerData['em_contact_name'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Emergency contact's no.</p>
-              <p>09987654321</p>
+              <p>{{ $registerData['em_contact_num'] ?? '' }}</p>
             </div>
           </div>
 
@@ -119,27 +120,27 @@
           <div class="grid grid-cols-2 gap-4 border-t pt-2 mt-4">
             <div>
               <p class="text-neutral-500/80">Birthdate</p>
-              <p>July 23, 2003</p>
+              <p>{{ $registerData['birthdate'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Birth place</p>
-              <p>Quezon City</p>
+              <p>{{ $registerData['birthplace'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Civil Status</p>
-              <p>Divorced</p>
+              <p>{{ $registerData['civil_status'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Gender</p>
-              <p>Female</p>
+              <p>{{ $registerData['gender'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Religion</p>
-              <p>Islam</p>
+              <p>{{ $registerData['religion'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Occupation</p>
-              <p>Factory Worker</p>
+              <p>{{ $registerData['occupation'] ?? '' }}</p>
             </div>
           </div>
 
@@ -147,20 +148,20 @@
           <div class="grid md:grid-cols-2 grid-cols-1 gap-4 border-t pt-2 mt-4">
             <div>
               <p class="text-neutral-500/80">Classiciation Status</p>
-              <p>4PS</p>
+              <p>{{ $registerData['classification_status'] ?? '' }}</p>
               <!-- 4PS WHEN ULIT -->
             </div>
             <div>
               <p class="text-neutral-500/80">Residency Status</p>
-              <p>Home Owner</p>
+              <p>{{ $registerData['user_type'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Valid ID</p>
-              <p>Barangay ID</p>
+              <p>{{ $registerData['valid_id'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">ID Number</p>
-              <p>12345678</p>
+              <p>{{ $registerData['id_num'] ?? '' }}</p>
             </div>
             {{-- <div class="opacity-0"></div> <!-- Block lang iteyyyy for alignment ng imeyds --> Di na need!!!!! --}}
             <div>

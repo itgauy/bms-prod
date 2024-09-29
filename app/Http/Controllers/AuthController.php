@@ -44,16 +44,16 @@ class AuthController extends Controller
         'civil_status' => ['required'],
         'gender' => ['required'],
         'religion' => ['required', 'max:255'],
-        'occupation' => ['required', 'max:255'],
+        'occupation' => ['max:255'],
         'classification_status' => ['required', 'max:255'],
         'valid_id' => ['required', 'max:255'],
-        'id_num' => ['required', 'max:255'],
-        'picture_id' => ['required', 'max:2048'],
-        'picture_holding_id' => ['required', 'max:2048'],
+        'id_num' => ['max:255'],
+        'picture_id' => ['max:2048'],
+        'picture_holding_id' => ['max:2048'],
         ]);
 
         // Get data from session then imerge ulit para mag sama yung data from step 1 and step 2
-        $registerData = session()->get('register_data');
+        $registerData = session()->get('register_data', []);
 
         // Merge data
         $registerData = array_merge($registerData, $fields);
@@ -67,7 +67,7 @@ class AuthController extends Controller
     // Show Register User - Step 3
     public function showRegisterStep3() {
         // Get data from session
-        $registerData = session()->get('register_data');
+        $registerData = session()->get('register_data', []);
 
         // Pass data to the view
         return view('auth.register-3', ['registerData' => $registerData]);
@@ -77,7 +77,7 @@ class AuthController extends Controller
     public function registerStep3() {
 
         // Get data from session
-        $registerData = session()->get('register_data');
+        $registerData = session()->get('register_data', []);
 
         // Create User
         User::create([
