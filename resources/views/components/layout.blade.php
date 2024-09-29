@@ -123,6 +123,10 @@
   </div>
   @endguest
 
+  @guest
+  <x-modals.register-confirmation />
+  @endguest
+
   @auth
   {{-- FOR LOGGED IN USERS: Logout Modal --}}
   <x-modals.logout-modal />

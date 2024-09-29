@@ -79,6 +79,16 @@
             @apply ring-2 ring-neutral-500/30;
         }
     }
+    /* Info Variant */
+    .btn-info {
+        @apply border border-transparent bg-blue-500 text-white;
+        &:hover {
+            @apply bg-blue-500/80;
+        }
+        &:focus {
+            @apply ring-2 ring-blue-500/30;
+        }
+    }
     /* Danger Variant */
     .btn-danger {
         @apply border border-transparent bg-red-500 text-neutral-100;

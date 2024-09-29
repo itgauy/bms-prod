@@ -161,13 +161,11 @@
               <img src="https://placeholder.co/300x200" alt="Sample ID" class="mt-2 w-full h-auto rounded-md">
             </div>
           </div>
-
-
-
           <!-- Buttons -->
           <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
             <a href="{{ route('register-3') }}" class="btn btn-secondary">Back</a>
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="register-modal"
+              data-hs-overlay="#register-modal">
               Submit
             </button>
           </div>
