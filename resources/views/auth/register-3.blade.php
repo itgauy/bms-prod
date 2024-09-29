@@ -4,8 +4,9 @@
   <body class="md:h-screen h-auto">
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
-      <form action="{{ route('register-2') }}" method="post"
-        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
+      <form action="{{ route('register-3') }}" method="post"
+        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-7 w-full max-w-3xl"
+        enctype="multipart/form-data">>
         @csrf
         <div class="space-y-1">
           <h2>Registration Form</h2>
@@ -81,11 +82,12 @@
           <div class="grid md:grid-cols-2 grid-cols-1 gap-4 border-t pt-2">
             <div>
               <p class="text-neutral-500/80">Complete Name</p>
-              <h4>Juan Santos Dela Cruz</h4>
+              {{ $registerData['first_name'] ?? '' }} {{ $registerData['middle_name'] ?? '' }}
+              {{ $registerData['last_name'] ?? '' }} {{ $registerData['suffix'] ?? '' }}
             </div>
             <div>
               <p class="text-neutral-500/80">Email Address</p>
-              <p>juan.delacruz@email.com</p>
+              <p>{{ $registerData['email'] ?? '' }}</p>
             </div>
             <div>
               <p class="text-neutral-500/80">Username</p>
