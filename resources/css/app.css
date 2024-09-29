@@ -109,6 +109,16 @@
     .input-label {
         @apply block text-sm font-medium;
     }
+    /* Select Input */
+    .select-input {
+        @apply py-2.5 px-4 pe-9 block w-full bg-neutral-100/40 border-neutral-200 rounded-lg text-sm transition duration-300 ease-in-out;
+        &:focus {
+            @apply border-neutral-500 ring-neutral-500;
+        }
+        &:disabled {
+            @apply opacity-50 pointer-events-none;
+        }
+    }
     /* Checkbox Input */
     .checkbox-input {
         @apply shrink-0 bg-neutral-100/40 border-neutral-200 rounded text-neutral-600  transition duration-300 ease-in-out;
@@ -136,4 +146,11 @@
         }
     }
     /* ---------------- // Input Component ---------------- */
+    .custom-scrollbar {
+        @apply [&::-webkit-scrollbar]:w-2
+        [&::-webkit-scrollbar-track]:rounded-full
+        [&::-webkit-scrollbar-track]:bg-neutral-100
+        [&::-webkit-scrollbar-thumb]:rounded-full
+        [&::-webkit-scrollbar-thumb]:bg-neutral-300;
+    }
 }
