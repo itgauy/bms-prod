@@ -9,8 +9,11 @@ Route::view('/', 'landing.index')->name('home');
 // ------ Authentication Pages ------
 
 Route::middleware('guest')->group(function () {
-    Route::view('/register', 'auth.register')->name('register');
-    Route::post('/register', [AuthController::class, 'register']);
+    Route::view('/register-1', 'auth.register-1')->name('register-1');
+    Route::post('/register-1', [AuthController::class, 'register-1']);
+
+    Route::view('/register-2', 'auth.register-2')->name('register-2');
+    Route::post('/register-2', [AuthController::class, 'register-2']);
 
     Route::view('/login', 'auth.login')->name('login');
     Route::post('/login', [AuthController::class, 'login']);

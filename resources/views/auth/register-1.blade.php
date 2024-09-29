@@ -4,7 +4,7 @@
   <body class="md:h-screen h-auto">
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
-      <form action="{{ route('register') }}" method="post"
+      <form action="{{ route('register-1') }}" method="post"
         class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
         @csrf
         <div class="space-y-1">
@@ -101,7 +101,7 @@
             <label for="username" class="input-label">Username <span class="text-red-500">*</span></label>
             <input type="text" name="username" id="username"
               class="default-input @error('username') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. JohnDoe123" value="{{ old('username') }}">
+              placeholder="E.g. JuanDelaCruz123" value="{{ old('username') }}">
             @error('username')
             <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -111,7 +111,7 @@
             <label for="email" class="input-label">Email Address <span class="text-red-500">*</span></label>
             <input type="text" name="email" id="email"
               class="default-input @error('email') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. john.doe@email.com" value="{{ old('email') }}">
+              placeholder="E.g. juan.delacruz@email.com" value="{{ old('email') }}">
             @error('email')
             <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
