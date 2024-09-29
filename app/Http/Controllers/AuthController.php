@@ -34,7 +34,7 @@ class AuthController extends Controller
         'last_name' => ['required', 'max:255'],
         'suffix' => ['max:255'],
         'street' => ['required', 'max:255'],
-        'sitio' => ['max:255'],
+        'sitio' => ['required','max:255'],
         'village' => ['required', 'max:255'],
         'contact_num' => ['required', 'max:20'],
         'em_contact_name' => ['required', 'max:255'],

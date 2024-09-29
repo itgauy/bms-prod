@@ -90,7 +90,7 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="last_name" class="input-label">Last name <span class="text-red-500">*</span></label>
             <input type="text" name="last_name" id="last_name"
-              class="default-input @error('laste_name') !border-red-500 !bg-red-500/5 @enderror"
+              class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. Dela Cruz" value="{{ old('last_name') }}">
             @error('last_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -128,12 +128,13 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="sitio" class="input-label">Sitio <span class="text-red-500">*</span></label>
             <select id="sitio" name="sitio"
-              class="select-input @error('sitio') !border-red-500 !bg-red-500/5 @enderror" value="{{ old('sitio') }}">
+              class="select-input @error('sitio') !border-red-500 !bg-red-500/5 @enderror">
               <option selected="" disabled>Select Sitio</option>
-              <option value="Damong Maliit">Damong Maliit</option>
-              <option value="Capri">Capri</option>
-              <option value="Pasacola">Pasacola</option>
-              <option value="Gitna">Gitna</option>
+              <option value="Damong Maliit" {{ old('sitio') == 'Damong Maliit' ? 'selected' : '' }}>Damong Maliit
+              </option>
+              <option value="Capri" {{ old('sitio') == 'Capri' ? 'selected' : '' }}>Capri</option>
+              <option value="Pasacola" {{ old('sitio') == 'Pasacola' ? 'selected' : '' }}>Pasacola</option>
+              <option value="Gitna" {{ old('sitio') == 'Gitna' ? 'selected' : '' }}>Gitna</option>
             </select>
             @error('sitio')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -218,11 +219,11 @@
           </div>
           <!-- Birth Place -->
           <div class="md:space-y-2.5 space-y-1.5">
-            <label for="birth-place" class="input-label">Birth place <span class="text-red-500">*</span></label>
-            <input type="text" name="birth-place" id="birth-place"
-              class="default-input @error('birth-place') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. Quezon City" value="{{ old('birth-place') }}">
-            @error('birth-place')
+            <label for="birthplace" class="input-label">Birth place <span class="text-red-500">*</span></label>
+            <input type="text" name="birthplace" id="birth-place"
+              class="default-input @error('birthplace') !border-red-500 !bg-red-500/5 @enderror"
+              placeholder="E.g. Quezon City" value="{{ old('birthplace') }}">
+            @error('birthplace')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
@@ -230,13 +231,13 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="civil_status" class="input-label">Civil Status <span class="text-red-500">*</span></label>
             <select id="civil_status" name="civil_status"
-              class="select-input @error('civil_status') !border-red-500 !bg-red-500/5 @enderror"
-              value="{{ old('civil_status') }}">
+              class="select-input @error('civil_status') !border-red-500 !bg-red-500/5 @enderror">
               <option selected="" disabled>Select Civil Status</option>
-              <option value="Single">Single</option>
-              <option value="Married">Married</option>
-              <option value="Divorced">Divorced</option>
-              <option value="Widowed">Widowed</option>
+              <option value="">Select Civil Status</option>
+              <option value="single" {{ old('civil_status') == 'single' ? 'selected' : '' }}>Single</option>
+              <option value="married" {{ old('civil_status') == 'married' ? 'selected' : '' }}>Married</option>
+              <option value="divorced" {{ old('civil_status') == 'divorced' ? 'selected' : '' }}>Divorced</option>
+              <option value="widowed" {{ old('civil_status') == 'widowed' ? 'selected' : '' }}>Widowed</option>
             </select>
             @error('civil_status')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -249,10 +250,9 @@
               class="select-input @error('gender') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('gender') }}">
               <option selected="" disabled>Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="LGBTQs">LGBTQ+</option>
-              <option value="Prefer not to say">Prefer not to say</option>
+              <option value="">Select Gender</option>
+              <option value="male" {{ old('gender') == 'male' ? 'selected' : '' }}>Male</option>
+              <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
             </select>
             @error('gender')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -261,28 +261,17 @@
           <!-- Religion -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="religion" class="input-label">Religion <span class="text-red-500">*</span></label>
-            <select id="religion" name="religion"
+            <input type="text" id="religion" name="religion"
               class="select-input @error('religion') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('religion') }}">
-              <option selected="" disabled>Select Religion</option>
-              <option value="Christian">Christian</option>
-              <option value="Catholic">Catholic</option>
-              <option value="Protestant">Protestant</option>
-              <option value="Iglesia ni Cristo">Iglesia ni Cristo</option>
-              <option value="Islam">Islam</option>
-              <option value="Buddhism">Buddhism</option>
-              <option value="Other Chirstian Denominations">Other Chirstian Denominations</option>
-              <option value="Other Indigenous Religions">Other Indigenous Religions</option>
-              <option value="No Religion/Atheis">No Religion/Atheist</option>
-              <option value="Other">Other</option>
-            </select>
             @error('religion')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Occupation -->
           <div class="md:space-y-2.5 space-y-1.5">
-            <label for="occupation" class="input-label">Occupation</label>
+            <label for="occupation" class="input-label">Occupation<span class="text-neutral-400 text-xs">
+                (Optional)</span></label>
             <input type="text" name="occupation" id="occupation" class="default-input"
               placeholder="E.g. Factory Worker" value="{{ old('occupation') }}">
           </div>
@@ -298,11 +287,16 @@
               class="select-input @error('classification_status') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('classification_status') }}">
               <option selected="" disabled>Select Classification Status</option>
-              <option value="Resident">Resident</option>
-              <option value="4PS">4PS</option>
-              <option value="PWD">PWD</option>
-              <option value="Solo Parent">Solo Parent</option>
-              <option value="Senior Citizen">Senior Citizen</option>
+              <option value="Resident" {{ old('classification_status') == 'Resident' ? 'selected' : '' }}>Resident
+              </option>
+              <option value="4PS" {{ old('classification_status') == '4PS' ? 'selected' : '' }}>4PS</option>
+              <option value="PWD" {{ old('classification_status') == 'PWD' ? 'selected' : '' }}>PWD</option>
+              <option value="Solo Parent" {{ old('classification_status') == 'Solo Parent' ? 'selected' : '' }}>Solo
+                Parent</option>
+              <option value="Senior Citizen" {{ old('classification_status') == 'Senior Citizen' ? 'selected' : '' }}>
+                Senior Citizen</option>
+              <option value="Student" {{ old('classification_status') == 'Student' ? 'selected' : '' }}>Student
+              </option>
             </select>
             @error('classification_status')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -321,7 +315,8 @@
               class="select-input @error('valid_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('valid_id') }}">
               <option selected="" disabled>Select Valid ID</option>
-              <option value="Barangay ID">Barangay ID</option>
+              <option value="Barangay ID" {{ old('valid_id') == 'Barangay ID' ? 'selected' : '' }}>Barangay ID
+              </option>
             </select>
             @error('valid_id')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -376,7 +371,6 @@
 
         // Mapping
         const sitioToVillage = {
-          // Damong Maliit Villages
           'Damong Maliit': ['Villa Nova Subdivision', 'Bartolome Compound', 'Josefina Subdivision', 'Pulong Gubat',
             'Dantes 1 Subd.', 'St. Andrew Subdivision', 'Roxas Compound', 'Dantes 2 Subdivision',
             'Gerryville Subdivision', 'Lazaro Compound', 'Bistek Ville #22', 'Bistek Ville #28', 'Marcela Compound',
@@ -384,25 +378,38 @@
             'San Antonio Subdivision', 'Ina ng Buhay Road', 'St. Vincent', 'Jordan Heights Subdivision',
             'Gonzales Compound', 'Queensland 1 Subdivision', 'Queensland 2 Subdivision', 'Queensland 3 Subdivision'
           ],
-          // Capri Villages
           'Capri': ['Amparo Subdivision', 'Pascual Road', 'Rodriguez Compound', 'San Andres Compound', 'Walters Road',
             'Rebisco Road', 'Imelda Street', 'Ugoy-Ugoy Compound', 'Rockville Subdivision', 'Samonte 1',
             'Samonte 2', 'Basa Compound', 'Sierra Vista Ph 1', 'Sierra Vista Ph 2', 'Sierra Vista Ph 3',
             'Robina Road', 'Reliance Road', 'Mendoza I', 'Mendoza II', 'Torres Village'
           ],
-          // Pasacola Villages
-          'Pasacola': [' Don Enrique/Florenceville Subd', 'San Paulo Subdivision', 'Pasacola Proper',
+          'Pasacola': ['Don Enrique/Florenceville Subd', 'San Paulo Subdivision', 'Pasacola Proper',
             'Pasacola Area A', 'Pasacola Area B', 'Pasacola Area C', 'Pasacola Dulo', 'Coral Ville',
             'Bistek Ville #12', 'Bistek Ville #16', 'Northwind Subdivision', 'Goldmine Interior',
             'St. John Goldmine', 'St. James Subdivision', 'St. James Riverside', 'Sta. Clara Villas',
             'Dormitory Ph 1', 'Dormitory Ph 2', 'Dormitory Ph 3', 'Kingdom'
           ],
-          // Gitna Villages
           'Gitna': ['P. Dela Cruz Street', 'Fivestar Compound', 'Villa Angelica', 'Enriquez/Rivera',
             'Riverside Alley'
           ]
         };
 
+        // Populate village dropdown based on old value
+        const oldSitio = "{{ old('sitio') }}";
+        const oldVillage = "{{ old('village') }}";
+
+        if (oldSitio) {
+          const villages = sitioToVillage[oldSitio] || [];
+          villages.forEach(function(village) {
+            const option = document.createElement('option');
+            option.value = village;
+            option.textContent = village;
+            if (village === oldVillage) {
+              option.selected = true;
+            }
+            villageSelect.appendChild(option);
+          });
+        }
 
         sitioSelect.addEventListener('change', function() {
           const selectedSitio = sitioSelect.value;
