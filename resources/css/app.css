@@ -13,11 +13,11 @@
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        @apply [&::-webkit-scrollbar]:w-2
+        @apply [&::-webkit-scrollbar]:w-1
         [&::-webkit-scrollbar-track]:rounded-full
-        [&::-webkit-scrollbar-track]:bg-neutral-100
+        [&::-webkit-scrollbar-track]:bg-blue-50
         [&::-webkit-scrollbar-thumb]:rounded-full
-        [&::-webkit-scrollbar-thumb]:bg-neutral-300;
+        [&::-webkit-scrollbar-thumb]:bg-blue-300;
     }
     h1 {
         @apply md:text-4xl text-3xl font-bold;
@@ -131,9 +131,9 @@
     }
     /* Select Input */
     .select-input {
-        @apply py-2.5 px-4 pe-9 block w-full bg-neutral-100/40 border-neutral-200 rounded-lg text-sm transition duration-300 ease-in-out;
+        @apply py-2.5 px-4 pe-9 block w-full bg-blue-50/20 border-blue-100 rounded-lg text-sm transition duration-300 ease-in-out;
         &:focus {
-            @apply border-neutral-500 ring-neutral-500;
+            @apply border-blue-500 ring-blue-500;
         }
         &:disabled {
             @apply opacity-50 pointer-events-none;
@@ -151,9 +151,9 @@
     }
     /* Radio Input */
     .radio-input {
-        @apply shrink-0 bg-gray-100/70 border-gray-200 rounded-full text-neutral-600 transition duration-300 ease-in-out;
+        @apply shrink-0 bg-blue-50/70 border-blue-100 rounded-full text-blue-600 transition duration-300 ease-in-out;
         &:focus {
-            @apply ring-neutral-500;
+            @apply ring-blue-500;
         }
         &:disabled {
             @apply opacity-50 pointer-events-none;
@@ -161,18 +161,18 @@
     }
     /* File Input */
     .file-input {
-        @apply block w-full bg-neutral-100/40 border border-neutral-200 rounded-lg text-sm transition duration-300 ease-in-out;
+        @apply block w-full bg-blue-50/20 border border-blue-100 rounded-lg text-sm transition duration-300 ease-in-out;
         &:focus {
-            @apply z-10 border-neutral-500 ring-neutral-500;
+            @apply z-10 border-blue-500 ring-blue-500;
         }
         &:disabled {
             @apply opacity-50 pointer-events-none;
         }
     }
     .grouped-radio {
-        @apply inline-flex cursor-pointer flex-col items-start gap-4 rounded-lg border border-neutral-200 p-4 transition has-[:checked]:bg-neutral-100 has-[:checked]:border-neutral-300;
+        @apply inline-flex cursor-pointer flex-col items-start gap-4 rounded-lg border border-blue-100 p-4 transition has-[:checked]:bg-blue-50 has-[:checked]:border-blue-200;
         &:hover {
-            @apply bg-neutral-50;
+            @apply bg-blue-50;
         }
     }
     /* ---------------- // Input Component ---------------- */
@@ -188,10 +188,10 @@
     }
 
     .custom-scrollbar {
-        @apply [&::-webkit-scrollbar]:w-2
+        @apply [&::-webkit-scrollbar]:w-1
         [&::-webkit-scrollbar-track]:rounded-full
-        [&::-webkit-scrollbar-track]:bg-neutral-100
+        [&::-webkit-scrollbar-track]:bg-blue-100
         [&::-webkit-scrollbar-thumb]:rounded-full
-        [&::-webkit-scrollbar-thumb]:bg-neutral-300;
+        [&::-webkit-scrollbar-thumb]:bg-blue-300;
     }
 }

@@ -5,7 +5,7 @@
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
       <form action="{{ route('register-1') }}" method="post"
-        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
+        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-xl shadow-blue-50/30 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
         @csrf
         <div class="space-y-1">
           <h2>Registration Form</h2>
@@ -21,13 +21,13 @@
                 class="size-10 flex justify-center items-center shrink-0 bg-blue-500 font-bold text-white rounded-full">
                 1
               </span>
-              <div class="ms-2 w-full h-px flex-1 bg-neutral-200 group-last:hidden"></div>
+              <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden"></div>
             </div>
             <div class="mt-3">
               <span class="block font-medium">
                 Step 1
               </span>
-              <p class="text-neutral-500 text-sm">
+              <p class="text-gray-500 text-sm">
                 Account Info.
               </p>
             </div>
@@ -36,16 +36,16 @@
           <li class="shrink basis-0 flex-1 group">
             <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
               <span
-                class="size-10 flex justify-center items-center shrink-0 bg-neutral-100 font-medium text-neutral-800 rounded-full">
+                class="size-10 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full">
                 2
               </span>
-              <div class="ms-2 w-full h-px flex-1 bg-neutral-200 group-last:hidden"></div>
+              <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden"></div>
             </div>
             <div class="mt-3">
               <span class="block font-medium">
                 Step 2
               </span>
-              <p class="text-neutral-500 text-sm">
+              <p class="text-gray-500 text-sm">
                 Personal Info.
               </p>
             </div>
@@ -54,7 +54,7 @@
           <li class="shrink basis-0 flex-1 group">
             <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
               <span
-                class="size-10 flex justify-center items-center shrink-0 bg-neutral-100 font-medium text-neutral-800 rounded-full">
+                class="size-10 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full">
                 3
               </span>
             </div>
@@ -62,7 +62,7 @@
               <span class="block font-medium">
                 Step 3
               </span>
-              <p class="text-neutral-500 text-sm">
+              <p class="text-gray-500 text-sm">
                 Check & Submit
               </p>
             </div>
@@ -93,7 +93,7 @@
                 </div>
               </label>
               @error('user_type')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ 'Choose at least one category.' }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ 'Choose at least one category.' }}</p>
               @enderror
             </div>
           </div>
@@ -107,7 +107,7 @@
               class="default-input @error('username') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. JuanDelaCruz123" value="{{ old('username') }}">
             @error('username')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Email -->
@@ -117,7 +117,7 @@
               class="default-input @error('email') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. juan.delacruz@email.com" value="{{ old('email') }}">
             @error('email')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <div class="md:col-span-2 col-span-1 gap-x-5 grid md:grid-cols-2 grid-cols-1">
@@ -128,7 +128,7 @@
                 class="default-input @error('password') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="Your Password">
               @error('password')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Confirm Password -->

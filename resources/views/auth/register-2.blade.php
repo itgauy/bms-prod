@@ -5,7 +5,7 @@
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
       <form action="{{ route('register-2') }}" method="post"
-        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-lg shadow-neutral-100/60 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
+        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-xl shadow-blue-50/30 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
         @csrf
         <div class="space-y-1">
           <h2>Registration Form</h2>
@@ -42,13 +42,13 @@
                 class="size-10 flex justify-center items-center shrink-0 bg-blue-500 font-bold text-white rounded-full">
                 2
               </span>
-              <div class="ms-2 w-full h-px flex-1 bg-neutral-200 group-last:hidden"></div>
+              <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden"></div>
             </div>
             <div class="mt-3">
               <span class="block font-medium">
                 Step 2
               </span>
-              <p class="text-neutral-500 text-sm">
+              <p class="text-gray-500 text-sm">
                 Personal Info.
               </p>
             </div>
@@ -57,7 +57,7 @@
           <li class="shrink basis-0 flex-1 group">
             <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
               <span
-                class="size-10 flex justify-center items-center shrink-0 bg-neutral-100 font-medium text-neutral-800 rounded-full">
+                class="size-10 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full">
                 3
               </span>
             </div>
@@ -65,7 +65,7 @@
               <span class="block font-medium">
                 Step 3
               </span>
-              <p class="text-neutral-500 text-sm">
+              <p class="text-gray-500 text-sm">
                 Check & Submit
               </p>
             </div>
@@ -83,7 +83,7 @@
               class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. Juan"
               value="{{ old('first_name') }}">
             @error('first_name')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Last name -->
@@ -93,7 +93,7 @@
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. Dela Cruz" value="{{ old('last_name') }}">
             @error('last_name')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Middle name -->
@@ -121,7 +121,7 @@
               class="default-input @error('street') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. Pedro"
               value="{{ old('street') }}">
             @error('street')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Sitio -->
@@ -137,7 +137,7 @@
               <option value="Gitna" {{ old('sitio') == 'Gitna' ? 'selected' : '' }}>Gitna</option>
             </select>
             @error('sitio')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Village -->
@@ -164,7 +164,7 @@
               <!-- The options will be dynamically generated -->
             </select>
             @error('village')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Address -->
@@ -178,7 +178,7 @@
               class="default-input @error('contact_num') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('contact_num') }}">
             @error('contact_num')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Emergency Contact's Name -->
@@ -189,7 +189,7 @@
               class="default-input @error('em_contact_name') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. Antonio Dela Cruz" value="{{ old('em_contact_name') }}">
             @error('em_contact_name')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Emergency Contact's Number -->
@@ -200,7 +200,7 @@
               class="default-input @error('em_contact_num') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09987654321" value="{{ old('em_contact_num') }}">
             @error('em_contact_num')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Contact Details -->
@@ -214,7 +214,7 @@
               class="default-input @error('birthdate') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('birthdate') }}">
             @error('birthdate')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Birth Place -->
@@ -224,7 +224,7 @@
               class="default-input @error('birthplace') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. Quezon City" value="{{ old('birthplace') }}">
             @error('birthplace')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Civil Status -->
@@ -240,7 +240,7 @@
               <option value="widowed" {{ old('civil_status') == 'widowed' ? 'selected' : '' }}>Widowed</option>
             </select>
             @error('civil_status')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Gender -->
@@ -255,7 +255,7 @@
               <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
             </select>
             @error('gender')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Religion -->
@@ -265,7 +265,7 @@
               class="select-input @error('religion') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('religion') }}">
             @error('religion')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Occupation -->
@@ -299,7 +299,7 @@
               </option>
             </select>
             @error('classification_status')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Residency Status -->
@@ -319,7 +319,7 @@
               </option>
             </select>
             @error('valid_id')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- ID Number -->
@@ -333,10 +333,10 @@
             <p class="input-label">Picture of Barangay ID <span class="text-red-500">*</span></p>
             <label for="picture_id" class="sr-only">Choose file</label>
             <input type="file" name="picture_id" id="picture_id"
-              class="file-input file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_id') !border-red-500 !bg-red-500/5 @enderror"
+              class="file-input file:text-blue-600 file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('picture_id') }}">
             @error('picture_id')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Picture of Barangay ID while holding -->
@@ -344,10 +344,10 @@
             <p class="input-label">Picture of Barangay ID while holding <span class="text-red-500">*</span></p>
             <label for="picture_holding_id" class="sr-only">Choose file</label>
             <input type="file" name="picture_holding_id" id="picture_holding_id"
-              class="file-input file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_holding_id') !border-red-500 !bg-red-500/5 @enderror"
+              class="file-input file:text-blue-600 file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_holding_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('picture_holding_id') }}">
             @error('picture_holding_id')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Verification Details -->
