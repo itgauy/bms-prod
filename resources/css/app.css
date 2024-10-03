@@ -79,6 +79,16 @@
             @apply ring-2 ring-blue-500/30;
         }
     }
+    /* Ghost Variant */
+    .btn-ghost {
+        @apply border border-transparent text-blue-700;
+        &:hover {
+            @apply bg-blue-100/30;
+        }
+        &:focus {
+            @apply ring-2 ring-blue-500/30;
+        }
+    }
     /* Info Variant */
     .btn-info {
         @apply border border-transparent bg-blue-500 text-white;
@@ -166,6 +176,17 @@
         }
     }
     /* ---------------- // Input Component ---------------- */
+    /* Sidebar Nav Button */
+    .side-nav-btn {
+        @apply flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-700 transition duration-300;
+        &:focus {
+            @apply outline-none bg-gray-100;
+        }
+        &:hover {
+            @apply bg-blue-500/5;
+        }
+    }
+
     .custom-scrollbar {
         @apply [&::-webkit-scrollbar]:w-2
         [&::-webkit-scrollbar-track]:rounded-full

@@ -14,7 +14,7 @@
 
 <body>
   <!-- Layout Header -->
-  <header class="fixed top-0 w-full bg-white shadow-lg shadow-blue-200/5 z-40">
+  <header class="fixed top-0 w-full bg-white shadow-lg shadow-blue-100/10 z-40">
     <nav class="md:p-6 px-4 md:py-6 py-4 flex items-center justify-between w-full md:px-16">
       <div class="flex items-center gap-5">
         @auth
@@ -59,29 +59,29 @@
         </svg>
       </button>
 
-      <ul class="items-center gap-10 lg:flex hidden">
+      <ul class="items-center gap-2 lg:flex hidden">
         <li>
-          <a href="{{ route('home') }}#announcements" class="default-nav-link">
+          <a href="{{ route('home') }}#announcements" class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
             Announcements
           </a>
         </li>
         <li>
-          <a href="{{ route('home') }}#services" class="default-nav-link">
+          <a href="{{ route('home') }}#services" class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
             Services
           </a>
         </li>
         <li>
-          <a href="{{ route('home') }}#officials" class="default-nav-link">
+          <a href="{{ route('home') }}#officials" class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
             Officials
           </a>
         </li>
         <li>
-          <a href="{{ route('home') }}#about-us" class="default-nav-link">
+          <a href="{{ route('home') }}#about-us" class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
             About Us
           </a>
         </li>
         <li>
-          <a href="{{ route('home') }}#contact-us" class="default-nav-link">
+          <a href="{{ route('home') }}#contact-us" class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
             Contact Us
           </a>
         </li>

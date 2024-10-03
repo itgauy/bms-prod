@@ -9,7 +9,7 @@
     <!-- Links -->
     <ul class="flex flex-col items-start gap-1">
       <a href="{{ route('resident') }}"
-        class="side-nav-link flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300"
+        class="side-nav-link side-nav-btn"
         data-hs-overlay="#main-sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
           class="shrink-0 size-4">
@@ -19,7 +19,7 @@
         User Overview
       </a>
       <a href="{{ route('home') }}"
-        class="side-nav-link flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300"
+        class="side-nav-link side-nav-btn"
         data-hs-overlay="#main-sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
           stroke="currentColor" class="shrink-0 size-4">
@@ -29,7 +29,7 @@
         Home
       </a>
       <a href="{{ route('home') }}#announcements"
-        class="side-nav-link flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300"
+        class="side-nav-link side-nav-btn"
         data-hs-overlay="#main-sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
           stroke="currentColor" class="shrink-0 size-4">
@@ -39,7 +39,7 @@
         Announcements
       </a>
       <a href="{{ route('home') }}#services"
-        class="side-nav-link flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300"
+        class="side-nav-link side-nav-btn"
         data-hs-overlay="#main-sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
           stroke="currentColor" class="shrink-0 size-4">
@@ -49,7 +49,7 @@
         Services
       </a>
       <a href="{{ route('home') }}#officials"
-        class="side-nav-link flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300"
+        class="side-nav-link side-nav-btn"
         data-hs-overlay="#main-sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
           stroke="currentColor" class="shrink-0 size-4">
@@ -59,7 +59,7 @@
         Officials
       </a>
       <a href="{{ route('home') }}#about-us"
-        class="side-nav-link flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300"
+        class="side-nav-link side-nav-btn"
         data-hs-overlay="#main-sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
           stroke="currentColor" class="shrink-0 size-4">
@@ -69,7 +69,7 @@
         About us
       </a>
       <a href="{{ route('home') }}#contact-us"
-        class="side-nav-link flex w-full items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300"
+        class="side-nav-link side-nav-btn"
         data-hs-overlay="#main-sidebar">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
           stroke="currentColor" class="shrink-0 size-4">
