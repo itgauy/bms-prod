@@ -8,7 +8,7 @@
         @apply scroll-smooth;
     }
     body {
-        @apply bg-neutral-50;
+        @apply bg-blue-50/10;
         font-family: "Inter", sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
@@ -39,11 +39,11 @@
     h3,
     h4,
     h5 {
-        @apply text-neutral-700;
+        @apply text-gray-700;
     }
     p,
     label {
-        @apply text-neutral-700 md:text-base text-sm;
+        @apply text-gray-700 md:text-base text-sm;
     }
 }
 
@@ -61,22 +61,22 @@
     }
     /* Primary Variant */
     .btn-primary {
-        @apply border border-transparent bg-neutral-700 text-white;
+        @apply border border-transparent bg-blue-600 text-white;
         &:hover {
-            @apply bg-neutral-800;
+            @apply bg-blue-700;
         }
         &:focus {
-            @apply ring-2 ring-neutral-700/50;
+            @apply ring-2 ring-blue-700/50;
         }
     }
     /* Secondary Variant */
     .btn-secondary {
-        @apply border border-transparent bg-neutral-100 text-neutral-700;
+        @apply border border-transparent bg-blue-100/30 text-blue-700;
         &:hover {
-            @apply bg-neutral-200;
+            @apply bg-blue-200/30;
         }
         &:focus {
-            @apply ring-2 ring-neutral-500/30;
+            @apply ring-2 ring-blue-500/30;
         }
     }
     /* Info Variant */
@@ -101,15 +101,15 @@
     }
     /* Link */
     .link {
-        @apply underline text-sm text-neutral-800;
+        @apply underline text-sm text-blue-600;
     }
     /* ---------------- // Button Component ---------------- */
     /* ---------------- Input Component ---------------- */
     /* Default Input */
     .default-input {
-        @apply py-2.5 px-4 block w-full bg-neutral-100/40 border-neutral-200 rounded-lg text-sm placeholder:text-neutral-400 transition duration-300 ease-in-out;
+        @apply py-2.5 px-4 block w-full bg-blue-50/20 border-blue-100 rounded-lg text-sm placeholder:text-gray-400 transition duration-300 ease-in-out;
         &:focus {
-            @apply border-neutral-500 ring-neutral-500;
+            @apply border-blue-500 ring-blue-500;
         }
         &:disabled {
             @apply pointer-events-none;
@@ -131,9 +131,9 @@
     }
     /* Checkbox Input */
     .checkbox-input {
-        @apply shrink-0 bg-neutral-100/40 border-neutral-200 rounded text-neutral-600  transition duration-300 ease-in-out;
+        @apply shrink-0 bg-blue-50/40 border-blue-100 rounded text-blue-600  transition duration-300 ease-in-out;
         &:focus {
-            @apply ring-neutral-500;
+            @apply ring-blue-500;
         }
         &:disabled {
             @apply opacity-50 pointer-events-none;

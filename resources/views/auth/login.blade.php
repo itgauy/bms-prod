@@ -4,19 +4,13 @@
   <body class="md:h-screen h-auto">
     <main class="flex justify-center items-center h-full md:p-6 p-0 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
-      <div class="bg-neutral-100 grid md:grid-cols-2 grid-cols-1 rounded-[1.9rem] w-full max-w-[70rem] md:p-2 p-4 gap-2">
+      <div class="bg-blue-50/50 grid md:grid-cols-2 grid-cols-1 rounded-[1.9rem] w-full max-w-[70rem] md:p-2 p-4 gap-2">
         <!-- Left Child Container -->
         <div class="md:order-1 order-2 flex flex-col">
-          <div class="px-5 py-4">
-            <div class="flex items-center gap-3">
-              <span class="block rounded-full size-7 bg-neutral-300 ring-2 ring-neutral-400"></span>
-              <h5>Name ng anes diney</h5>
-            </div>
-          </div>
           <div class="flex-grow flex min-h-48 justify-center items-center">
             <p class="max-w-md mx-auto">Illustration diney</p>
           </div>
-          <div class="border border-neutral-300/50 bg-neutral-200/40 py-4 px-5 rounded-[1.6rem] space-y-1.5">
+          <div class="border border-blue-300/40 bg-blue-200/10 py-4 px-5 rounded-[1.6rem] space-y-1.5">
             <h4>Womp Womp</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus obcaecati nemo nulla vero perspiciatis.
               Et,
@@ -54,7 +48,7 @@
               <button type="button" onclick="togglePasswordVisibility()"
                 class="absolute inset-y-0 end-0 flex items-center pe-3">
                 <svg id="password-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                  class="size-4 text-neutral-500">
+                  class="size-4 text-gray-500">
                   <path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
                   <path fill-rule="evenodd"
                     d="M1.323 11.447C2.811 6.976 7.028 3.75 12.001 3.75c4.97 0 9.185 3.223 10.675 7.69.12.362.12.752 0 1.113-1.487 4.471-5.705 7.697-10.677 7.697-4.97 0-9.186-3.223-10.675-7.69a1.762 1.762 0 0 1 0-1.113ZM17.25 12a5.25 5.25 0 1 1-10.5 0 5.25 5.25 0 0 1 10.5 0Z"
