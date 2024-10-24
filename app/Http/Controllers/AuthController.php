@@ -11,6 +11,10 @@ class AuthController extends Controller
 {
     // Register User - Step 1
     public function registerStep1(Request $request) {
+        
+        // Retrieve existing session data if ever na meron (back button)
+        $sessionData = session()->get('register_data', []);
+        
         // Validate (lahat ng nasa baba ay yung validation para makuha error pag sakaling invalid)
         $fields = $request->validate([
             'username' => ['required', 'max:255'],
@@ -19,8 +23,11 @@ class AuthController extends Controller
             'password' => ['required', 'min:3', 'confirmed']
         ]);
         
+        // Merge with existing session data
+        $sessionData = array_merge($sessionData, $fields);
+
         // Storing of data in session (ginagamit for multi-step registrations)
-        session()->put('register_data', $fields);
+        session()->put('register_data', $sessionData);
 
         return redirect()->route('register-2');
     }
@@ -108,6 +115,11 @@ class AuthController extends Controller
 
         // Redirect to login page
         return redirect()->route('login');
+    }
+
+    // Clear Session on leave
+    public function clearSession() {
+        session()->forget('register_data');
     }
 
     // Login User

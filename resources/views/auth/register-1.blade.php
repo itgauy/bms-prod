@@ -80,7 +80,7 @@
                 class="grouped-radio {{ $errors->has('user_type') ? '!border-red-500 !bg-red-500/5' : '' }}">
                 <div class="flex items-center gap-3">
                   <input id="home-owner" type="radio" name="user_type" value="home-owner" class="radio-input"
-                    {{ old('user_type') == 'home-owner' ? 'checked' : '' }} />
+                    {{ old('user_type', session('register_data.user_type')) == 'home-owner' ? 'checked' : '' }} />
                   <span class="font-medium">Home Owner</span>
                 </div>
               </label>
@@ -88,12 +88,13 @@
                 class="grouped-radio {{ $errors->has('user_type') ? '!border-red-500 !bg-red-500/5' : '' }}">
                 <div class="flex items-center gap-3">
                   <input id="renter-tenant-input" type="radio" name="user_type" value="renter-tenant"
-                    class="radio-input" {{ old('user_type') == 'renter-tenant' ? 'checked' : '' }} />
+                    class="radio-input"
+                    {{ old('user_type', session('register_data.user_type')) == 'renter-tenant' ? 'checked' : '' }} />
                   <span class="font-medium">Renter/Tenant</span>
                 </div>
               </label>
               @error('user_type')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ 'Choose at least one category.' }}</p>
+                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ 'Choose at least one category.' }}</p>
               @enderror
             </div>
           </div>
@@ -105,9 +106,9 @@
             <label for="username" class="input-label">Username <span class="text-red-500">*</span></label>
             <input type="text" name="username" id="username"
               class="default-input @error('username') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. JuanDelaCruz123" value="{{ old('username') }}">
+              placeholder="E.g. JuanDelaCruz123" value="{{ old('username', session('register_data.username')) }}">
             @error('username')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Email -->
@@ -115,9 +116,9 @@
             <label for="email" class="input-label">Email Address <span class="text-red-500">*</span></label>
             <input type="text" name="email" id="email"
               class="default-input @error('email') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. juan.delacruz@email.com" value="{{ old('email') }}">
+              placeholder="E.g. juan.delacruz@email.com" value="{{ old('email', session('register_data.email')) }}">
             @error('email')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <div class="md:col-span-2 col-span-1 gap-x-5 grid md:grid-cols-2 grid-cols-1">
@@ -128,7 +129,7 @@
                 class="default-input @error('password') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="Your Password">
               @error('password')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Confirm Password -->
@@ -143,7 +144,7 @@
           <!-- Buttons -->
           <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
             <a href="{{ route('login') }}" class="btn btn-secondary">Back</a>
-            <button class="btn btn-primary">
+            <button class="btn btn-primary next-button">
               Next
             </button>
           </div>
@@ -153,5 +154,31 @@
       <!-- End of Main Container -->
     </main>
   </body>
+
+  <script>
+    var isNextClicked = false;
+
+    window.addEventListener('beforeunload', function(e) {
+      if (!isNextClicked) {
+        var confirmationMessage = 'Are you sure you want to leave this page? Your data will be lost.';
+        (e || window.event).returnValue = confirmationMessage; // Gecko + IE
+        return confirmationMessage; // Webkit, Safari, Chrome
+      }
+    });
+
+    document.querySelector('.next-button').addEventListener('click', function() {
+      isNextClicked = true;
+    });
+
+    // Clear session data on leave
+    window.addEventListener('beforeunload', function() {
+      fetch('/clear-session', {
+        method: 'POST',
+        headers: {
+          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+        }
+      });
+    });
+  </script>
 
 </x-layout>

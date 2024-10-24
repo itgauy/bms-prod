@@ -27,6 +27,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 
+// ------ Clear session on register page ------
+Route::post('/clear-session', [AuthController::class, 'clearSession'])->name('clear-session');
+
 // ------ Admin Pages ------
 Route::get('/admin', function () {
     return view('admin.index');
