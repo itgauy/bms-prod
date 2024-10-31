@@ -155,6 +155,7 @@
     </main>
   </body>
 
+  {{-- This script is kapag nag leave si user sa form, confirmation because all data will be lost --}}
   <script>
     var isNextClicked = false;
 
