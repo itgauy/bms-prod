@@ -45,4 +45,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    //added this function to link the User model to the Resident model
+    public function resident()
+    {
+        return $this->hasOne(Resident::class);
+    }
 }

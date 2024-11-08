@@ -2,124 +2,44 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Resident;
 use App\Models\User;
+use App\Models\Resident;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    // Register User - Step 1
-    public function registerStep1(Request $request) {
-        
-        // Retrieve existing session data if ever na meron (back button)
-        $sessionData = session()->get('register_data', []);
-        
-        // Validate (lahat ng nasa baba ay yung validation para makuha error pag sakaling invalid)
-        $fields = $request->validate([
+    // Register User
+    public function register(Request $request) {
+        // Validate user fields
+        $userFields = $request->validate([
             'username' => ['required', 'max:255'],
             'user_type' => ['required', 'in:home-owner,renter-tenant'],
             'email' => ['required', 'max:255', 'email', 'unique:users'],
             'password' => ['required', 'min:3', 'confirmed']
         ]);
-        
-        // Merge with existing session data
-        $sessionData = array_merge($sessionData, $fields);
 
-        // Storing of data in session (ginagamit for multi-step registrations)
-        session()->put('register_data', $sessionData);
-
-        return redirect()->route('register-2');
-    }
-
-    // Register User - Step 2
-    public function registerStep2(Request $request) {
-        // Validate
-        $fields = $request->validate([
-        'first_name' => ['required', 'max:255'],
-        'middle_name' => ['max:255'],
-        'last_name' => ['required', 'max:255'],
-        'suffix' => ['max:255'],
-        'street' => ['required', 'max:255'],
-        'sitio' => ['required','max:255'],
-        'village' => ['required', 'max:255'],
-        'contact_num' => ['required', 'max:20'],
-        'em_contact_name' => ['required', 'max:255'],
-        'em_contact_num' => ['required', 'max:20'],
-        'birthdate' => ['required', 'date'],
-        'birthplace' => ['required', 'max:255'],
-        'civil_status' => ['required'],
-        'gender' => ['required'],
-        'religion' => ['required', 'max:255'],
-        'occupation' => ['max:255'],
-        'classification_status' => ['required', 'max:255'],
-        'valid_id' => ['required', 'max:255'],
-        'id_num' => ['max:255'],
-        'picture_id' => ['max:2048'],
-        'picture_holding_id' => ['max:2048'],
+        // Validate resident fields
+        $resFields = $request->validate([
+            'first_name' => ['required', 'max:50'],
+            'middle_name' => ['max:50'],
+            'last_name' => ['required','max:50'],
+            'suffix' => ['max:50'],
+            'street' => ['nullable'], 'sitio' => ['nullable'], 'village' => ['nullable'], 'contact_num' => ['nullable'], 'em_contact_name' => ['nullable'], 'em_contact_num' => ['nullable'], 'birthdate' => ['nullable'], 'birthplace' => ['nullable'], 'civil_status' => ['nullable'], 'gender' => ['nullable'], 'religion' => ['nullable'], 'occupation' => ['nullable'], 'classification_status' => ['nullable'], 'valid_id' => ['nullable'], 'id_num' => ['nullable'], 'picture_id' => ['nullable'], 'picture_holding_id' => ['nullable']
         ]);
 
-        // Get data from session then imerge ulit para mag sama yung data from step 1 and step 2
-        $registerData = session()->get('register_data', []);
+        // Register
+        $user = User::create($userFields);
 
-        // Merge data
-        $registerData = array_merge($registerData, $fields);
+        // Register resident related to user
+        $resFields['user_id'] = $user->id;
+        Resident::create($resFields);
 
-        // Store merged data in session
-        session()->put('register_data', $registerData);
+        // Login
+        Auth::login($user);
 
-        return redirect()->route('register-3');
-    }
-
-    // Show Register User - Step 3
-    public function showRegisterStep3() {
-        // Get data from session
-        $registerData = session()->get('register_data', []);
-
-        // Pass data to the view
-        return view('auth.register-3', ['registerData' => $registerData]);
-    }
-
-    // Register User - Step 3
-    public function registerStep3() {
-
-        // Get data from session
-        $registerData = session()->get('register_data', []);
-
-        // Create User
-        User::create([
-            'username' => $registerData['username'],
-            'user_type' => $registerData['user_type'],
-            'email' => $registerData['email'],
-            'password' => bcrypt($registerData['password']),
-        ]);
-
-        // Create Resident
-        Resident::create([
-            'first_name' => $registerData['first_name'],
-            'middle_name' => $registerData['middle_name'],
-            'last_name' => $registerData['last_name'],
-            'suffix' => $registerData['suffix'],
-            'birthdate' => $registerData['birthdate'],
-            'age' => $registerData['age'],
-            'gender' => $registerData['gender'],
-            'civil_status' => $registerData['civil_status'],
-            'citizenship' => $registerData['citizenship'],
-            'occupation' => $registerData['occupation'],
-            'classification_status' => $registerData['classification_status'],
-            'valid_id' => $registerData['valid_id'],
-            'id_num' => $registerData['id_num'],
-            'picture_id' => $registerData['picture_id'],
-            'picture_holding_id' => $registerData['picture_holding_id'],
-        ]);
-
-        // Redirect to login page
-        return redirect()->route('login');
-    }
-
-    // Clear Session on leave
-    public function clearSession() {
-        session()->forget('register_data');
+        //Redirect
+        return redirect()->route('resident');
     }
 
     // Login User

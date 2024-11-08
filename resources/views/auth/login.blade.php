@@ -31,7 +31,7 @@
             <input type="text" name="email" id="email" value="{{ old('email') }}"
               class="default-input @error('email') !border-red-500 !bg-red-500/5 @enderror" placeholder="Your email">
             @error('email')
-            <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
             @enderror
           </div>
           <div class="md:space-y-2.5 space-y-1.5">
@@ -42,7 +42,7 @@
                 class="default-input @error('password') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="Your password">
               @error('password')
-              <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
+                <p style="color:red;font-size:0.8rem;margin-top:-0.1rem;">{{ $message }}</p>
               @enderror
               <!-- Toggle Password Button -->
               <button type="button" onclick="togglePasswordVisibility()"
@@ -67,14 +67,14 @@
             </div>
           </div>
           @error('failed')
-          <p style="color:red;font-size:0.8rem;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;">{{ $message }}</p>
           @enderror
           <!-- Submit -->
           <button class="btn btn-primary w-full">
             Login
           </button>
           <!-- Additionals -->
-          <p class="text-sm text-center">Don't have an account yet? <br><a href="{{ route('register-1') }}"
+          <p class="text-sm text-center">Don't have an account yet? <br><a href="{{ route('register') }}"
               class="link">Sign up here</a></p>
         </form>
         <!-- End of Form -->
