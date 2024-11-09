@@ -14,6 +14,8 @@ Route::middleware('guest')->group(function () {
 
     Route::view('/login', 'auth.login')->name('login');
     Route::post('/login', [AuthController::class, 'login']);
+
+    Route::view('/register-2', 'auth.register-2')->name('register-2');
 });
 
 Route::middleware('auth')->group(function () {

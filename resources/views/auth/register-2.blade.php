@@ -12,70 +12,9 @@
           <p>Fill out the form to proceed. Fields marked with * are required.</p>
         </div>
 
-        <!-- Stepper -->
-        <ul class="relative flex flex-row gap-x-2">
-          <!-- Step 1 / Account Information -->
-          <li class="shrink basis-0 flex-1 group">
-            <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
-              <span
-                class="size-10 flex justify-center items-center shrink-0 bg-green-500 font-bold text-white rounded-full">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3"
-                  stroke="currentColor" class="size-4">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                </svg>
-              </span>
-              <div class="ms-2 w-full h-px flex-1 bg-blue-300 group-last:hidden"></div>
-            </div>
-            <div class="mt-3">
-              <span class="block font-medium">
-                Step 1
-              </span>
-              <p class="text-neutral-500 text-sm">
-                Account Info.
-              </p>
-            </div>
-          </li>
-          <!-- Step 2 / Personal Information -->
-          <li class="shrink basis-0 flex-1 group">
-            <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
-              <span
-                class="size-10 flex justify-center items-center shrink-0 bg-blue-500 font-bold text-white rounded-full">
-                2
-              </span>
-              <div class="ms-2 w-full h-px flex-1 bg-gray-200 group-last:hidden"></div>
-            </div>
-            <div class="mt-3">
-              <span class="block font-medium">
-                Step 2
-              </span>
-              <p class="text-gray-500 text-sm">
-                Personal Info.
-              </p>
-            </div>
-          </li>
-          <!-- Step 3 /Check & Submit -->
-          <li class="shrink basis-0 flex-1 group">
-            <div class="min-w-10 min-h-10 w-full inline-flex items-center text-xs align-middle">
-              <span
-                class="size-10 flex justify-center items-center shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full">
-                3
-              </span>
-            </div>
-            <div class="mt-3">
-              <span class="block font-medium">
-                Step 3
-              </span>
-              <p class="text-gray-500 text-sm">
-                Check & Submit
-              </p>
-            </div>
-          </li>
-        </ul>
-        <!-- End Stepper -->
-
         <div class="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-6 gap-y-5 pt-4">
           <!-- Complete Name -->
-          <h5 class="md:col-span-2 col-span-1 border-t pt-2 font-medium">Complete Name</h5>
+          <h5 class="md:col-span-2 col-span-1 font-medium">Complete Name</h5>
           <!-- First Name -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="first_name" class="input-label">First name <span class="text-red-500">*</span></label>
@@ -83,7 +22,7 @@
               class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. Juan"
               value="{{ old('first_name') }}">
             @error('first_name')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Last name -->
@@ -93,7 +32,7 @@
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. Dela Cruz" value="{{ old('last_name') }}">
             @error('last_name')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Middle name -->
@@ -121,7 +60,7 @@
               class="default-input @error('street') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. Pedro"
               value="{{ old('street') }}">
             @error('street')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Sitio -->
@@ -137,7 +76,7 @@
               <option value="Gitna" {{ old('sitio') == 'Gitna' ? 'selected' : '' }}>Gitna</option>
             </select>
             @error('sitio')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Village -->
@@ -164,7 +103,7 @@
               <!-- The options will be dynamically generated -->
             </select>
             @error('village')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Address -->
@@ -178,7 +117,7 @@
               class="default-input @error('contact_num') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('contact_num') }}">
             @error('contact_num')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Emergency Contact's Name -->
@@ -189,7 +128,7 @@
               class="default-input @error('em_contact_name') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. Antonio Dela Cruz" value="{{ old('em_contact_name') }}">
             @error('em_contact_name')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Emergency Contact's Number -->
@@ -200,7 +139,7 @@
               class="default-input @error('em_contact_num') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09987654321" value="{{ old('em_contact_num') }}">
             @error('em_contact_num')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Contact Details -->
@@ -214,7 +153,7 @@
               class="default-input @error('birthdate') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('birthdate') }}">
             @error('birthdate')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Birth Place -->
@@ -224,7 +163,7 @@
               class="default-input @error('birthplace') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. Quezon City" value="{{ old('birthplace') }}">
             @error('birthplace')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Civil Status -->
@@ -240,7 +179,7 @@
               <option value="widowed" {{ old('civil_status') == 'widowed' ? 'selected' : '' }}>Widowed</option>
             </select>
             @error('civil_status')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Gender -->
@@ -255,7 +194,7 @@
               <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
             </select>
             @error('gender')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Religion -->
@@ -265,7 +204,7 @@
               class="select-input @error('religion') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('religion') }}">
             @error('religion')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Occupation -->
@@ -299,7 +238,7 @@
               </option>
             </select>
             @error('classification_status')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Residency Status -->
@@ -319,7 +258,7 @@
               </option>
             </select>
             @error('valid_id')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- ID Number -->
@@ -336,7 +275,7 @@
               class="file-input file:text-blue-600 file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('picture_id') }}">
             @error('picture_id')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Picture of Barangay ID while holding -->
@@ -347,14 +286,14 @@
               class="file-input file:text-blue-600 file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_holding_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('picture_holding_id') }}">
             @error('picture_holding_id')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Verification Details -->
 
           <!-- Buttons -->
           <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
-            <a href="{{ route('register-1') }}" class="btn btn-secondary">Back</a>
+            <a href="{{ route('register') }}" class="btn btn-secondary">Back</a>
             <button class="btn btn-primary">
               Next
             </button>
