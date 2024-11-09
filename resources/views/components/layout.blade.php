@@ -149,7 +149,12 @@
   {{-- C Service Modal / Certificate of Indigency --}}
   <x-modals.C-modal />
   <x-modals.C-modal-1 /> {{-- Medical Financial Assistance Modal --}}
-  <x-modals.C-modal-2 /> {{-- Good Moral --}}
+  <x-modals.C-modal-2 /> {{-- Good Moral Modal --}}
+
+  {{-- D Service Modal / Barangay Identification --}}
+  <x-modals.D-modal />
+  <x-modals.D-modal-1 /> {{-- Renewal of Old ID Modal --}}
+  <x-modals.D-modal-2 /> {{-- Request for new ID Modal --}}
   @endauth
 
   <!-- Main Content -->
