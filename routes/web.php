@@ -14,13 +14,13 @@ Route::middleware('guest')->group(function () {
 
     Route::view('/login', 'auth.login')->name('login');
     Route::post('/login', [AuthController::class, 'login']);
-
-    Route::view('/register-2', 'auth.register-2')->name('register-2');
 });
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth', 'check.status')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('resident');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::view('/register-2', 'auth.register-2')->name('register-2');
 });
 
 // ------ Clear session on register page ------
