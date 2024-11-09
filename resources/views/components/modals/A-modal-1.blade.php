@@ -150,7 +150,7 @@
           </div>
           <!-- Business name -->
           <div class="md:space-y-2.5 space-y-1.5">
-            <label for="business_address" class="input-label">Business name <span class="text-red-500">*</span></label>
+            <label for="business_name" class="input-label">Business name <span class="text-red-500">*</span></label>
             <input type="text" name="business_name" id="business_name"
               class="default-input @error('business_name') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. Tech-Commr" value="{{ old('business_name') }}">
@@ -214,7 +214,7 @@
           </div>
           <!-- Action Buttons -->
           <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
-            <a href="{{ route('login') }}" class="btn btn-secondary">Cancel</a>
+            <button aria-label="Close" data-hs-overlay="#A-modal-1" class="btn btn-secondary">Cancel</button>
             <button class="btn btn-primary next-button">
               Submit
             </button>

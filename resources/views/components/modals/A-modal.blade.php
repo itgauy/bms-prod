@@ -23,7 +23,7 @@
       <!-- Modal Content -->
       <div class="p-7 flex flex-wrap jsutify-center items-center gap-7">
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="A-modal-1" data-hs-overlay="#A-modal-1" data-hs-overlay-options='{
-          "isClosePrev": true
+          "isClosePrev": false
         }'
           class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-14 flex-1 flex-col justify-center items-center">
           Illustration diney

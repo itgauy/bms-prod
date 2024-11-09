@@ -23,14 +23,14 @@
       <!-- Modal Content -->
       <div class="p-7 flex flex-wrap jsutify-center items-center gap-7">
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="B-modal-1" data-hs-overlay="#B-modal-1" data-hs-overlay-options='{
-          "isClosePrev": true
+          "isClosePrev": false
         }'
           class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-14 flex-1 flex-col justify-center items-center">
           Illustration diney
           <p class="text-center text-blue-500 font-medium md:text-2xl text-xl">Residency</p>
         </button>
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="B-modal-1" data-hs-overlay="#B-modal-2" data-hs-overlay-options='{
-          "isClosePrev": true
+          "isClosePrev": false
         }'
           class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-14 flex-1 flex-col justify-center items-center">
           Illustration diney

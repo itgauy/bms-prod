@@ -140,11 +140,11 @@
   {{-- A Service Modal / Barangay Clearance --}}
   <x-modals.A-modal />
   <x-modals.A-modal-1 /> {{-- Business Information Sheet Modal --}}
-  {{-- // A Service Modal / Barangay Clearance --}}
 
   {{-- B Service Modal / Barangay Certificate --}}
   <x-modals.B-modal />
-  {{-- // B Service Modal / Barangay Certificate --}}
+  <x-modals.B-modal-1 /> {{-- Certificate-Residency Modal --}}
+  <x-modals.B-modal-2 /> {{-- Certificate-Loans Modal --}}
   @endauth
 
   <!-- Main Content -->
