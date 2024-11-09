@@ -112,7 +112,7 @@
   @auth
   {{-- Main Sidebar --}}
   <div id="main-sidebar"
-    class="hs-overlay hs-overlay-open:translate-x-0 hs-overlay-backdrop-open:bg-neutral-600/50 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-64 w-full p-5 space-y-7 z-50 bg-white border-e"
+    class="hs-overlay hs-overlay-open:translate-x-0 hs-overlay-backdrop-open:bg-blue-950/30 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-64 w-full p-5 space-y-7 z-50 bg-white border-e"
     role="dialog" tabindex="-1" aria-labelledby="main-sidebar-label">
     {{-- Sidebar Content --}}
     <x-resident.logged-in-sidebar />
@@ -122,7 +122,7 @@
   @guest
   {{-- Main Sidebar --}}
   <div id="main-sidebar"
-    class="hs-overlay hs-overlay-open:translate-x-0 hs-overlay-backdrop-open:bg-neutral-600/50 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-64 w-full p-5 space-y-7 z-50 bg-white border-e"
+    class="hs-overlay hs-overlay-open:translate-x-0 hs-overlay-backdrop-open:bg-blue-950/30 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-64 w-full p-5 space-y-7 z-50 bg-white border-e"
     role="dialog" tabindex="-1" aria-labelledby="main-sidebar-label">
     {{-- Sidebar Content --}}
     <x-resident.logged-out-sidebar />

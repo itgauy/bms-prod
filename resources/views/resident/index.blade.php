@@ -13,35 +13,35 @@
   <!-- Services -->
   <section class="p-6 md:px-24 lg:px-36 md:py-24 py-16">
     <div class="space-y-1">
-      <h1>Welcome back, Juan!</h1>
+      <h1>Welcome back, {{ auth()->user()->username }}!</h1>
       <h4>What do you want to request?</h4>
     </div>
     <div class="grid md:grid-cols-4 grid-cols-2 gap-4 mt-12">
       <!-- A -->
       <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="A-modal"
         data-hs-overlay="#A-modal"
-        class="btn btn-secondary border border-blue-200/80 w-full p-12 flex flex-col justify-center items-center rounded-2xl">
+        class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-12 flex flex-col justify-center items-center rounded-2xl">
         <h2>A</h2>
         <p class="text-center text-blue-500 font-medium md:text-xl text-lg">Barangay Clearance</p>
       </button>
       <!-- B -->
       <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="B-modal"
         data-hs-overlay="#B-modal"
-        class="btn btn-secondary border border-blue-200/80 w-full p-12 flex flex-col justify-center items-center rounded-2xl">
+        class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-12 flex flex-col justify-center items-center rounded-2xl">
         <h2>B</h2>
         <p class="text-center text-blue-500 font-medium md:text-xl text-lg">Barangay Certificate</p>
       </button>
       <!-- C -->
       <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="C-modal"
         data-hs-overlay="#C-modal"
-        class="btn btn-secondary border border-blue-200/80 w-full p-12 flex flex-col justify-center items-center rounded-2xl">
+        class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-12 flex flex-col justify-center items-center rounded-2xl">
         <h2>C</h2>
         <p class="text-center text-blue-500 font-medium md:text-xl text-lg">Certificate of Indigency</p>
       </button>
       <!-- D -->
       <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="D-modal"
         data-hs-overlay="#D-modal"
-        class="btn btn-secondary border border-blue-200/80 w-full p-12 flex flex-col justify-center items-center rounded-2xl">
+        class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-12 flex flex-col justify-center items-center rounded-2xl">
         <h2>D</h2>
         <p class="text-center text-blue-500 font-medium md:text-xl text-lg">Barangay Identification</p>
       </button>
