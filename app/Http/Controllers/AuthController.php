@@ -19,6 +19,7 @@ class AuthController extends Controller
             'user_type' => ['required', 'in:home-owner,renter-tenant'],
             'email' => ['required', 'max:255', 'email', 'unique:users'],
             'password' => ['required', 'min:8', 'confirmed'],
+            'status' => ['in:0,1'],
 
             // Resident Fields
             'first_name' => ['required', 'max:50'],
@@ -54,6 +55,9 @@ class AuthController extends Controller
         Auth::login($user);
 
         //Redirect
+        if ($user->status == 0) {
+            return redirect()->route('register-2');
+        }
         return redirect()->route('resident');
     }
 
@@ -67,6 +71,9 @@ class AuthController extends Controller
 
         // Try to login the user
         if(Auth::attempt($fields, $request->remember)) {
+            if (Auth::user()->status == 0) {
+                return redirect()->route('register-2');
+            }
             return redirect()->intended('dashboard');
         } else {
             return back()->withErrors(([
