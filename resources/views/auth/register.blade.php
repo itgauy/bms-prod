@@ -45,7 +45,7 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="first_name" class="input-label">First name <span class="text-red-500">*</span></label>
             <input type="text" name="first_name" id="first_name"
-              class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. Juan"
+              class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. JUAN"
               value="{{ old('first_name') }}">
             @error('first_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -55,7 +55,7 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="middle_name" class="input-label">Middle name <span
                 class="text-neutral-400 text-xs">(Optional)</span></label>
-            <input type="text" name="middle_name" id="middle_name" class="default-input" placeholder="E.g. Santos"
+            <input type="text" name="middle_name" id="middle_name" class="default-input" placeholder="E.g. SANTOS"
               value="{{ old('middle_name') }}">
           </div>
           <!-- Last name -->
@@ -63,7 +63,7 @@
             <label for="last_name" class="input-label">Last name <span class="text-red-500">*</span></label>
             <input type="text" name="last_name" id="last_name"
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. Dela Cruz" value="{{ old('last_name') }}">
+              placeholder="E.g. DELA CRUZ" value="{{ old('last_name') }}">
             @error('last_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -72,15 +72,15 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="suffix" class="input-label">Suffix <span
                 class="text-neutral-400 text-xs">(Optional)</span></label>
-            <input type="text" name="suffix" id="suffix" class="default-input" placeholder="E.g. Jr."
+            <input type="text" name="suffix" id="suffix" class="default-input" placeholder="E.g. JR"
               value="{{ old('suffix') }}">
           </div>
           <!-- Username -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="username" class="input-label">Username <span class="text-red-500">*</span></label>
             <input type="text" name="username" id="username"
-              class="default-input @error('username') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. JuanDelaCruz123" value="{{ old('username') }}">
+              class="default-input exempt-uppercase @error('username') !border-red-500 !bg-red-500/5 @enderror"
+              placeholder="E.g. JuanDelaCruz123 (No special characters)" value="{{ old('username') }}">
             @error('username')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -89,7 +89,7 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="email" class="input-label">Email Address <span class="text-red-500">*</span></label>
             <input type="text" name="email" id="email"
-              class="default-input @error('email') !border-red-500 !bg-red-500/5 @enderror"
+              class="default-input exempt-uppercase @error('email') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. juan.delacruz@email.com" value="{{ old('email') }}">
             @error('email')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -100,7 +100,7 @@
             <div class="md:space-y-2.5 space-y-1.5 md:pb-0 pb-5">
               <label for="password" class="input-label">Password <span class="text-red-500">*</span></label>
               <input type="password" name="password" id="password"
-                class="default-input @error('password') !border-red-500 !bg-red-500/5 @enderror"
+                class="default-input exempt-uppercase @error('password') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="Your Password">
               @error('password')
                 <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -111,8 +111,8 @@
               <label for="password_confirmation" class="input-label">Confirm Password <span
                   class="text-red-500">*</span></label>
               <input type="password" name="password_confirmation" id="password_confirmation"
-                class="default-input  @error('password') !border-red-500 !bg-red-500/5 @enderror"
-                placeholder="Your Password">
+                class="default-input exempt-uppercase @error('password') !border-red-500 !bg-red-500/5 @enderror"
+                placeholder="Your Confirmed Password">
             </div>
           </div>
           <!-- Buttons -->
@@ -129,7 +129,18 @@
     </main>
   </body>
 
+  {{-- This script is kapag nag leave si user sa form, confirmation because all data will be lost --}}
   <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const letterFields = document.querySelectorAll('input[type="text"]:not(.exempt-uppercase)');
+
+      letterFields.forEach(field => {
+        field.addEventListener('input', function() {
+          this.value = this.value.replace(/[^a-zA-Z\s]/g, '').toUpperCase();
+        });
+      });
+    });
+
     var isNextClicked = false;
 
     window.addEventListener('beforeunload', function(e) {
