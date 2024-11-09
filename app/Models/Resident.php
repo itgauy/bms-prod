@@ -31,5 +31,12 @@ class Resident extends Model
         'id_num',
         'picture_id',
         'picture_holding_id',
+        'user_id' // added sa fillable but para lang sa connection talaga ng user table
     ];
+
+    // added this function to link the Resident model to the User model
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

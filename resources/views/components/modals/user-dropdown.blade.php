@@ -1,9 +1,9 @@
 <div
-  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-xl shadow-stone-300/30 rounded-xl p-2 space-y-0.5 mt-2"
+  class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-xl shadow-neutral-300/30 rounded-xl p-2 space-y-0.5 mt-2"
   role="menu" aria-orientation="vertical" aria-labelledby="user-dropdown">
   <div class="py-5 flex flex-col justify-center items-center gap-3">
     <span
-      class="inline-flex items-center justify-center size-12 text-sm font-semibold rounded-full leading-none border border-stone-300 bg-stone-600 text-white">
+      class="inline-flex items-center justify-center size-12 text-sm font-semibold rounded-full leading-none border bg-blue-500 ring-2 ring-blue-300 text-white">
       {{ strtoupper(substr(auth()->user()->username, 0, 1)) }}
     </span>
     <div class="text-center">
@@ -12,7 +12,7 @@
     </div>
   </div>
   <div class="mt-2 py-2 first:pt-0 last:pb-0">
-    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300"
+    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-700 btn-ghost hover:text-blue-600 focus:outline-none transition duration-300"
       href="#">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
         class="shrink-0 size-4">
@@ -21,7 +21,7 @@
       </svg>
       View Profile
     </a>
-    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300"
+    <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-700 btn-ghost hover:text-blue-600 focus:outline-none transition duration-300"
       href="#">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
         class="shrink-0 size-4">
@@ -32,7 +32,7 @@
     </a>
     <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="logout-modal"
       data-hs-overlay="#logout-modal"
-      class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-stone-700 hover:bg-stone-100 focus:outline-none focus:bg-gray-100 transition duration-300">
+      class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-700 btn-ghost hover:text-blue-600 focus:outline-none transition duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
         class="shrink-0 size-4">
         <path stroke-linecap="round" stroke-linejoin="round"
