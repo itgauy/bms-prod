@@ -145,6 +145,11 @@
   <x-modals.B-modal />
   <x-modals.B-modal-1 /> {{-- Certificate-Residency Modal --}}
   <x-modals.B-modal-2 /> {{-- Certificate-Loans Modal --}}
+
+  {{-- C Service Modal / Certificate of Indigency --}}
+  <x-modals.C-modal />
+  <x-modals.C-modal-1 /> {{-- Medical Financial Assistance Modal --}}
+  <x-modals.C-modal-2 /> {{-- Good Moral --}}
   @endauth
 
   <!-- Main Content -->
