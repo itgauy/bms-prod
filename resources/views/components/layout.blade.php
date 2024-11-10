@@ -155,6 +155,8 @@
   <x-modals.D-modal />
   <x-modals.D-modal-1 /> {{-- Renewal of Old ID Modal --}}
   <x-modals.D-modal-2 /> {{-- Request for new ID Modal --}}
+
+  <x-modals.registration-success />
   @endauth
 
   <!-- Main Content -->
