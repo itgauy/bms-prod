@@ -1,5 +1,4 @@
 <section>
-  <h2 class="text-2xl font-semibold mb-4">Resident Application Page - Sample lang naman</h2>
   <div class="flex flex-col">
     <div class="-m-1.5 overflow-x-auto">
       <div class="p-1.5 min-w-full inline-block align-middle">
@@ -60,6 +59,25 @@
                 </div>
               </div>
             </div>
+          </div>
+
+          <!-- Residency Status Filter -->
+          <div class="p-4">
+            <label for="home-owner"
+              class="btn has-[:checked]:bg-blue-50/90 hover:bg-blue-50/50 has-[:checked]:text-blue-600 has-[:checked]:border-blue-200 cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input id="home-owner" type="radio" name="residency-status" value="Homeowner" class="radio-input hidden" checked />
+                <span class="font-medium">Home Owner</span>
+              </div>
+            </label>
+            <label for="renter-tenant"
+              class="btn has-[:checked]:bg-blue-50/90 hover:bg-blue-50/50 has-[:checked]:text-blue-600 has-[:checked]:border-blue-200 cursor-pointer">
+              <div class="flex items-center gap-3">
+                <input id="renter-tenant" type="radio" name="residency-status" value="Renter/Tenant"
+                  class="radio-input hidden" />
+                <span class="font-medium">Renter/Tenant</span>
+              </div>
+            </label>
           </div>
 
           <!-- Table -->
@@ -138,7 +156,7 @@
     {
       userId: 3,
       name: "John Brown",
-      resStatus: "Homeowner",
+      resStatus: "Renter/Tenant",
       createdAt: "ssss",
       appStatus: "Approved"
     },
@@ -159,21 +177,21 @@
     {
       userId: 3,
       name: "John Brown",
-      resStatus: "Homeowner",
+      resStatus: "Renter/Tenant",
       createdAt: "ssss",
       appStatus: "Approved"
     },
     {
       userId: 1,
       name: "John Brown",
-      resStatus: "Homeowner",
+      resStatus: "Renter/Tenant",
       createdAt: "ssss",
       appStatus: "Approved"
     },
     {
       userId: 2,
       name: "marga",
-      resStatus: "Homeowner",
+      resStatus: "Renter/Tenant",
       createdAt: "ssss",
       appStatus: "Declined"
     },
@@ -194,7 +212,7 @@
     {
       userId: 2,
       name: "marga",
-      resStatus: "Homeowner",
+      resStatus: "Renter/Tenant",
       createdAt: "ssss",
       appStatus: "Declined"
     },
@@ -203,11 +221,11 @@
       name: "John Brown",
       resStatus: "Homeowner",
       createdAt: "ssss",
-      appStatus: "Approved"
+      appStatus: "Declined"
     },
   ];
 
-  let filteredData = [...Data]; // Start with a copy of the original data
+  let filteredData = Data.filter(item => item.resStatus === "Homeowner"); // Homeowner default
   let currentPage = 1;
   const rowsPerPage = 10;
 
@@ -246,38 +264,36 @@
     const totalPages = Math.ceil(filteredData.length / rowsPerPage);
     document.getElementById('prev-btn').disabled = currentPage === 1;
     document.getElementById('next-btn').disabled = currentPage === totalPages;
-
-    const pageBtns = document.querySelectorAll('.page-btn');
-    pageBtns.forEach(btn => {
-      btn.classList.remove('bg-gray-200');
-      if (btn.id === `page-${currentPage}`) {
-        btn.classList.add('bg-gray-200');
-      }
-    });
   }
+
+  // Residency status filter logic
+  document.querySelectorAll('input[name="residency-status"]').forEach(input => {
+    input.addEventListener('change', function() {
+      const selectedStatus = this.value;
+
+      // Update the residency status filter
+      filteredData = Data.filter(item => item.resStatus === selectedStatus);
+
+      currentPage = 1;
+      applyFilters();
+    });
+  });
+
 
   // Application status filter logic
   document.querySelectorAll('input[name="application-status"]').forEach(input => {
     input.addEventListener('change', function() {
-      const selectedStatus = this.value;
-
-      if (selectedStatus === "All") {
-        filteredData = [...Data];
-      } else {
-        filteredData = Data.filter(item => item.appStatus === selectedStatus);
-      }
-
       currentPage = 1;
-      updateTable(currentPage);
+      applyFilters();
     });
   });
 
+  // Search filter logic
   document.getElementById('search').addEventListener('input', function(e) {
-    const query = e.target.value.toLowerCase();
-    filteredData = Data.filter(item => item.name.toLowerCase().includes(query));
     currentPage = 1;
-    updateTable(currentPage);
+    applyFilters();
   });
+
 
   document.getElementById('prev-btn').addEventListener('click', function() {
     if (currentPage > 1) {
@@ -294,12 +310,24 @@
     }
   });
 
-  document.querySelectorAll('.page-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      currentPage = parseInt(btn.textContent);
-      updateTable(currentPage);
-    });
-  });
+  // Centralized filtering function
+  function applyFilters() {
+    const selectedResidency = document.querySelector('input[name="residency-status"]:checked').value;
+    const selectedAppStatus = document.querySelector('input[name="application-status"]:checked')?.value;
+    const query = document.getElementById('search').value.toLowerCase();
+
+    filteredData = Data.filter(item => item.resStatus === selectedResidency);
+
+    if (selectedAppStatus && selectedAppStatus !== "All") {
+      filteredData = filteredData.filter(item => item.appStatus === selectedAppStatus);
+    }
+
+    if (query) {
+      filteredData = filteredData.filter(item => item.name.toLowerCase().includes(query));
+    }
+
+    updateTable(currentPage);
+  }
 
   updateTable(currentPage); // Initial render
 </script>
