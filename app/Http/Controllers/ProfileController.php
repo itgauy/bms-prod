@@ -45,7 +45,7 @@ class ProfileController extends Controller
         Resident::create($resFields);
 
         // Redirect
-        return redirect()->route('resident');
+        return redirect()->route('resident')->with('success', 'Profile successfully registered!');
 
     }
 }

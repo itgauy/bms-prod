@@ -189,7 +189,6 @@
               class="select-input @error('gender') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('gender') }}">
               <option selected="" disabled>Select Gender</option>
-              <option value="">Select Gender</option>
               <option value="male" {{ old('gender') == 'male' ? 'selected' : '' }}>Male</option>
               <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
             </select>
@@ -200,7 +199,7 @@
           <!-- Religion -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="religion" class="input-label">Religion <span class="text-red-500">*</span></label>
-            <input type="text" id="religion" name="religion"
+            <input type="text" id="religion" name="religion" placeholder="E.g. Catholic"
               class="select-input @error('religion') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('religion') }}">
             @error('religion')
@@ -295,7 +294,7 @@
           <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
             <a href="{{ route('resident') }}" class="btn btn-secondary">Back</a>
             <button class="btn btn-primary">
-              Next
+              Register
             </button>
           </div>
         </div>
