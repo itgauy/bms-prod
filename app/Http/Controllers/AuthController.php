@@ -56,9 +56,9 @@ class AuthController extends Controller
 
         //Redirect
         if ($user->status == 0) {
-            return redirect()->route('register-2');
+            return redirect()->route('profile-register');
         }
-        return redirect()->route('resident');
+        return redirect()->route('profile-register');
     }
 
     // Login User
@@ -72,7 +72,7 @@ class AuthController extends Controller
         // Try to login the user
         if(Auth::attempt($fields, $request->remember)) {
             if (Auth::user()->status == 0) {
-                return redirect()->route('register-2');
+                return redirect()->route('profile-register');
             }
             return redirect()->intended('dashboard');
         } else {

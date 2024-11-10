@@ -4,11 +4,11 @@
   <body class="md:h-screen h-auto">
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
-      <form action="{{ route('register-2') }}" method="post"
+      <form action="{{ route('profile-register') }}" method="post"
         class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-xl shadow-blue-50/30 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
         @csrf
         <div class="space-y-1">
-          <h2>Registration Form</h2>
+          <h2>Profile Registration</h2>
           <p>Fill out the form to proceed. Fields marked with * are required.</p>
         </div>
 
@@ -293,7 +293,7 @@
 
           <!-- Buttons -->
           <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
-            <a href="{{ route('register') }}" class="btn btn-secondary">Back</a>
+            <a href="{{ route('resident') }}" class="btn btn-secondary">Back</a>
             <button class="btn btn-primary">
               Next
             </button>
