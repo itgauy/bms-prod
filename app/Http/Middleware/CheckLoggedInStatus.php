@@ -16,8 +16,8 @@ class CheckLoggedInStatus
      */
     public function handle($request, Closure $next)
     {
-        if (Auth::check() && Auth::user()->status == 0 && $request->route()->getName() !== 'register-2' && $request->route()->getName() !== 'logout') {
-            return redirect()->route('register-2');
+        if (Auth::check() && Auth::user()->status == 0 && $request->route()->getName() !== 'profile-register' && $request->route()->getName() !== 'logout') {
+            return redirect()->route('profile-register');
         }
 
         return $next($request);

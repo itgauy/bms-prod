@@ -2,11 +2,10 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'landing.index')->name('home');
-
-// ------ Authentication Pages ------
 
 Route::middleware('guest')->group(function () {
     Route::view('/register', 'auth.register')->name('register');
@@ -16,11 +15,14 @@ Route::middleware('guest')->group(function () {
     Route::post('/login', [AuthController::class, 'login']);
 });
 
+// ------ Authentication Pages ------
+
 Route::middleware('auth', 'check.status')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('resident');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-    Route::view('/register-2', 'auth.register-2')->name('register-2');
+    Route::view('/profile-register', 'auth.profile-register')->name('profile-register');
+    Route::post('/profile-register', [ProfileController::class, 'registerProfile'])->name('profile-register');
 });
 
 // ------ Clear session on register page ------
