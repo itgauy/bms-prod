@@ -52,6 +52,8 @@
     </div>
   </div>
   <!-- // Main Layout -->
+  <!-- View Resident Application Modal -->
+  <x-modals.resident-application />
 </body>
 
 </html>
