@@ -1,7 +1,8 @@
 @if (session()->has('success'))
-  <div id="reg-success" class="bg-blue-950/30 size-full fixed top-0 start-0 z-50 overflow-x-hidden overflow-y-auto"
+  <div id="reg-success"
+    class="bg-blue-950/30 size-full fixed top-0 start-0 z-50 overflow-x-hidden overflow-y-auto opacity-100 transition-all duration-300 ease-out"
     role="dialog" tabindex="-1" aria-labelledby="reg-success-label">
-    <div class="mt-7 ease-out transition-all sm:max-w-sm sm:w-full m-3 sm:mx-auto">
+    <div id="modal-body" class="mt-7 ease-out transition-all sm:max-w-sm sm:w-full m-3 sm:mx-auto">
       <!-- Modal Card -->
       <div class="flex flex-col bg-white border shadow-sm rounded-xl">
         <!-- Modal Header -->
@@ -27,11 +28,19 @@
   </div>
 
   <script>
-    const modal = document.querySelector('#reg-success');
+    const regSuccess = document.querySelector('#reg-success');
+    const modal = document.querySelector('#modal-body')
     const closeBtn = document.querySelector('#close-btn');
 
     closeBtn.addEventListener('click', () => {
-      modal.style.display = 'none';
+      regSuccess.classList.remove('opacity-100');
+      regSuccess.classList.add('opacity-0');
+      modal.classList.remove('mt-7');
+      modal.classList.add('mt-0');
+
+      setTimeout(() => {
+        regSuccess.style.display = 'none';
+      }, 300);
     });
   </script>
 @endif
