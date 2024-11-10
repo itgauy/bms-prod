@@ -18,15 +18,15 @@
   </aside>
   <!-- // Desktop Sidebar -->
   <!-- Mobile Sidebar -->
-  <aside id="admin-sidebar" class="hs-overlay hs-overlay-open:translate-x-0 hs-overlay-backdrop-open:bg-neutral-600/50 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-64 w-full p-5 space-y-7 z-[80] bg-white border-e" role="dialog" tabindex="-1" aria-labelledby="admin-sidebar">
+  <aside id="admin-sidebar" class="hs-overlay hs-overlay-open:translate-x-0 hs-overlay-backdrop-open:bg-blue-950/30 hidden -translate-x-full fixed top-0 start-0 transition-all duration-300 transform h-full max-w-64 w-full p-5 space-y-7 z-[80] bg-white border-e" role="dialog" tabindex="-1" aria-labelledby="admin-sidebar">
     <x-admin.sidebar />
   </aside>
   <!-- // Mobile Sidebar -->
   <!-- Main Layout -->
   <div class="lg:py-4 b-4 lg:pr-4 lg:p-0 p-4 lg:ml-64 h-screen">
-    <div class="relative bg-white border border-slate-200 md:rounded-2xl rounded-xl h-full custom-scrollbar overflow-auto">
+    <div class="relative bg-white border border-blue-200/70 md:rounded-2xl rounded-xl h-full custom-scrollbar overflow-auto">
       <!-- Content Header -->
-      <header class="backdrop-blur-md bg-white/70 sticky top-0 md:py-4 py-3 md:px-5 px-3  flex justify-between items-center border-slate-200 border-b w-full z-20">
+      <header class="backdrop-blur-md bg-white/70 sticky top-0 md:py-4 py-3 md:px-5 px-3 flex justify-between items-center border-blue-200/30 border-b w-full z-20">
         <x-admin.header />
       </header>
       <!-- // Content Header -->
@@ -35,11 +35,17 @@
         <div id="dashboard" role="tabpanel" aria-labelledby="dashboard-item">
           @include('admin.dashboard')
         </div>
-        <div id="user-applications" class="hidden" role="tabpanel" aria-labelledby="user-applications-item">
-          @include('admin.user-applications')
+        <div id="resident-application" class="hidden" role="tabpanel" aria-labelledby="resident-application-item">
+          @include('admin.resident-application')
         </div>
-        <div id="staff-officials" class="hidden" role="tabpanel" aria-labelledby="staff-officials-item">
-          @include('admin.staff-officials')
+        <div id="staff-management" class="hidden" role="tabpanel" aria-labelledby="staff-management-item">
+          @include('admin.staff-management')
+        </div>
+        <div id="activity-log" class="hidden" role="tabpanel" aria-labelledby="activity-log-item">
+          @include('admin.activity-log')
+        </div>
+        <div id="announcement" class="hidden" role="tabpanel" aria-labelledby="announcement-item">
+          @include('admin.announcement')
         </div>
       </div>
       <!-- // Tab Content -->
