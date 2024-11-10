@@ -1,3 +1,3 @@
 <section>
-  <h1>sample lang naman - maam manandeg</h1>
+  <h2>Dashboard Page</h2>
 </section>
