@@ -245,7 +245,7 @@
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.createdAt}</td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.appStatus}</td>
           <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-            <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out" onclick="openModal()">
+            <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out" onclick="openResidentApplicationModal()">
               View
             </button>
           </td>
