@@ -100,7 +100,7 @@
           </div>
 
           <!-- Pagination -->
-          <div class="py-1 px-4 flex justify-between items-center">
+          <div class="py-3 px-4 flex justify-between items-center">
             <span id="showing-text" class="text-sm text-gray-600">Showing 10 of 20</span>
             <nav class="flex items-center space-x-1" aria-label="Pagination">
               <button id="prev-btn" type="button" class="btn btn-secondary" aria-label="Previous" disabled>
@@ -245,7 +245,7 @@
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.createdAt}</td>
           <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.appStatus}</td>
           <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-            <button class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-gray-700 hover:text-gray-900 hover:bg-gray-100">
+            <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out" onclick="openModal()">
               View
             </button>
           </td>
