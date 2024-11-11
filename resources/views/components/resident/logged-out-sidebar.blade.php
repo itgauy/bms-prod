@@ -2,7 +2,7 @@
   <!-- Logo/Home -->
   <a href="{{ route('home') }}" class="flex items-center gap-4">
     <span class="block rounded-full size-7 bg-blue-300 ring-2 ring-blue-400"></span>
-    <h5>BNN??</h5>
+    <h5>BNNMS</h5>
   </a>
 
   <!-- Links -->
