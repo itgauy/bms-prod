@@ -19,7 +19,7 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="first_name" class="input-label">First name <span class="text-red-500">*</span></label>
             <input type="text" name="first_name" id="first_name"
-              class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. Juan"
+              class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. JUAN"
               value="{{ old('first_name') }}">
             @error('first_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -30,7 +30,7 @@
             <label for="last_name" class="input-label">Last name <span class="text-red-500">*</span></label>
             <input type="text" name="last_name" id="last_name"
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. Dela Cruz" value="{{ old('last_name') }}">
+              placeholder="E.g. DELA CRUZ" value="{{ old('last_name') }}">
             @error('last_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -39,14 +39,14 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="middle_name" class="input-label">Middle name <span
                 class="text-neutral-400 text-xs">(Optional)</span></label>
-            <input type="text" name="middle_name" id="middle_name" class="default-input" placeholder="E.g. Santos"
+            <input type="text" name="middle_name" id="middle_name" class="default-input" placeholder="E.g. SANTOS"
               value="{{ old('middle_name') }}">
           </div>
           <!-- Suffix name -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="suffix" class="input-label">Suffix <span
                 class="text-neutral-400 text-xs">(Optional)</span></label>
-            <input type="text" name="suffix" id="suffix" class="default-input" placeholder="E.g. Jr."
+            <input type="text" name="suffix" id="suffix" class="default-input" placeholder="E.g. JR."
               value="{{ old('suffix') }}">
           </div>
           <!-- End of Complete Name -->
@@ -126,7 +126,7 @@
                 class="text-red-500">*</span></label>
             <input type="text" name="em_contact_name" id="em_contact_name"
               class="default-input @error('em_contact_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. Antonio Dela Cruz" value="{{ old('em_contact_name') }}">
+              placeholder="E.g. ANTONIO DELA CRUZ" value="{{ old('em_contact_name') }}">
             @error('em_contact_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror

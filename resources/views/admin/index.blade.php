@@ -57,7 +57,9 @@
   </div>
   <!-- // Main Layout -->
   <!-- View Resident Application Modal -->
-  <x-modals.resident-application />
+  <x-admin.modals.resident-application />
+  <x-admin.modals.approve-confirm />
+  <x-admin.modals.decline-confirm />
 </body>
 
 </html>
