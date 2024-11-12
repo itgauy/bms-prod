@@ -145,7 +145,7 @@
 <script>
   // Custom made modal trigger, di kinaya ni prelineUI ahahahaha may prob
   // Open modal function
-  function openModal() {
+  function openResidentApplicationModal() {
     const modalOverlay = document.getElementById("view-resident-application");
     const modalBody = document.getElementById("modal-body");
 
@@ -160,7 +160,7 @@
   }
 
   // Close modal function
-  function closeModal() {
+  function closeResidentApplicationModal() {
     const modalOverlay = document.getElementById("view-resident-application");
     const modalBody = document.getElementById("modal-body");
 
@@ -173,5 +173,5 @@
     }, 300); // Similar to duration-300 class
   }
 
-  document.getElementById("close-btn").addEventListener("click", closeModal);
+  document.getElementById("close-btn").addEventListener("click", closeResidentApplicationModal);
 </script>

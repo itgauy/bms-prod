@@ -2,8 +2,8 @@
   <div class="space-y-12">
     <!-- Logo/Home -->
     <a href="{{ route('home') }}" class="flex items-center gap-4">
-      <span class="block rounded-full size-7 bg-neutral-300 ring-2 ring-neutral-400"></span>
-      <h5>BNN??</h5>
+      <span class="block rounded-full size-7 bg-blue-300 ring-2 ring-blue-400"></span>
+      <h5>BNNMS</h5>
     </a>
 
     <!-- Links -->
@@ -83,7 +83,7 @@
 
   <!-- Logout and User Info -->
   <div class="flex flex-col items-center gap-2.5">
-    <button type="button" class="btn btn-secondary w-full" type="button" aria-haspopup="dialog" aria-expanded="false"
+    <button type="button" class="btn bg-red-200/20 hover:bg-red-200/40 text-red-600 w-full" type="button" aria-haspopup="dialog" aria-expanded="false"
       aria-controls="logout-modal" data-hs-overlay="#logout-modal">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
         class="shrink-0 size-4">
@@ -92,9 +92,9 @@
       </svg>
       Logout
     </button>
-    <div class="flex items-start gap-3 w-full border rounded-md p-2">
+    <div class="flex items-start gap-3 w-full border border-blue-200/70 bg-blue-300/10 rounded-md p-2">
       <span
-        class="inline-flex items-center justify-center size-9 text-xs font-semibold rounded-full leading-none border border-stone-300 bg-stone-600 text-white flex-shrink-0">
+        class="inline-flex items-center justify-center size-9 text-xs font-semibold rounded-full leading-none border border-blue-300 bg-blue-500 text-white flex-shrink-0">
         {{ strtoupper(substr(auth()->user()->username, 0, 1)) }}
       </span>
       <div>
