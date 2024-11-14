@@ -18,7 +18,32 @@
       <div class="p-7">
         <!-- Modal Content -->
         <div class="space-y-4">
-          WIP
+          <div class="grid md:grid-cols-3 grid-cols-2 gap-y-4">
+            <h5 class="col-span-full font-medium leading-none pb-2">Certificate Category: <span id="certificate-category" class=" text-blue-600">Loans</span></h5>
+            <div id="type-container">
+              <!-- Cert or loans content will be inserted here -->
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Cost</p>
+              <p>₱50.00</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Applicant name</p>
+              <p>Juan Dela Cruz</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Address</p>
+              <p>Pedro 117 Block 23</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Date of Claim</p>
+              <p>11/14/24</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Specific Request</p>
+              <p>Multi-pages Print</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -26,6 +51,33 @@
 </div>
 
 <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const certificateCategory = document.getElementById("certificate-category").textContent.trim();
+    const typeContainer = document.getElementById("type-container");
+
+    // Define the content for Residency and Loans
+    const residencyContent = `
+      <div>
+        <p class="text-gray-500/80 text-sm">Type of certificate</p>
+        <p>Residency</p>
+      </div>
+    `;
+
+    // Example lang toooo
+    const loansContent = `
+      <div>
+        <p class="text-gray-500/80 text-sm">Type of loans</p>
+        <p>Housing Loans</p>
+      </div>
+    `;
+
+    if (certificateCategory === "Residency") {
+      typeContainer.innerHTML = residencyContent;
+    } else if (certificateCategory === "Loans") {
+      typeContainer.innerHTML = loansContent;
+    }
+  });
+
   // Custom made modal trigger, di kinaya ni prelineUI ahahahaha may prob
   // Open modal function
   function openRqstBrgyCertificateModal() {

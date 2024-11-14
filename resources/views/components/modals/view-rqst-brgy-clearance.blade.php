@@ -18,7 +18,53 @@
       <div class="p-7">
         <!-- Modal Content -->
         <div class="space-y-4">
-          WIP
+          <div class="grid md:grid-cols-3 grid-cols-2 gap-y-4">
+            <h5 class="col-span-full font-medium leading-none pb-2">Clerance Category: <span class="text-blue-600">Business Permit</span></h5>
+            <div>
+              <p class="text-gray-500/80 text-sm">Permit Categories</p>
+              <p>Group A (₱1,000)</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Applicant name</p>
+              <p>Juan Dela Cruz</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Position/Designation</p>
+              <p>Business Owner</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Kind of business</p>
+              <p>Laundry Shop</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Business name</p>
+              <p>Ana's Laundry Shop</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Business address</p>
+              <p>Pedro 117 Block 23</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Date of Claim</p>
+              <p>11/14/24</p>
+            </div>
+          </div>
+          <!-- Contact Information -->
+          <div class="grid md:grid-cols-3 grid-cols-2 gap-y-4">
+            <h5 class="border-t col-span-full pt-2 mt-4 font-medium">Contact Information</h5>
+            <div>
+              <p class="text-gray-500/80 text-sm">Contact Person</p>
+              <p>Maya Dela Cruz</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Position/Designation</p>
+              <p>Business Co-Founder</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Contact number</p>
+              <p>09123456789</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

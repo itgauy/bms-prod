@@ -16,9 +16,33 @@
       </div>
       <!-- Modal Content -->
       <div class="p-7">
-        <!-- Modal Content -->
         <div class="space-y-4">
-          WIP
+          <div class="grid md:grid-cols-3 grid-cols-2 gap-y-4">
+            <h5 class="col-span-full font-medium leading-none pb-2">Barangay ID Category: <span id="id-category" class=" text-blue-600">Request for New ID</span></h5>
+            <div>
+              <p class="text-gray-500/80 text-sm">Full name</p>
+              <p>Juan Mendoza Dela Cruz</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Birthdate</p>
+              <p>02/02/2003</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Contact number</p>
+              <p>09123456789</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Address</p>
+              <p>Pedro 117 Block 23</p>
+            </div>
+            <div>
+              <p class="text-gray-500/80 text-sm">Date of Claim</p>
+              <p>11/14/24</p>
+            </div>
+            <div id="container">
+              <!-- Old or New ID content will be inserted here -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -26,6 +50,34 @@
 </div>
 
 <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const certificateCategory = document.getElementById("id-category").textContent.trim();
+    const typeContainer = document.getElementById("container");
+
+    // Define the content for Residency and Loans
+    const oldIDContent = `
+      <div class="space-y-1">
+        <p class="text-gray-500/80 text-sm">Expired ID</p>
+        <div class="relative w-full h-auto">
+          <img src="https://placehold.co/50x30" alt="Expired ID" class="object-cover w-full rounded-md">
+        </div>
+      </div>
+    `;
+
+    // Example lang toooo
+    const newIDContent = `
+      <div>
+        <p class="text-gray-500/80 text-sm">Precint number</p>
+        <p>0090A</p>
+      </div>
+    `;
+
+    if (certificateCategory === "Renewal of Old ID") {
+      typeContainer.innerHTML = oldIDContent;
+    } else if (certificateCategory === "Request for New ID") {
+      typeContainer.innerHTML = newIDContent;
+    }
+  });
   // Custom made modal trigger, di kinaya ni prelineUI ahahahaha may prob
   // Open modal function
   function openRqstBrgyIdentificationModal() {
