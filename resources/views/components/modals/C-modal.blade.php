@@ -25,15 +25,26 @@
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="C-modal-1" data-hs-overlay="#C-modal-1" data-hs-overlay-options='{
           "isClosePrev": false
         }'
-          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-14 flex flex-col justify-center items-center">
-          Illustration diney
+          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full py-6 flex flex-col justify-center items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+            <path d="M12 6v4" />
+            <path d="M14 14h-4" />
+            <path d="M14 18h-4" />
+            <path d="M14 8h-4" />
+            <path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-9a2 2 0 0 1 2-2h2" />
+            <path d="M18 22V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v18" />
+          </svg>
           <p class="text-center text-blue-500 font-medium md:text-2xl text-xl">Medical Financial Assistance</p>
         </button>
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="C-modal-1" data-hs-overlay="#C-modal-2" data-hs-overlay-options='{
           "isClosePrev": false
         }'
-          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-14 flex flex-col justify-center items-center">
-          Illustration diney
+          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full py-6 flex flex-col justify-center items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <polyline points="16 11 18 13 22 9" />
+          </svg>
           <p class="text-center text-blue-500 font-medium md:text-2xl text-xl">Good Moral</p>
         </button>
       </div>
