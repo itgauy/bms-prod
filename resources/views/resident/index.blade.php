@@ -57,7 +57,6 @@
           <div class="p-1.5 min-w-full inline-block align-middle">
             <div class="border border-blue-100/70 rounded-lg divide-y divide-blue-100/70">
 
-
               <!-- Requested Services Filter -->
               <div class="p-4">
                 <label for="requested-all"
@@ -207,20 +206,39 @@
       const tableBody = document.getElementById('table-body');
       tableBody.innerHTML = '';
       pageData.forEach(item => {
+        // Determine the appropriate onclick function based on service type
+        let onclickFunction = '';
+        switch (item.service) {
+          case "Barangay Clearance":
+            onclickFunction = 'openRqstBrgyClearanceModal()';
+            break;
+          case "Barangay Certificate":
+            onclickFunction = 'openRqstBrgyCertificateModal()';
+            break;
+          case "Certificate of Indigency":
+            onclickFunction = 'openRqstCertificateOfIndigencyModal()';
+            break;
+          case "Barangay Identification":
+            onclickFunction = 'openRqstBrgyIdentificationModal()';
+            break;
+          default:
+            onclickFunction = '';
+        }
+
         const row = `
-        <tr>
-          <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">${item.requestId}</td>
-          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.service}</td>
-          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.cost}</td>
-          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.dateOfClaim}</td>
-          <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.status}</td>
-          <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-            <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out">
-              View
-            </button>
-          </td>
-        </tr>
-      `;
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">${item.requestId}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.service}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.cost}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.dateOfClaim}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.status}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
+          <button onclick="${onclickFunction}" class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out">
+            View
+          </button>
+        </td>
+      </tr>
+    `;
         tableBody.innerHTML += row;
       });
 
