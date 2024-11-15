@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('brgy_clearances', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('resident_id'); // Add foreign key to residents
             $table->string('category');
             $table->string('name');
             $table->string('position');
@@ -24,6 +25,9 @@ return new class extends Migration
             $table->string('contact_position');
             $table->string('contact_number');
             $table->timestamps();
+
+            // Foreign key constraint
+            $table->foreign('resident_id')->references('id')->on('residents')->onDelete('cascade');
         });
     }
 
@@ -32,6 +36,10 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::table('brgy_clearances', function (Blueprint $table) {
+            $table->dropForeign(['resident_id']);
+        });
+
         Schema::dropIfExists('brgy_clearances');
     }
 };

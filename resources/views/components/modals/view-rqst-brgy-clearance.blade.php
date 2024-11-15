@@ -1,6 +1,9 @@
 <!-- Modal Structure -->
-<div id="view-rqst-brgy-clearance" class="bg-blue-950/30 hidden size-full fixed top-0 start-0 z-[70] overflow-x-hidden overflow-y-auto custom-scrollbar transition-all duration-300 ease-in-out" role="dialog" tabindex="-1" aria-labelledby="view-rqst-brgy-clearance-label">
-  <div id="view-rqst-brgy-clerance-modal" class="mt-0 opacity-0 transition-all duration-300 ease-in-out sm:max-w-2xl w-full sm:w-full m-3 sm:mx-auto">
+<div id="view-rqst-brgy-clearance"
+  class="bg-blue-950/30 hidden size-full fixed top-0 start-0 z-[70] overflow-x-hidden overflow-y-auto custom-scrollbar transition-all duration-300 ease-in-out"
+  role="dialog" tabindex="-1" aria-labelledby="view-rqst-brgy-clearance-label">
+  <div id="view-rqst-brgy-clerance-modal"
+    class="mt-0 opacity-0 transition-all duration-300 ease-in-out sm:max-w-2xl w-full sm:w-full m-3 sm:mx-auto">
     <!-- Modal Card -->
     <div class="flex flex-col bg-white border shadow-sm rounded-xl pointer-events-auto">
       <!-- Modal Header -->
@@ -8,7 +11,9 @@
         <h3 id="view-rqst-brgy-clearance-label" class="text-lg font-semibold">Barangay Clerance Request</h3>
         <button id="view-rqst-brgy-clearance-modal-close" class="btn btn-ghost text-gray-700 px-2.5" aria-label="Close">
           <span class="sr-only">Close</span>
-          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
             <path d="M18 6 6 18"></path>
             <path d="m6 6 12 12"></path>
           </svg>
@@ -19,7 +24,8 @@
         <!-- Modal Content -->
         <div class="space-y-4">
           <div class="grid md:grid-cols-3 grid-cols-2 gap-y-4">
-            <h5 class="col-span-full font-medium leading-none pb-2">Clerance Category: <span class="text-blue-600">Business Permit</span></h5>
+            <h5 class="col-span-full font-medium leading-none pb-2">Clearance Category: <span
+                class="text-blue-600">Business Permit</span></h5>
             <div>
               <p class="text-gray-500/80 text-sm">Permit Categories</p>
               <p>Group A (₱1,000)</p>
@@ -102,5 +108,6 @@
     }, 300); // Similar to duration-300 class
   }
 
-  document.getElementById("view-rqst-brgy-clearance-modal-close").addEventListener("click", closeRqstBrgyClearanceModal);
+  document.getElementById("view-rqst-brgy-clearance-modal-close").addEventListener("click",
+    closeRqstBrgyClearanceModal);
 </script>
