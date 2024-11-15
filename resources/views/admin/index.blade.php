@@ -35,7 +35,7 @@
       </header>
       <!-- // Content Header -->
       <!-- Tab Content -->
-      <div class="md:p-8 p-4 z-10">
+      <div class="md:p-6 p-3 z-10">
         <div id="dashboard" role="tabpanel" aria-labelledby="dashboard-item">
           @include('admin.dashboard')
         </div>
@@ -60,6 +60,9 @@
   <x-admin.modals.resident-application />
   <x-admin.modals.approve-confirm />
   <x-admin.modals.decline-confirm />
+
+  <!-- New Announcement Modal -->
+  <x-admin.modals.new-announcement />
 </body>
 
 </html>
