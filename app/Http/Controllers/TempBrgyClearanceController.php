@@ -7,6 +7,11 @@ use App\Models\BrgyClearance;
 
 class TempBrgyClearanceController extends Controller
 {
+    public function index() {
+        return view('resident.index');
+    }
+
+
     public function brgyClearance(Request $request) {
         $brgyFields = $request->validate([
             'category' => ['required'],
