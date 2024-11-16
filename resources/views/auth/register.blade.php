@@ -1,5 +1,5 @@
 <x-layout>
-  {{-- instead na ilagay pa lahat, alisin nalang kasi sa components/layout pwede na kunin --}}
+
 
   <body class="md:h-screen h-auto">
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
@@ -63,7 +63,7 @@
             <label for="last_name" class="input-label">Last name <span class="text-red-500">*</span></label>
             <input type="text" name="last_name" id="last_name"
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. DELA CRUZ" value="{{ old('last_name') }}">
+              placeholder="E.g. DELA CRUZ" value="{{ old(' last_name') }}">
             @error('last_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -129,7 +129,7 @@
     </main>
   </body>
 
-  {{-- This script is kapag nag leave si user sa form, confirmation because all data will be lost --}}
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const letterFields = document.querySelectorAll('input[type="text"]:not(.exempt-uppercase)');
