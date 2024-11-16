@@ -98,8 +98,8 @@
         {{ strtoupper(substr(auth()->user()->username, 0, 1)) }}
       </span>
       <div>
-        <h4 class="text-stone-700 text-sm">{{ auth()->user()->username }}</h4>
-        <p class="text-stone-600 text-xs">{{ auth()->user()->email }}</p>
+        <h4 class="text-gray-700 text-sm">{{ auth()->user()->username }}</h4>
+        <p class="text-gray-600 text-xs w-full max-w-[9.7rem] truncate">{{ auth()->user()->email }}</p>
       </div>
     </div>
   </div>

@@ -25,7 +25,7 @@
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="D-modal-1" data-hs-overlay="#D-modal-1" data-hs-overlay-options='{
           "isClosePrev": false
         }'
-          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-10 flex flex-col justify-center items-center">
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/10 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-10 flex flex-col justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
             <path d="M16 10h2" />
             <path d="M16 14h2" />
@@ -38,7 +38,7 @@
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="D-modal-1" data-hs-overlay="#D-modal-2" data-hs-overlay-options='{
           "isClosePrev": false
         }'
-          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-10 flex flex-col justify-center items-center">
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/10 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-10 flex flex-col justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
             <path d="M16 10h2" />
             <path d="M16 14h2" />
