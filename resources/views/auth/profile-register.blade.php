@@ -1,6 +1,4 @@
 <x-layout>
-  {{-- instead na ilagay pa lahat, alisin nalang kasi sa components/layout pwede na kunin --}}
-
   <body class="md:h-screen h-auto">
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
@@ -20,7 +18,7 @@
             <label for="first_name" class="input-label">First name <span class="text-red-500">*</span></label>
             <input type="text" name="first_name" id="first_name"
               class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. JUAN"
-              value="{{ old('first_name') }}">
+              value="{{ session('first_name', old('first_name')) }}" style="text-transform: uppercase;">
             @error('first_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -30,7 +28,7 @@
             <label for="last_name" class="input-label">Last name <span class="text-red-500">*</span></label>
             <input type="text" name="last_name" id="last_name"
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. DELA CRUZ" value="{{ old('last_name') }}">
+              placeholder="E.g. DELA CRUZ" value="{{ session('last_name', old('last_name')) }}" style="text-transform: uppercase;">
             @error('last_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -40,14 +38,14 @@
             <label for="middle_name" class="input-label">Middle name <span
                 class="text-neutral-400 text-xs">(Optional)</span></label>
             <input type="text" name="middle_name" id="middle_name" class="default-input" placeholder="E.g. SANTOS"
-              value="{{ old('middle_name') }}">
+              value="{{ session('middle_name', old('middle_name')) }}" style="text-transform: uppercase;">
           </div>
           <!-- Suffix name -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="suffix" class="input-label">Suffix <span
                 class="text-neutral-400 text-xs">(Optional)</span></label>
             <input type="text" name="suffix" id="suffix" class="default-input" placeholder="E.g. JR."
-              value="{{ old('suffix') }}">
+              value="{{ session('suffix', old('suffix')) }}" style="text-transform: uppercase;">
           </div>
           <!-- End of Complete Name -->
 
@@ -58,7 +56,7 @@
             <label for="street" class="input-label">Street <span class="text-red-500">*</span></label>
             <input type="text" name="street" id="street"
               class="default-input @error('street') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. Pedro"
-              value="{{ old('street') }}">
+              value="{{ old('street ') }}" style="text-transform: uppercase;">
             @error('street')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -116,9 +114,9 @@
             <input type="text" name="contact_num" id="contact_num"
               class="default-input @error('contact_num') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('contact_num') }}">
-            @error('contact_num')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
-            @enderror
+              @error('contact_num')
+  <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+@enderror
           </div>
           <!-- Emergency Contact's Name -->
           <div class="md:space-y-2.5 space-y-1.5">
@@ -126,7 +124,7 @@
                 class="text-red-500">*</span></label>
             <input type="text" name="em_contact_name" id="em_contact_name"
               class="default-input @error('em_contact_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. ANTONIO DELA CRUZ" value="{{ old('em_contact_name') }}">
+              placeholder="E.g. ANTONIO DELA CRUZ" value="{{ old('em_contact_name') }}" style="text-transform: uppercase;">
             @error('em_contact_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -161,7 +159,7 @@
             <label for="birthplace" class="input-label">Birth place <span class="text-red-500">*</span></label>
             <input type="text" name="birthplace" id="birth-place"
               class="default-input @error('birthplace') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. Quezon City" value="{{ old('birthplace') }}">
+              placeholder="E.g. Quezon City" value="{{ old('birthplace') }}"style="text-transform: uppercase;">
             @error('birthplace')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -172,7 +170,7 @@
             <select id="civil_status" name="civil_status"
               class="select-input @error('civil_status') !border-red-500 !bg-red-500/5 @enderror">
               <option selected="" disabled>Select Civil Status</option>
-              <option value="">Select Civil Status</option>
+
               <option value="single" {{ old('civil_status') == 'single' ? 'selected' : '' }}>Single</option>
               <option value="married" {{ old('civil_status') == 'married' ? 'selected' : '' }}>Married</option>
               <option value="divorced" {{ old('civil_status') == 'divorced' ? 'selected' : '' }}>Divorced</option>
@@ -181,7 +179,7 @@
             @error('civil_status')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
-          </div>
+          </div ```blade
           <!-- Gender -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="gender" class="input-label">Gender <span class="text-red-500">*</span></label>
@@ -211,7 +209,7 @@
             <label for="occupation" class="input-label">Occupation<span class="text-neutral-400 text-xs">
                 (Optional)</span></label>
             <input type="text" name="occupation" id="occupation" class="default-input"
-              placeholder="E.g. Factory Worker" value="{{ old('occupation') }}">
+              placeholder="E.g. Factory Worker" value="{{ old('occupation') }}" style="text-transform: uppercase;">
           </div>
           <!-- End of Other Relevant Information -->
 
@@ -236,7 +234,7 @@
               <option value="Student" {{ old('classification_status') == 'Student' ? 'selected' : '' }}>Student
               </option>
             </select>
-            @error('classification_status')
+            @error('classification_status')               
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
@@ -249,7 +247,7 @@
           <!-- Valid ID -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="valid_id" class="input-label">Valid ID <span class="text-red-500">*</span></label>
-            <select id="valid_id" name="valid_id"
+ <select id="valid_id" name="valid_id"
               class="select-input @error('valid_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('valid_id') }}">
               <option selected="" disabled>Select Valid ID</option>
@@ -299,8 +297,7 @@
           </div>
         </div>
       </form>
-      </div>
-      <!-- End of Main Container -->
+
     </main>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
