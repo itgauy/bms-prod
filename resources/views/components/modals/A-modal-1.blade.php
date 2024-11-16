@@ -108,7 +108,7 @@
               </div>
             </label>
             @error('category')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ 'Choose at least one category.' }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ 'Choose at least one category.' }}</p>
             @enderror
           </div>
           <div class="grid md:grid-cols-2 grid-cols-1 gap-x-5 md:gap-y-6 gap-y-5 pt-6">
@@ -119,7 +119,7 @@
                 class="default-input @error('name') !border-red-500 !bg-red-500/5 @enderror" required
                 placeholder="E.g. Juan Dela Cruz" value="{{ old('name') }}">
               @error('name')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Position/Designation -->
@@ -130,7 +130,7 @@
                 class="default-input @error('position') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="E.g. Business Owner" value="{{ old('position') }}">
               @error('position')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Kind of Business -->
@@ -156,7 +156,7 @@
                 <option selected="" disabled>Select kind of business</option>
               </select>
               @error('business_type')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Business name -->
@@ -167,7 +167,7 @@
                 class="default-input @error('business_name') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="E.g. Tech-Commr" value="{{ old('business_name') }}">
               @error('business_name')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Business address -->
@@ -178,7 +178,7 @@
                 class="default-input @error('business_address') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="E.g. Pedro 117 Block 23 Street Banawe" value="{{ old('business_address') }}">
               @error('business_address')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Date of Claim -->
@@ -188,7 +188,7 @@
                 class="default-input @error('date_claimed') !border-red-500 !bg-red-500/5 @enderror"
                 value="{{ old('date_claimed') }}">
               @error('date_claimed')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <div class="md:col-span-2 col-span-1 flex items-center gap-2">
@@ -204,7 +204,7 @@
                 class="default-input @error('contact_person') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="E.g. Maya Dela Cruz" value="{{ old('contact_person') }}">
               @error('contact_person')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Position/Designation -->
@@ -215,7 +215,7 @@
                 class="default-input @error('contact_position') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="E.g. Business Owner" value="{{ old('contact_position') }}">
               @error('contact_position')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Contact Number -->
@@ -226,12 +226,12 @@
                 class="default-input @error('contact_number') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="E.g. 09123456789" value="{{ old('contact_number') }}">
               @error('contact_number')
-                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Action Buttons -->
             <div class="md:col-span-2 col-span-1 flex justify-end gap-4 mt-6">
-              <a aria-label="Close" data-hs-overlay="#A-modal-1" class="btn btn-secondary">Cancel</a>
+              <a aria-label="Close" data-hs-overlay="#A-modal-1" class="btn btn-secondary cursor-pointer">Cancel</a>
               <button class="btn btn-primary next-button" id="submit">
                 Submit
               </button>
