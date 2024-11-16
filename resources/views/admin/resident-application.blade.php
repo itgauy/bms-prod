@@ -2,7 +2,7 @@
   <div class="flex flex-col">
     <div class="-m-1.5 overflow-x-auto">
       <div class="p-1.5 min-w-full inline-block align-middle">
-        <div class="border border-blue-100/70 rounded-lg divide-y divide-blue-100/70">
+        <div class="border border-blue-600/10 bg-white shadow-md shadow-blue-500/5 rounded-lg divide-y divide-blue-100/70">
           <div class="py-3 px-4 flex gap-3 items-center">
             <div class="relative max-w-xs">
               <label class="sr-only">Search</label>
@@ -31,7 +31,7 @@
                 </svg>
               </button>
               <div
-                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-md rounded-lg p-2 space-y-0.5 mt-2"
+                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-lg shadow-blue-500/5 border border-blue-600/10 rounded-lg p-2 space-y-0.5 mt-2"
                 role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-item-checkbox">
                 <div class="flex gap-x-2 py-2 px-3 rounded-lg hover:bg-blue-100/40 transition duration-300">
                   <input id="status-all" name="application-status" type="radio" value="All"

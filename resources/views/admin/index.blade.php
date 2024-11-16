@@ -27,10 +27,10 @@
   <!-- Main Layout -->
   <div class="lg:py-4 b-4 lg:pr-4 lg:p-0 p-4 lg:ml-64 h-screen">
     <div
-      class="relative bg-white border border-blue-200/70 md:rounded-2xl rounded-xl h-full custom-scrollbar overflow-auto">
+      class="relative bg-white/50 border border-blue-200/70 md:rounded-2xl rounded-xl h-full custom-scrollbar overflow-auto">
       <!-- Content Header -->
       <header
-        class="backdrop-blur-md bg-white/70 sticky top-0 md:py-4 py-3 md:px-5 px-3 flex justify-between items-center border-blue-200/30 border-b w-full z-20">
+        class="backdrop-blur-md bg-white/80 sticky top-0 md:py-4 py-3 md:px-5 px-3 flex justify-between items-center border-blue-200/30 border-b w-full z-20">
         <x-admin.header />
       </header>
       <!-- // Content Header -->
