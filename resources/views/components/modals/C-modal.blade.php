@@ -25,7 +25,7 @@
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="C-modal-1" data-hs-overlay="#C-modal-1" data-hs-overlay-options='{
           "isClosePrev": false
         }'
-          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full py-6 flex flex-col justify-center items-center">
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/10 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full py-6 flex flex-col justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
             <path d="M12 6v4" />
             <path d="M14 14h-4" />
@@ -39,7 +39,7 @@
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="C-modal-1" data-hs-overlay="#C-modal-2" data-hs-overlay-options='{
           "isClosePrev": false
         }'
-          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full py-6 flex flex-col justify-center items-center">
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/10 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full py-6 flex flex-col justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
             <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
             <circle cx="9" cy="7" r="4" />
