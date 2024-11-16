@@ -25,7 +25,7 @@
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="B-modal-1" data-hs-overlay="#B-modal-1" data-hs-overlay-options='{
           "isClosePrev": false
         }'
-          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full py-6 flex-1 flex-col justify-center items-center">
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/10 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full py-6 flex-1 flex-col justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
             <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
             <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
@@ -35,7 +35,7 @@
         <button aria-haspopup="dialog" aria-expanded="false" aria-controls="B-modal-1" data-hs-overlay="#B-modal-2" data-hs-overlay-options='{
           "isClosePrev": false
         }'
-          class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full py-6 flex-1 flex-col justify-center items-center">
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/10 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full py-6 flex-1 flex-col justify-center items-center">
           <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="text-blue-500">
             <path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17" />
             <path d="m7 21 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a2 2 0 0 0-2.75-2.91l-4.2 3.9" />

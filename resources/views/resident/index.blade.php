@@ -23,8 +23,8 @@
       <!-- A -->
       <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="A-modal"
         data-hs-overlay="#A-modal"
-        class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
-        <div class="bg-white w-full h-3/4 flex items-center justify-center rounded-xl p-4">
+        class="btn border-b-4 border-b-transparent hover:bg-blue-100/5 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
+        <div class="w-full h-3/4 flex items-center justify-center rounded-xl p-4">
           <img src="{{ asset('images/illustration-1.png') }}" alt="" class="w-24 h-auto">
         </div>
         <p class="text-center text-blue-500 font-medium md:text-xl text-lg py-4">Barangay Clearance</p>
@@ -32,8 +32,8 @@
       <!-- B -->
       <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="B-modal"
         data-hs-overlay="#B-modal"
-        class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
-        <div class="bg-white w-full h-3/4 flex items-center justify-center rounded-xl p-4">
+        class="btn border-b-4 border-b-transparent hover:bg-blue-100/5 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
+        <div class="w-full h-3/4 flex items-center justify-center rounded-xl p-4">
           <img src="{{ asset('images/illustration-3.png') }}" alt="" class="w-24 h-auto">
         </div>
         <p class="text-center text-blue-500 font-medium md:text-xl text-lg py-4">Barangay Certificate</p>
@@ -41,8 +41,8 @@
       <!-- C -->
       <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="C-modal"
         data-hs-overlay="#C-modal"
-        class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
-        <div class="bg-white w-full h-3/4 flex items-center justify-center rounded-xl p-4">
+        class="btn border-b-4 border-b-transparent hover:bg-blue-100/5 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
+        <div class="w-full h-3/4 flex items-center justify-center rounded-xl p-4">
           <img src="{{ asset('images/illustration-2.png') }}" alt="" class="w-24 h-auto">
         </div>
         <p class="text-center text-blue-500 font-medium md:text-xl text-lg py-4">Certificate of Indigency</p>
@@ -50,8 +50,8 @@
       <!-- D -->
       <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="D-modal"
         data-hs-overlay="#D-modal"
-        class="btn btn-ghost border border-blue-200/50 bg-blue-100/10 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
-        <div class="bg-white w-full h-3/4 flex items-center justify-center rounded-xl p-4">
+        class="btn border-b-4 border-b-transparent hover:bg-blue-100/5 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
+        <div class="w-full h-3/4 flex items-center justify-center rounded-xl p-4">
           <img src="{{ asset('images/illustration-4.png') }}" alt="" class="w-14 h-auto">
         </div>
         <p class="text-center text-blue-500 font-medium md:text-xl text-lg py-4">Barangay Identification</p>
@@ -63,7 +63,7 @@
       <div class="flex flex-col">
         <div class="-m-1.5 overflow-x-auto">
           <div class="p-1.5 min-w-full inline-block align-middle">
-            <div class="border border-blue-100/70 rounded-lg divide-y divide-blue-100/70">
+            <div class="border border-blue-600/10 bg-white shadow-md shadow-blue-500/5 rounded-lg divide-y divide-blue-100/70">
 
               <!-- Requested Services Filter -->
               <div class="p-4">
