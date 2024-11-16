@@ -1,6 +1,6 @@
 <x-layout>
   <main class="md:pt-36 p-6 md:px-24 lg:px-36 md:py-24 py-16">
-    <div class="py-12" id="home">
+    <div class="md:py-12 py-8" id="home">
       <section>
         <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
           <h1
@@ -28,7 +28,7 @@
       </section>
       <div id="announcements" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
-    <div class="py-12">
+    <div class="md:py-12 py-8">
       <h1 class="text-3xl pl-10 pb-6 font-bold ">Announcements</h1>
       <p class="px-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus itaque delectus illum
         fuga culpa dolore ab dignissimos! Inventore iusto excepturi veniam voluptates quam ipsa, reiciendis earum
@@ -52,7 +52,7 @@
       </div>
       <div id="services" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
-    <div class="py-12" id="services">
+    <div class="md:py-12 py-8" id="services">
       <h1 class="text-2xl sm:text-3xl pb-6 font-bold">Services</h1>
       <p class="pb-5 text-sm sm:text-base">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus itaque delectus illum fuga culpa
@@ -85,8 +85,8 @@
       </div>
       <div id="officials" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
-    <div class="py-12" id="services">
-      <section id="officials" class="py-12">
+    <div class="md:py-12 py-8" id="services">
+      <section id="officials" class="py-14">
         <div class="max-w-6xl mx-auto px-6">
           <h1 class="text-3xl font-bold text-center text-sky-950 mb-8">Barangay Officials & Staff</h1>
           <!-- Barangay Captain -->
@@ -188,29 +188,69 @@
       </section>
       <div id="about-us" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
-    <div class="py-12" id="services">
-      <div class="sm:flex items-center ">
-        <div class="sm:w-1/2 p-10">
-          <div class="image object-center text-center">
-            <img class="rounded-xl" src="https://placehold.co/620x300" alt="barangay pic">
-          </div>
+
+    <!-- About Us -->
+    <div class="md:py-12 py-8" id="services">
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
+        <div class="w-full h-94">
+          <img src="https://placehold.co/50x40" alt="" class="w-full object-cover h-full rounded-2xl">
         </div>
-        <div class="sm:w-1/2 p-5">
-          <div class="text">
-            <span class="text-gray-500 border-b-2 border-sky-950 uppercase">About us</span>
-            <h2 class="my-4 font-bold text-3xl  sm:text-4xl ">About <span class="text-sky-950">Our Barangay</span>
-            </h2>
-            <p class="text-gray-700">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, commodi
-              doloremque, fugiat illum magni minus nisi nulla numquam obcaecati placeat quia, repellat tempore
-              voluptatum.
-            </p>
+        <div class="space-y-7">
+          <div class="space-y-4">
+            <h2>About Barangay Nagkaisang Nayon</h2>
+            <p class="text-sm">Quezon City Ordinance #4942 created Barrio Nagkaisang Nayon in Novaliches, Quezon City and approved on January 28, 1962 by Quezon City Vice Mayor Vicente O. Novales. Then on September 24, 1974 under Presidential Decree #557 converted all existing barrios into barangays and recognized as basic political unit of Area IX, District II of Quezon City.</p>
+            <a href="#" class="btn btn-secondary">Read more...</a>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex flex-col gap-[3px] border px-6 py-5 rounded-2xl bg-blue-300/5 border-blue-400/30">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
+              </svg>
+              <h5 class="text-medium text-gray-600">Population</h5>
+              <h1 class="text-blue-500 mt-3">53,781</h1>
+            </div>
+            <div class="flex flex-col gap-[3px] border px-6 py-5 rounded-2xl bg-green-300/5 border-green-400/30">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498 4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 0 0-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0Z" />
+              </svg>
+              <h5 class="text-medium text-gray-600">Area</h5>
+              <h1 class="text-green-500 mt-3">2.718 km²</h1>
+            </div>
+            <div class="flex flex-col gap-[3px] border px-6 py-5 rounded-2xl bg-amber-300/5 border-amber-400/30">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+              </svg>
+              <h5 class="text-medium text-gray-600">Population Density</h5>
+              <h1 class="text-amber-500 mt-3">19,788/km²</h1>
+            </div>
+            <div class="flex flex-col gap-[3px] border px-6 py-5 rounded-2xl bg-rose-300/5 border-rose-400/30">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+              </svg>
+              <h5 class="text-medium text-gray-600">Annual Population Change</h5>
+              <h1 class="text-rose-500 mt-3">2.0%</h1>
+            </div>
           </div>
         </div>
       </div>
+      <div class="grid md:grid-cols-2 grid-cols-1 mt-20 gap-5">
+        <div class="flex flex-col items-center justify-center text-center space-y-3">
+          <h2>Vision</h2>
+          <p class="text-sm w-full max-w-md">Barangay Nagkaisang Nayon envisions a united, prosperous, and progressive community guided by transparent, accountable leadership, fostering a safe, inclusive, and child-friendly environment under the grace of Almighty God.
+          </p>
+        </div>
+        <div class="flex flex-col items-center justify-center text-center space-y-3">
+          <h2>Mission</h2>
+          <p class="text-sm w-full max-w-md">To promote good governance and solidarity by empowering citizens, ensuring gender responsiveness, and prioritizing safety, development, and prosperity for all.
+          </p>
+        </div>
+      </div>
+
       <div id="contact-us" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
-    <div class="py-12" id="services">
+
+    <!-- Contact Us -->
+    <div class="md:py-12 py-8" id="services">
       <section>
         <div class="max-w-3xl mx-auto px-6">
           <h2 class="text-3xl font-bold text-center text-sky-950 mb-8">Contact Us</h2>
