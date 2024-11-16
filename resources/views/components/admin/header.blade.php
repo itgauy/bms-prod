@@ -13,7 +13,7 @@
       AD
     </button>
     <div
-      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-xl shadow-neutral-300/30 rounded-xl p-2 space-y-0.5 mt-2"
+      class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-xl shadow-blue-500/5 border border-blue-600/10 rounded-xl p-2 space-y-0.5 mt-2"
       role="menu" aria-orientation="vertical" aria-labelledby="user-dropdown">
       <div class="py-5 flex flex-col justify-center items-center gap-3">
         <span
