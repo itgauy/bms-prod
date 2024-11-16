@@ -22,7 +22,7 @@
                 class="grouped-radio {{ $errors->has('user_type') ? '!border-red-500 !bg-red-500/5' : '' }}">
                 <div class="flex items-center gap-3">
                   <input id="home-owner" type="radio" name="user_type" value="home-owner" class="radio-input"
-                    {{ old('user_type', session('register_data.user_type')) == 'home-owner' ? 'checked' : '' }} />
+                    {{ old('user_type') == 'home-owner' ? 'checked' : '' }} />
                   <span class="font-medium">Home Owner</span>
                 </div>
               </label>
@@ -30,8 +30,7 @@
                 class="grouped-radio {{ $errors->has('user_type') ? '!border-red-500 !bg-red-500/5' : '' }}">
                 <div class="flex items-center gap-3">
                   <input id="renter-tenant-input" type="radio" name="user_type" value="renter-tenant"
-                    class="radio-input"
-                    {{ old('user_type', session('register_data.user_type')) == 'renter-tenant' ? 'checked' : '' }} />
+                    class="radio-input" {{ old('user_type') == 'renter-tenant' ? 'checked' : '' }} />
                   <span class="font-medium">Renter/Tenant</span>
                 </div>
               </label>
@@ -156,14 +155,14 @@
     });
 
     // Clear session data on leave
-    window.addEventListener('beforeunload', function() {
-      fetch('/clear-session', {
-        method: 'POST',
-        headers: {
-          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-        }
-      });
-    });
+    // window.addEventListener('beforeunload', function() {
+    //   fetch('/clear-session', {
+    //     method: 'POST',
+    //     headers: {
+    //       'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+    //     }
+    //   });
+    // });
   </script>
 
 </x-layout>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\BrgyClearance;
+use Illuminate\Support\Facades\Auth;
 
 class TempBrgyClearanceController extends Controller
 {
@@ -26,10 +27,11 @@ class TempBrgyClearanceController extends Controller
             'contact_number' => ['required', 'max:20'],
         ]);
 
-        // Register brgy clearance
+        $user = Auth::user();
+
+        $brgyFields['user_id'] = $user->id;
         BrgyClearance::create($brgyFields);
 
-        // Redirect
-        return redirect()->route('brgy-clearance');
+        return redirect()->route('resident')->with('success', 'Barangay Clearance Requested Successfully!<br>Please wait for it to be approved.');
     }
 }
