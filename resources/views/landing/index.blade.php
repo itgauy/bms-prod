@@ -28,63 +28,127 @@
       </section>
       <div id="announcements" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
+
+    <!-- Announcements -->
     <div class="md:py-12 py-8">
-      <h1 class="text-3xl pl-10 pb-6 font-bold ">Announcements</h1>
-      <p class="px-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus itaque delectus illum
-        fuga culpa dolore ab dignissimos! Inventore iusto excepturi veniam voluptates quam ipsa, reiciendis earum
-        temporibus. Vero, vel?</p>
-      <div class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg mt-24 z-10">
-        <!-- Images -->
-        <div id="carousel" class="flex transition-transform duration-500 max-w-full translate-x-0">
-          <img src="https://placehold.co/600x500" alt="Slide 1" class="w-full">
-          <img src="https://placehold.co/600x500" alt="Slide 2" class="w-full">
-          <img src="https://placehold.co/600x500" alt="Slide 3" class="w-full">
+      <!-- Slider -->
+      <div data-hs-carousel='{
+    "loadingClasses": "opacity-0",
+    "isAutoPlay": true,
+    "isDraggable": true
+  }' class="relative">
+        <div class="hs-carousel relative overflow-hidden w-full min-h-[31rem] bg-white rounded-2xl">
+          <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+            <!-- Carousel Content -->
+            <div class="hs-carousel-slide">
+              <div class="relative w-full h-[31rem]">
+                <img src="{{ asset('images/announcement-fade.png') }}" alt="" class="z-10 absolute w-full h-full object-cover">
+                <img src="{{ asset('images/sample-announcement-img.png') }}" alt="" class="z-0 absolute w-full h-full object-cover">
+                <div class="z-50 absolute px-20 py-12 space-y-4">
+                  <h1 class=" text-white">Sample Title</h1>
+                  <p class="w-full max-w-md text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, laboriosam inventore? Quos laboriosam est, iste obcaecati laudantium nulla eius. Quas eum velit, iure rerum at quam expedita veniam consequatur numquam?</p>
+                  <div class="flex gap-8 mt-4">
+                    <p class="text-sm italic text-white">2024-11-15</p>
+                    <p class="text-sm italic text-white">1:47 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hs-carousel-slide">
+              <div class="relative w-full h-[31rem]">
+                <img src="{{ asset('images/announcement-fade.png') }}" alt="" class="z-10 absolute w-full h-full object-cover">
+                <img src="{{ asset('images/sample-announcement-img.png') }}" alt="" class="z-0 absolute w-full h-full object-cover">
+                <div class="z-50 absolute px-20 py-12 space-y-4">
+                  <h1 class=" text-white">Sample Title</h1>
+                  <p class="w-full max-w-md text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, laboriosam inventore? Quos laboriosam est, iste obcaecati laudantium nulla eius. Quas eum velit, iure rerum at quam expedita veniam consequatur numquam?</p>
+                  <div class="flex gap-8 mt-4">
+                    <p class="text-sm italic text-white">2024-11-15</p>
+                    <p class="text-sm italic text-white">1:47 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="hs-carousel-slide">
+              <div class="relative w-full h-[31rem]">
+                <img src="{{ asset('images/announcement-fade.png') }}" alt="" class="z-10 absolute w-full h-full object-cover">
+                <img src="{{ asset('images/sample-announcement-img.png') }}" alt="" class="z-0 absolute w-full h-full object-cover">
+                <div class="z-50 absolute px-20 py-12 space-y-4">
+                  <h1 class=" text-white">Sample Title</h1>
+                  <p class="w-full max-w-md text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, laboriosam inventore? Quos laboriosam est, iste obcaecati laudantium nulla eius. Quas eum velit, iure rerum at quam expedita veniam consequatur numquam?</p>
+                  <div class="flex gap-8 mt-4">
+                    <p class="text-sm italic text-white">2024-11-15</p>
+                    <p class="text-sm italic text-white">1:47 PM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Navigation Buttons -->
-        <button id="prev"
-          class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white rounded-full">
-          &lt;
+        <!-- Carousel Buttons -->
+        <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 btn bg-blue-50/30 text-white hs-carousel-disabled:pointer-events-none absolute inset-y-0 start-3 transform -translate-y-1/2 top-1/2 inline-flex justify-center items-center rounded-full size-[46px]">
+          <span class="text-2xl" aria-hidden="true">
+            <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m15 18-6-6 6-6"></path>
+            </svg>
+          </span>
+          <span class="sr-only">Previous</span>
         </button>
-        <button id="next"
-          class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2 bg-gray-700 bg-opacity-50 text-white rounded-full">
-          &gt;
+        <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 btn bg-blue-50/30 text-white hs-carousel-disabled:pointer-events-none absolute inset-y-0 end-3 transform -translate-y-1/2 top-1/2 inline-flex justify-center items-center rounded-full size-[46px]">
+          <span class="sr-only">Next</span>
+          <span class="text-2xl" aria-hidden="true">
+            <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m9 18 6-6-6-6"></path>
+            </svg>
+          </span>
         </button>
       </div>
       <div id="services" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
-    <div class="md:py-12 py-8" id="services">
-      <h1 class="text-2xl sm:text-3xl pb-6 font-bold">Services</h1>
-      <p class="pb-5 text-sm sm:text-base">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam doloribus itaque delectus illum fuga culpa
-        dolore ab dignissimos! Inventore iusto excepturi veniam voluptates quam ipsa, reiciendis earum temporibus. Vero,
-        vel?
-      </p>
 
-      <!-- SERVICE CARDS -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
-        <div class="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-sky-950 dark:border-gray-700">
-          <h5 class="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-white">SERVICE 1</h5>
-          <p class="font-normal text-white">Here are the biggest enterprise technology acquisitions of 2021 so far, in
-            reverse chronological order.</p>
-        </div>
-        <div class="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-sky-950 dark:border-gray-700">
-          <h5 class="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-white">SERVICE 2</h5>
-          <p class="font-normal text-white">Here are the biggest enterprise technology acquisitions of 2021 so far, in
-            reverse chronological order.</p>
-        </div>
-        <div class="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-sky-950 dark:border-gray-700">
-          <h5 class="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-white">SERVICE 3</h5>
-          <p class="font-normal text-white">Here are the biggest enterprise technology acquisitions of 2021 so far, in
-            reverse chronological order.</p>
-        </div>
-        <div class="block p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-sky-950 dark:border-gray-700">
-          <h5 class="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-white">SERVICE 4</h5>
-          <p class="font-normal text-white">Here are the biggest enterprise technology acquisitions of 2021 so far, in
-            reverse chronological order.</p>
-        </div>
+    <!-- Our Services -->
+    <div class="md:py-12 py-8" id="services">
+      <div class="flex gap-4 items-center flex-col justify-center">
+        <h1 class="text-center">Our Services</h1>
+        <p class="text-sm text-center w-full max-w-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat dolore cum ipsum, assumenda consequatur qui eveniet quibusdam rem! Quam voluptatem aperiam inventore in nihil possimus molestiae dolores sed fugiat facere?</p>
+      </div>
+      <div class="grid md:grid-cols-4 grid-cols-2 gap-4 mt-12">
+        <!-- A -->
+        <button type="button" aria-haspopup="dialog"
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/5 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
+          <div class="w-full h-3/4 flex items-center justify-center rounded-xl p-4">
+            <img src="{{ asset('images/illustration-1.png') }}" alt="" class="w-24 h-auto">
+          </div>
+          <p class="text-center text-blue-500 font-medium md:text-xl text-lg py-3">Barangay Clearance</p>
+        </button>
+        <!-- B -->
+        <button type="button"
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/5 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
+          <div class="w-full h-3/4 flex items-center justify-center rounded-xl p-4">
+            <img src="{{ asset('images/illustration-3.png') }}" alt="" class="w-24 h-auto">
+          </div>
+          <p class="text-center text-blue-500 font-medium md:text-xl text-lg py-3">Barangay Certificate</p>
+        </button>
+        <!-- C -->
+        <button type="button"
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/5 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
+          <div class="w-full h-3/4 flex items-center justify-center rounded-xl p-4">
+            <img src="{{ asset('images/illustration-2.png') }}" alt="" class="w-24 h-auto">
+          </div>
+          <p class="text-center text-blue-500 font-medium md:text-xl text-lg py-3">Certificate of Indigency</p>
+        </button>
+        <!-- D -->
+        <button type="button"
+          class="btn border-b-4 border-b-transparent hover:bg-blue-100/5 hover:border-b-4 hover:border-b-blue-500 border border-blue-600/5 bg-white shadow-lg shadow-blue-500/5 w-full p-4 flex flex-col justify-between items-center rounded-2xl">
+          <div class="w-full h-3/4 flex items-center justify-center rounded-xl p-4">
+            <img src="{{ asset('images/illustration-4.png') }}" alt="" class="w-14 h-auto">
+          </div>
+          <p class="text-center text-blue-500 font-medium md:text-xl text-lg py-3">Barangay Identification</p>
+        </button>
       </div>
       <div id="officials" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
+
+    <!-- Officials -->
     <div class="md:py-12 py-8" id="services">
       <section id="officials" class="py-14">
         <div class="max-w-6xl mx-auto px-6">
@@ -245,7 +309,6 @@
           </p>
         </div>
       </div>
-
       <div id="contact-us" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
 
