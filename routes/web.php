@@ -21,6 +21,8 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth', 'check.status')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('resident');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    // Tama ba tooooo
+    Route::view('/my-profile', 'resident.user-profile')->name('user-profile');
 
     Route::view('/profile-register', 'auth.profile-register')->name('profile-register');
     Route::post('/profile-register', [ProfileController::class, 'registerProfile'])->name('profile-register');
