@@ -1,31 +1,32 @@
 <x-layout>
   <main class="md:pt-36 p-6 md:px-24 lg:px-36 md:py-24 py-16">
+
+    <!-- Hero Section -->
     <div class="md:py-12 py-8" id="home">
-      <section>
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-          <h1
-            class="mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl dark:text-sky-950">
-            WELCOME TO BARANGAY NAGKAISANG NAYON MANAGEMENT SYSTEM</h1>
-          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-sky-950">This is where
-            community meets convenience. Our platform is designed to streamline services, enhance transparency, and
-            empower our residents with accessible, efficient solutions for their legal needs.</p>
-          <div class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0">
-            <a href="#"
-              class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-sky-950 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
-              Get started
-              <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                fill="none" viewBox="0 0 14 10">
-                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M1 5h12m0 0L9 1m4 4L9 9" />
+      <div class="grid md:grid-cols-2 grid-cols-1 gap-12">
+        <div class="space-y-2.5">
+          <span class="inline-flex items-center gap-1.5 rounded-full border border-blue-200 bg-blue-50 px-2.5 py-1 text-sm text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-3.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z" />
+            </svg>
+            Official website
+          </span>
+          <h1 class="text-5xl leading-[1.2] font-bold">A Community That Cares: Nagkaisang Nayon</h1>
+          <p>Discover the warmth of a close-knit community. Barangay Nagkaisang Nayon is more than just a place; it's a home where neighbors become family. Experience the genuine care and support that define our vibrant neighborhood.</p>
+          <div class="flex items-center gap-3 pt-8">
+            <button class="btn btn-primary">
+              Get Started
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 19.5 15-15m0 0H8.25m11.25 0v11.25" />
               </svg>
-            </a>
-            <a href="#about-us"
-              class="py-3 px-5 sm:ms-4 text-sm font-medium text-white focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
-              Learn more
-            </a>
+            </button>
+            <button class="btn btn-secondary">About us</button>
           </div>
         </div>
-      </section>
+        <div class="md:h-96 h-64">
+          <img src="{{ asset('images/hero-illustration.png') }}" alt="Hero Illustration" class="w-full h-full object-cover rounded-2xl">
+        </div>
+      </div>
       <div id="announcements" class="border border-red-500 md:h-16 h-12 opacity-0"></div>
     </div>
 
