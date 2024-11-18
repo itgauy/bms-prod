@@ -62,9 +62,9 @@
 
       <ul class="items-center gap-2 lg:flex hidden">
         <li>
-          <a href="{{ route('home') }}#announcements"
+          <a href="{{ route('home') }}#about-us"
             class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
-            Announcements
+            About Us
           </a>
         </li>
         <li>
@@ -74,15 +74,15 @@
           </a>
         </li>
         <li>
-          <a href="{{ route('home') }}#officials"
+          <a href="{{ route('home') }}#announcements"
             class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
-            Officials
+            Announcements
           </a>
         </li>
         <li>
-          <a href="{{ route('home') }}#about-us"
+          <a href="{{ route('home') }}#officials"
             class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
-            About Us
+            Officials
           </a>
         </li>
         <li>
