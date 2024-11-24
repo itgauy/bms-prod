@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('brgy_certs', function (Blueprint $table) {
             $table->id();
             $table->string('category');
-            $table->number('cost');
+            $table->integer('cost');
             $table->string('cert_type');
             $table->string('name');
             $table->string('address');
@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('specific_request');
             $table->timestamps();
 
-            $table->foreign('resident_id')->references('id')->on('residents')->onDelete('cascade');
+            // $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
