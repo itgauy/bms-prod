@@ -19,6 +19,7 @@ return new class extends Migration
                 'password' => Hash::make('Admin@123'),
                 'user_type' => 'super_admin',
                 'status' => 1,
+                // TEST
             ]);
         }
     }

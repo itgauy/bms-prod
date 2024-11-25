@@ -35,7 +35,7 @@
                 </div>
               </label>
               @error('user_type')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ 'Choose at least one category.' }}</p>
+                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ 'Choose at least one category.' }}</p>
               @enderror
             </div>
           </div>
@@ -47,7 +47,7 @@
               class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. JUAN"
               value="{{ old('first_name') }}">
             @error('first_name')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Middle name -->
@@ -62,9 +62,9 @@
             <label for="last_name" class="input-label">Last name <span class="text-red-500">*</span></label>
             <input type="text" name="last_name" id="last_name"
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. DELA CRUZ" value="{{ old(' last_name') }}">
+              placeholder="E.g. DELA CRUZ" value="{{ old('last_name') }}">
             @error('last_name')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Suffix name -->
@@ -81,7 +81,7 @@
               class="default-input exempt-uppercase @error('username') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. JuanDelaCruz123 (No special characters)" value="{{ old('username') }}">
             @error('username')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Email -->
@@ -91,7 +91,7 @@
               class="default-input exempt-uppercase @error('email') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. juan.delacruz@email.com" value="{{ old('email') }}">
             @error('email')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <div class="md:col-span-2 col-span-1 gap-x-5 grid md:grid-cols-2 grid-cols-1">
@@ -102,7 +102,7 @@
                 class="default-input exempt-uppercase @error('password') !border-red-500 !bg-red-500/5 @enderror"
                 placeholder="Your Password">
               @error('password')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+                <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
             </div>
             <!-- Confirm Password -->

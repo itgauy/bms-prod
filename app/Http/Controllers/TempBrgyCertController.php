@@ -6,16 +6,14 @@ use Illuminate\Http\Request;
 use App\Models\BrgyCert;
 use Illuminate\Support\Facades\Auth;
 
-class TempBrgyClearanceController extends Controller
+class TempBrgyCertController extends Controller
 {
     public function index() {
         return view('resident.index');
     }
 
-
-    public function brgyCert(Request $request) {
+    public function brgyCertificate(Request $request) {
         $brgyFields = $request->validate([
-            'category' => ['required'],
             'cost' => ['required'],
             'cert_type' => ['required'],
             'name' => ['required', 'max:255'],
@@ -26,6 +24,7 @@ class TempBrgyClearanceController extends Controller
 
         $user = Auth::user();
 
+        $brgyFields['category'] = 'Residency';
         $brgyFields['user_id'] = $user->id;
         BrgyCert::create($brgyFields);
 

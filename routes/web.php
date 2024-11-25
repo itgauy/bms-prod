@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TempBrgyClearanceController;
+use App\Http\Controllers\TempBrgyCertController;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'landing.index')->name('home');
@@ -27,8 +28,13 @@ Route::middleware('auth', 'check.status')->group(function () {
     Route::view('/profile-register', 'auth.profile-register')->name('profile-register');
     Route::post('/profile-register', [ProfileController::class, 'registerProfile'])->name('profile-register');
 
+    // BARANGAY CLEARANCE
     Route::view('/brgy-clearance', 'auth.brgy-clearance')->name('brgy-clearance');
     Route::post('/brgy-clearance', [TempBrgyClearanceController::class, 'brgyClearance'])->name('brgy-clearance');
+
+    // BARANGAY CERTIFICATE
+    Route::view('/brgy-certificate', 'auth.brgy-certificate')->name('brgy-certificate');
+    Route::post('/brgy-certificate', [TempBrgyCertController::class, 'brgyCertificate'])->name('brgy-certificate');
 });
 
 // ------ Clear session on register page ------
