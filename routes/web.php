@@ -3,8 +3,10 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ResidentController; // Import ResidentController
 use Illuminate\Support\Facades\Route;
 
+// Existing web routes
 Route::view('/', 'landing.index')->name('home');
 
 Route::middleware('guest')->group(function () {
@@ -16,7 +18,6 @@ Route::middleware('guest')->group(function () {
 });
 
 // ------ Authentication Pages ------
-
 Route::middleware('auth', 'check.status')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('resident');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -33,8 +34,11 @@ Route::get('/admin', function () {
     return view('admin.index');
 })->name('admin');
 
-
-// ------ Resident Pages ------
-// Route::get('/dashboard', function () {
-//     return view('resident.index');
-// })->name('resident');
+// ------ API Routes ------
+Route::prefix('api')->group(function () {
+    Route::apiResource('residents', ResidentController::class);
+    
+    // New route for resident applications
+    Route::get('resident-applications', [ResidentController::class, 'applications'])->name('resident.applications');
+    Route::get('/residents/fetchAll', [ResidentController::class, 'fetchAll']);
+});
