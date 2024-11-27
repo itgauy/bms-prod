@@ -34,8 +34,10 @@
             <img src="https://placehold.co/50x50" alt="" class="object-cover rounded-lg h-full w-full">
           </div>
           <div class="flex justify-end items-center gap-3">
-            <button class="btn btn-primary">Edit</button>
-            <button class="btn btn-danger">Archive</button>
+            <button class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="edit-announcement-modal"
+              data-hs-overlay="#edit-announcement-modal">Edit</button>
+            <button class="btn btn-danger" aria-haspopup="dialog" aria-expanded="false" aria-controls="archive-confirm"
+              data-hs-overlay="#archive-confirm">Archive</button>
           </div>
         </div>
         <!--  -->
@@ -58,8 +60,10 @@
             <img src="https://placehold.co/50x50" alt="" class="object-cover rounded-lg h-full w-full">
           </div>
           <div class="flex justify-end items-center gap-3">
-            <button class="btn btn-primary">Edit</button>
-            <button class="btn btn-danger">Archive</button>
+            <button class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="edit-announcement-modal"
+              data-hs-overlay="#edit-announcement-modal">Edit</button>
+            <button class="btn btn-danger" aria-haspopup="dialog" aria-expanded="false" aria-controls="archive-confirm"
+              data-hs-overlay="#archive-confirm">Archive</button>
           </div>
         </div>
       </div>
@@ -137,7 +141,7 @@
       addedBy: "Admin",
       dateAdded: "2024-05-18",
       dateExpired: "2024-05-18",
-    },
+    }
   ];
 
   let currentPage1 = 1;
@@ -157,10 +161,10 @@
         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.dateAdded}</td>
         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.dateExpired}</td>
         <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium flex justify-end gap-2.5">
-         <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out">
+         <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out" onclick="openUnarchiveAnnouncementModal()">
             Unarchive
           </button>
-          <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:text-red-700 hover:bg-red-50/50 transition duration-300 ease-in-out">
+          <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:text-red-700 hover:bg-red-50/50 transition duration-300 ease-in-out" onclick="openDeleteAnnouncementModal()">
             Delete
           </button>
         </td>
@@ -200,4 +204,5 @@
   });
 
   updateTable1(currentPage1); // Initial render
+</script>
 </script>

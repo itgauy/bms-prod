@@ -4,6 +4,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ResidentController; // Import ResidentController
+use App\Http\Controllers\TempBrgyClearanceController;
+use App\Http\Controllers\TempBrgyCertController;
 use Illuminate\Support\Facades\Route;
 
 // Existing web routes
@@ -21,9 +23,19 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth', 'check.status')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('resident');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
+    // Tama ba tooooo
+    Route::view('/my-profile', 'resident.user-profile')->name('user-profile');
 
     Route::view('/profile-register', 'auth.profile-register')->name('profile-register');
     Route::post('/profile-register', [ProfileController::class, 'registerProfile'])->name('profile-register');
+
+    // BARANGAY CLEARANCE
+    Route::view('/brgy-clearance', 'auth.brgy-clearance')->name('brgy-clearance');
+    Route::post('/brgy-clearance', [TempBrgyClearanceController::class, 'brgyClearance'])->name('brgy-clearance');
+
+    // BARANGAY CERTIFICATE
+    Route::view('/brgy-certificate', 'auth.brgy-certificate')->name('brgy-certificate');
+    Route::post('/brgy-certificate', [TempBrgyCertController::class, 'brgyCertificate'])->name('brgy-certificate');
 });
 
 // ------ Clear session on register page ------

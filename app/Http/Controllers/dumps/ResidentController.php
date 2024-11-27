@@ -43,7 +43,6 @@ class ResidentController extends Controller
     return response()->json($residents);
     }
 
-
     /**
      * Store a newly created resource in storage.
      */
@@ -54,6 +53,7 @@ class ResidentController extends Controller
 
         // Return the created resident with a 201 status code
         return response()->json($resident, 201);
+
     }
 
     /**
@@ -63,6 +63,15 @@ class ResidentController extends Controller
     {
         // Return the specified resident
         return response()->json($resident);
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     */
+    public function edit(Resident $resident)
+    {
+        //
     }
 
     /**
@@ -75,6 +84,7 @@ class ResidentController extends Controller
 
         // Return the updated resident
         return response()->json($resident);
+        //
     }
 
     /**
