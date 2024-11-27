@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('brgy_clearances', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('resident_id'); // Add foreign key to residents
+            // $table->unsignedBigInteger('resident_id'); // Add foreign key to residents
             $table->string('category');
             $table->string('name');
             $table->string('position');
@@ -27,7 +27,7 @@ return new class extends Migration
             $table->timestamps();
 
             // Foreign key constraint
-            $table->foreign('resident_id')->references('id')->on('residents')->onDelete('cascade');
+            // $table->foreign('resident_id')->references('id')->on('residents')->onDelete('cascade');
         });
     }
 

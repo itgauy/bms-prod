@@ -5,7 +5,7 @@
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
       <form action="{{ route('register') }}" method="post"
-        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-xl shadow-blue-50/30 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
+        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 border border-blue-600/5 bg-white shadow-xl shadow-blue-500/5 rounded-3xl space-y-7 w-full max-w-3xl">
         @csrf
         <div class="space-y-1">
           <h2>Account Registration</h2>
@@ -22,7 +22,7 @@
                 class="grouped-radio {{ $errors->has('user_type') ? '!border-red-500 !bg-red-500/5' : '' }}">
                 <div class="flex items-center gap-3">
                   <input id="home-owner" type="radio" name="user_type" value="home-owner" class="radio-input"
-                    {{ old('user_type', session('register_data.user_type')) == 'home-owner' ? 'checked' : '' }} />
+                    {{ old('user_type') == 'home-owner' ? 'checked' : '' }} />
                   <span class="font-medium">Home Owner</span>
                 </div>
               </label>
@@ -30,8 +30,7 @@
                 class="grouped-radio {{ $errors->has('user_type') ? '!border-red-500 !bg-red-500/5' : '' }}">
                 <div class="flex items-center gap-3">
                   <input id="renter-tenant-input" type="radio" name="user_type" value="renter-tenant"
-                    class="radio-input"
-                    {{ old('user_type', session('register_data.user_type')) == 'renter-tenant' ? 'checked' : '' }} />
+                    class="radio-input" {{ old('user_type') == 'renter-tenant' ? 'checked' : '' }} />
                   <span class="font-medium">Renter/Tenant</span>
                 </div>
               </label>
@@ -63,7 +62,7 @@
             <label for="last_name" class="input-label">Last name <span class="text-red-500">*</span></label>
             <input type="text" name="last_name" id="last_name"
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. DELA CRUZ" value="{{ old(' last_name') }}">
+              placeholder="E.g. DELA CRUZ" value="{{ old('last_name') }}">
             @error('last_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -156,14 +155,14 @@
     });
 
     // Clear session data on leave
-    window.addEventListener('beforeunload', function() {
-      fetch('/clear-session', {
-        method: 'POST',
-        headers: {
-          'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
-        }
-      });
-    });
+    // window.addEventListener('beforeunload', function() {
+    //   fetch('/clear-session', {
+    //     method: 'POST',
+    //     headers: {
+    //       'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+    //     }
+    //   });
+    // });
   </script>
 
 </x-layout>

@@ -13,7 +13,7 @@
   </div>
   <div class="mt-2 py-2 first:pt-0 last:pb-0">
     <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-700 btn-ghost hover:text-blue-600 focus:outline-none transition duration-300"
-      href="#">
+      href="{{ route('user-profile') }}">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
         class="shrink-0 size-4">
         <path stroke-linecap="round" stroke-linejoin="round"
@@ -32,7 +32,7 @@
     </a>
     <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="logout-modal"
       data-hs-overlay="#logout-modal"
-      class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-700 btn-ghost hover:text-blue-600 focus:outline-none transition duration-300">
+      class="w-full flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-700 btn-ghost hover:bg-red-400/10 hover:text-red-500 focus:outline-none transition duration-300">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
         class="shrink-0 size-4">
         <path stroke-linecap="round" stroke-linejoin="round"

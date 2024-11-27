@@ -37,10 +37,10 @@
       @auth
       {{-- User Dropdown Button --}}
       <div class="hs-dropdown relative inline-flex">
-        <button id="user-dropdown" class="btn btn-secondary flex items-center" aria-haspopup="menu"
+        <button id="user-dropdown" class="btn btn-secondary flex items-center hs-dropdown-toggle" aria-haspopup="menu"
           aria-expanded="false" aria-label="Dropdown">
           {{ auth()->user()->username }}
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="shrink-0 size-4">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="shrink-0 size-4 hs-dropdown-open:rotate-180 transition duration-300 ease-in-out">
             <path fill-rule="evenodd"
               d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z"
               clip-rule="evenodd" />
@@ -62,9 +62,9 @@
 
       <ul class="items-center gap-2 lg:flex hidden">
         <li>
-          <a href="{{ route('home') }}#announcements"
+          <a href="{{ route('home') }}#about-us"
             class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
-            Announcements
+            About Us
           </a>
         </li>
         <li>
@@ -74,15 +74,15 @@
           </a>
         </li>
         <li>
-          <a href="{{ route('home') }}#officials"
+          <a href="{{ route('home') }}#announcements"
             class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
-            Officials
+            Announcements
           </a>
         </li>
         <li>
-          <a href="{{ route('home') }}#about-us"
+          <a href="{{ route('home') }}#officials"
             class="default-nav-link btn btn-ghost text-gray-700 text-base hover:text-blue-600">
-            About Us
+            Officials
           </a>
         </li>
         <li>

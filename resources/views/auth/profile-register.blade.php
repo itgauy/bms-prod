@@ -1,9 +1,10 @@
 <x-layout>
+
   <body class="md:h-screen h-auto">
     <main class="flex justify-center items-center h-full md:p-6 p-4 md:pt-36 md:py-24 py-24">
       <!-- Main Container -->
       <form action="{{ route('profile-register') }}" method="post"
-        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 shadow-xl shadow-blue-50/30 bg-white rounded-3xl space-y-7 w-full max-w-3xl">
+        class="md:px-12 lg:px-8 px-6 md:pb-12 lg:pb-8 pb-6 pt-1 border border-blue-600/5 bg-white shadow-xl shadow-blue-500/5 rounded-3xl space-y-7 w-full max-w-3xl">
         @csrf
         <div class="space-y-1">
           <h2>Profile Registration</h2>
@@ -20,7 +21,7 @@
               class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. JUAN"
               value="{{ session('first_name', old('first_name')) }}" style="text-transform: uppercase;">
             @error('first_name')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Last name -->
@@ -30,7 +31,7 @@
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. DELA CRUZ" value="{{ session('last_name', old('last_name')) }}" style="text-transform: uppercase;">
             @error('last_name')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Middle name -->
@@ -58,7 +59,7 @@
               class="default-input @error('street') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. Pedro"
               value="{{ old('street ') }}" style="text-transform: uppercase;">
             @error('street')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Sitio -->
@@ -74,7 +75,7 @@
               <option value="Gitna" {{ old('sitio') == 'Gitna' ? 'selected' : '' }}>Gitna</option>
             </select>
             @error('sitio')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Village -->
@@ -101,7 +102,7 @@
               <!-- The options will be dynamically generated -->
             </select>
             @error('village')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Address -->
@@ -114,9 +115,9 @@
             <input type="text" name="contact_num" id="contact_num"
               class="default-input @error('contact_num') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('contact_num') }}">
-              @error('contact_num')
-  <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
-@enderror
+            @error('contact_num')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @enderror
           </div>
           <!-- Emergency Contact's Name -->
           <div class="md:space-y-2.5 space-y-1.5">
@@ -126,7 +127,7 @@
               class="default-input @error('em_contact_name') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. ANTONIO DELA CRUZ" value="{{ old('em_contact_name') }}" style="text-transform: uppercase;">
             @error('em_contact_name')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Emergency Contact's Number -->
@@ -137,7 +138,7 @@
               class="default-input @error('em_contact_num') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09987654321" value="{{ old('em_contact_num') }}">
             @error('em_contact_num')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Contact Details -->
@@ -151,7 +152,7 @@
               class="default-input @error('birthdate') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('birthdate') }}">
             @error('birthdate')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Birth Place -->
@@ -159,9 +160,9 @@
             <label for="birthplace" class="input-label">Birth place <span class="text-red-500">*</span></label>
             <input type="text" name="birthplace" id="birth-place"
               class="default-input @error('birthplace') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. Quezon City" value="{{ old('birthplace') }}"style="text-transform: uppercase;">
+              placeholder="E.g. Quezon City" value="{{ old('birthplace') }}" style="text-transform: uppercase;">
             @error('birthplace')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Civil Status -->
@@ -177,10 +178,10 @@
               <option value="widowed" {{ old('civil_status') == 'widowed' ? 'selected' : '' }}>Widowed</option>
             </select>
             @error('civil_status')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div ```blade
-          <!-- Gender -->
+            <!-- Gender -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="gender" class="input-label">Gender <span class="text-red-500">*</span></label>
             <select id="gender" name="gender"
@@ -191,7 +192,7 @@
               <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
             </select>
             @error('gender')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Religion -->
@@ -201,7 +202,7 @@
               class="select-input @error('religion') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('religion') }}">
             @error('religion')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Occupation -->
@@ -234,8 +235,8 @@
               <option value="Student" {{ old('classification_status') == 'Student' ? 'selected' : '' }}>Student
               </option>
             </select>
-            @error('classification_status')               
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            @error('classification_status')
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Residency Status -->
@@ -247,7 +248,7 @@
           <!-- Valid ID -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="valid_id" class="input-label">Valid ID <span class="text-red-500">*</span></label>
- <select id="valid_id" name="valid_id"
+            <select id="valid_id" name="valid_id"
               class="select-input @error('valid_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('valid_id') }}">
               <option selected="" disabled>Select Valid ID</option>
@@ -255,7 +256,7 @@
               </option>
             </select>
             @error('valid_id')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- ID Number -->
@@ -272,7 +273,7 @@
               class="file-input file:text-blue-600 file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('picture_id') }}">
             @error('picture_id')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Picture of Barangay ID while holding -->
@@ -283,7 +284,7 @@
               class="file-input file:text-blue-600 file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_holding_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('picture_holding_id') }}">
             @error('picture_holding_id')
-              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Verification Details -->

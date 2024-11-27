@@ -43,9 +43,15 @@ class ProfileController extends Controller
 
         // Register resident related to user
         $resFields['user_id'] = $user->id;
-        Resident::create($resFields);
+        $resident = Resident::where('user_id', $user->id)->first();
+        if ($resident) {
+            $resident->update($resFields);
+        } else {
+            Resident::create($resFields);
+        }
 
         // Redirect
-        return redirect()->route('resident')->with('success', 'Profile successfully registered!');
+        return redirect()->route('resident')->with('success', 'Profile successfully registered!<br>Please wait for the admin to verify your account.');
+
     }
 }
