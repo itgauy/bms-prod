@@ -2,13 +2,15 @@
   <div class="flex flex-col">
     <div class="-m-1.5 overflow-x-auto">
       <div class="p-1.5 min-w-full inline-block align-middle">
-        <div class="border border-blue-600/10 bg-white shadow-md shadow-blue-500/5 rounded-lg divide-y divide-blue-100/70">
+        <div
+          class="border border-blue-600/10 bg-white shadow-md shadow-blue-500/5 rounded-lg divide-y divide-blue-100/70">
           <div class="py-3 px-4 flex gap-3 items-center">
             <div class="relative max-w-xs">
               <label class="sr-only">Search</label>
               <input type="text" id="search" class="pl-9 block w-full default-input" placeholder="Search for names">
               <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none pl-3">
-                <svg class="w-4 h-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <svg class="w-4 h-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="11" cy="11" r="8"></circle>
                   <path d="M21 21l-4.3-4.3"></path>
                 </svg>
@@ -16,8 +18,9 @@
             </div>
             <!-- Application Status Filter -->
             <div class="hs-dropdown relative inline-flex" data-hs-dropdown-auto-close="inside">
-              <button id="hs-dropdown-item-checkbox" type="button" class="hs-dropdown-toggle btn btn-secondary py-2 px-4"
-                aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+              <button id="hs-dropdown-item-checkbox" type="button"
+                class="hs-dropdown-toggle btn btn-secondary py-2 px-4" aria-haspopup="menu" aria-expanded="false"
+                aria-label="Dropdown">
                 Application Status
                 <svg class="hs-dropdown-open:rotate-180 transition duration-300 ease-in-out size-4"
                   xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -25,7 +28,8 @@
                   <path d="m6 9 6 6 6-6" />
                 </svg>
               </button>
-              <div class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-lg shadow-blue-500/5 border border-blue-600/10 rounded-lg p-2 space-y-0.5 mt-2"
+              <div
+                class="hs-dropdown-menu transition-[opacity,margin] duration hs-dropdown-open:opacity-100 opacity-0 hidden min-w-60 bg-white shadow-lg shadow-blue-500/5 border border-blue-600/10 rounded-lg p-2 space-y-0.5 mt-2"
                 role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-item-checkbox">
                 <div class="flex gap-x-2 py-2 px-3 rounded-lg hover:bg-blue-100/40 transition duration-300">
                   <input id="status-all" name="application-status" type="radio" value="All"
@@ -57,7 +61,8 @@
             <label for="home-owner"
               class="btn has-[:checked]:bg-blue-50/90 hover:bg-blue-50/50 has-[:checked]:text-blue-600 has-[:checked]:border-blue-200 cursor-pointer">
               <div class="flex items-center gap-3">
-                <input id="home-owner" type="radio" name="residency-status" value="Homeowner" class="radio-input hidden" checked />
+                <input id="home-owner" type="radio" name="residency-status" value="Homeowner"
+                  class="radio-input hidden" checked />
                 <span class="font-medium">Home Owner</span>
               </div>
             </label>
@@ -76,12 +81,17 @@
             <table id="resident-table" class="min-w-full divide-y divide-blue-100/70">
               <thead class="bg-blue-50/50">
                 <tr>
-                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">User  ID</th>
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">User ID
+                  </th>
                   <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
-                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Residency Status</th>
-                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Created At</th>
-                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Application Status</th>
-                  <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action</th>
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Residency
+                    Status</th>
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Created At
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                    Application Status</th>
+                  <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action
+                  </th>
                 </tr>
               </thead>
               <tbody id="table-body" class="divide-y divide-blue-100/70">
@@ -110,7 +120,7 @@
 
 <script>
   async function fetchData() {
-    const response = await fetch('http://127.0.0.1:8001/api/residents?page=1');
+    const response = await fetch('http://127.0.0.1:8000/api/residents');
     const data = await response.json();
     return data.data; // Return the resident data
   }
@@ -145,7 +155,8 @@
       tableBody.insertAdjacentHTML('beforeend', row);
     });
 
-    document.getElementById('showing-text').textContent = `Showing ${startIndex + 1} to ${Math.min(endIndex, residents.length)} of ${residents.length}`;
+    document.getElementById('showing-text').textContent =
+      `Showing ${startIndex + 1} to ${Math.min(endIndex, residents.length)} of ${residents.length}`;
     document.getElementById('prev-btn').disabled = page === 1;
     document.getElementById('next-btn').disabled = endIndex >= residents.length;
   }
@@ -216,7 +227,8 @@
       tableBody.insertAdjacentHTML('beforeend', row);
     });
 
-    document.getElementById('showing-text').textContent = `Showing ${startIndex + 1} to ${Math.min(endIndex, filteredResidents.length)} of ${filteredResidents.length}`;
+    document.getElementById('showing-text').textContent =
+      `Showing ${startIndex + 1} to ${Math.min(endIndex, filteredResidents.length)} of ${filteredResidents.length}`;
     document.getElementById('prev-btn').disabled = currentPage === 1;
     document.getElementById('next-btn').disabled = endIndex >= filteredResidents.length;
   });
