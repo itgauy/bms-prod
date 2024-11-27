@@ -61,8 +61,12 @@
   <x-admin.modals.approve-confirm />
   <x-admin.modals.decline-confirm />
 
-  <!-- New Announcement Modal -->
+  <!-- Announcement Modals -->
   <x-admin.modals.new-announcement />
+  <x-admin.modals.edit-announcement />
+  <x-admin.modals.archive-announcement />
+  <x-admin.modals.unarchive-announcement />
+  <x-admin.modals.delete-announcement />
 </body>
 
 </html>
