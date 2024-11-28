@@ -29,7 +29,9 @@
         @endauth
         <!-- Logo/Home -->
         <a href="{{ route('home') }}" class="flex items-center gap-4">
-          <span class="block rounded-full size-7 bg-blue-300 ring-2 ring-blue-400"></span>
+          <div class="relative size-8">
+            <img src="{{ asset('images/bnn-logo.png') }}" class="object-cover w-full h-full rounded-full ring-[1.5px] ring-blue-400" alt="Barangay Nagkaisang Nayon Logo">
+          </div>
           <h5>BNNMS</h5>
         </a>
       </div>
@@ -177,7 +179,9 @@
     <!-- Logo, Title and description -->
     <div class="space-y-4">
       <a href="{{ route('home') }}" class="inline-flex flex-col gap-3">
-        <span class="block rounded-full size-20 bg-blue-300 ring-2 ring-blue-400"></span>
+        <div class="relative size-20">
+          <img src="{{ asset('images/bnn-logo.png') }}" class="object-cover w-full h-full rounded-full ring-2 ring-blue-400" alt="Barangay Nagkaisang Nayon Logo">
+        </div>
         <h3>Barangay Nagkaisang Nayon</h3>
       </a>
       <p class="w-full max-w-lg text-sm">Nestled in District V, Area IX of Quezon City, lies Barangay Nagkaisang Nayon,
