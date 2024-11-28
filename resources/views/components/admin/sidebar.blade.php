@@ -2,7 +2,9 @@
   <div class="space-y-10">
     <!-- Logo/Home -->
     <div class="flex flex-col items-center gap-4 pt-4">
-      <span class="block rounded-full size-20 bg-blue-300 ring-2 ring-blue-400"></span>
+      <div class="relative size-20">
+        <img src="{{ asset('images/bnn-logo.png') }}" class="object-cover w-full h-full rounded-full ring-2 ring-blue-400" alt="Barangay Nagkaisang Nayon Logo">
+      </div>
     </div>
 
     <!-- Links -->
