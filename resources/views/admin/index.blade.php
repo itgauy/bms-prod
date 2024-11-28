@@ -46,6 +46,9 @@
         <div id="staff-management" class="hidden" role="tabpanel" aria-labelledby="staff-management-item">
           @include('admin.staff-management')
         </div>
+        <div id="service-request" class="hidden" role="tabpanel" aria-labelledby="service-request-item">
+          @include('admin.service-request')
+        </div>
         <div id="activity-log" class="hidden" role="tabpanel" aria-labelledby="activity-log-item">
           @include('admin.activity-log')
         </div>
