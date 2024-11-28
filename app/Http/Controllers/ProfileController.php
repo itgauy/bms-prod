@@ -20,10 +20,10 @@ class ProfileController extends Controller
             'street' => ['required', 'max:255'],
             'sitio' => ['required', 'max:255'],
             'village' => ['required', 'max:255'],
-            'contact_num' => ['required', 'max:20'],
+            'contact_num' => ['required', 'min:11'],
             'em_contact_name' => ['required', 'max:255'],
-            'em_contact_num' => ['required', 'max:20'],
-            'birthdate' => ['required', 'date'],
+            'em_contact_num' => ['required', 'min:11'],
+            'birthdate' => ['required', 'date', 'before:-16 years'],
             'birthplace' => ['required', 'max:255'],
             'civil_status' => ['required'],
             'gender' => ['required'],
@@ -34,6 +34,8 @@ class ProfileController extends Controller
             'id_num' => ['max:255'],
             'picture_id' => ['max:2048'],
             'picture_holding_id' => ['max:2048'],
+        ], [
+            'birthdate.before' => 'Age must be at least 16 years old to register.',
         ]);
 
         // Update user status

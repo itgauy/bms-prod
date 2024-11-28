@@ -19,9 +19,9 @@
             <label for="first_name" class="input-label">First name <span class="text-red-500">*</span></label>
             <input type="text" name="first_name" id="first_name"
               class="default-input @error('first_name') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. JUAN"
-              value="{{ session('first_name', old('first_name')) }}" style="text-transform: uppercase;">
+              value="{{ Auth::user()->resident->first_name }}" style="text-transform: uppercase;">
             @error('first_name')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Last name -->
@@ -29,9 +29,10 @@
             <label for="last_name" class="input-label">Last name <span class="text-red-500">*</span></label>
             <input type="text" name="last_name" id="last_name"
               class="default-input @error('last_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. DELA CRUZ" value="{{ session('last_name', old('last_name')) }}" style="text-transform: uppercase;">
+              placeholder="E.g. DELA CRUZ" value="{{ Auth::user()->resident->last_name }}"
+              style="text-transform: uppercase;">
             @error('last_name')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Middle name -->
@@ -39,14 +40,14 @@
             <label for="middle_name" class="input-label">Middle name <span
                 class="text-neutral-400 text-xs">(Optional)</span></label>
             <input type="text" name="middle_name" id="middle_name" class="default-input" placeholder="E.g. SANTOS"
-              value="{{ session('middle_name', old('middle_name')) }}" style="text-transform: uppercase;">
+              value="{{ Auth::user()->resident->middle_name }}" style="text-transform: uppercase;">
           </div>
           <!-- Suffix name -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="suffix" class="input-label">Suffix <span
                 class="text-neutral-400 text-xs">(Optional)</span></label>
             <input type="text" name="suffix" id="suffix" class="default-input" placeholder="E.g. JR."
-              value="{{ session('suffix', old('suffix')) }}" style="text-transform: uppercase;">
+              value="{{ Auth::user()->resident->suffix }}" style="text-transform: uppercase;">
           </div>
           <!-- End of Complete Name -->
 
@@ -59,7 +60,7 @@
               class="default-input @error('street') !border-red-500 !bg-red-500/5 @enderror" placeholder="E.g. Pedro"
               value="{{ old('street ') }}" style="text-transform: uppercase;">
             @error('street')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Sitio -->
@@ -75,7 +76,7 @@
               <option value="Gitna" {{ old('sitio') == 'Gitna' ? 'selected' : '' }}>Gitna</option>
             </select>
             @error('sitio')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Village -->
@@ -102,7 +103,7 @@
               <!-- The options will be dynamically generated -->
             </select>
             @error('village')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Address -->
@@ -113,10 +114,10 @@
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="contact_num" class="input-label">Contact number <span class="text-red-500">*</span></label>
             <input type="text" name="contact_num" id="contact_num"
-              class="default-input @error('contact_num') !border-red-500 !bg-red-500/5 @enderror"
+              class="number-input default-input @error('contact_num') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('contact_num') }}">
             @error('contact_num')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Emergency Contact's Name -->
@@ -125,9 +126,10 @@
                 class="text-red-500">*</span></label>
             <input type="text" name="em_contact_name" id="em_contact_name"
               class="default-input @error('em_contact_name') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. ANTONIO DELA CRUZ" value="{{ old('em_contact_name') }}" style="text-transform: uppercase;">
+              placeholder="E.g. ANTONIO DELA CRUZ" value="{{ old('em_contact_name') }}"
+              style="text-transform: uppercase;">
             @error('em_contact_name')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Emergency Contact's Number -->
@@ -135,10 +137,10 @@
             <label for="em_contact_num" class="input-label">Emergency contact's number <span
                 class="text-red-500">*</span></label>
             <input type="text" name="em_contact_num" id="em_contact_num"
-              class="default-input @error('em_contact_num') !border-red-500 !bg-red-500/5 @enderror"
+              class="number-input default-input @error('em_contact_num') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09987654321" value="{{ old('em_contact_num') }}">
             @error('em_contact_num')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Contact Details -->
@@ -152,7 +154,7 @@
               class="default-input @error('birthdate') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. 09123456789" value="{{ old('birthdate') }}">
             @error('birthdate')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Birth Place -->
@@ -162,7 +164,7 @@
               class="default-input @error('birthplace') !border-red-500 !bg-red-500/5 @enderror"
               placeholder="E.g. Quezon City" value="{{ old('birthplace') }}" style="text-transform: uppercase;">
             @error('birthplace')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Civil Status -->
@@ -178,10 +180,9 @@
               <option value="widowed" {{ old('civil_status') == 'widowed' ? 'selected' : '' }}>Widowed</option>
             </select>
             @error('civil_status')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
-          </div ```blade
-            <!-- Gender -->
+          </div ```blade <!-- Gender -->
           <div class="md:space-y-2.5 space-y-1.5">
             <label for="gender" class="input-label">Gender <span class="text-red-500">*</span></label>
             <select id="gender" name="gender"
@@ -192,7 +193,7 @@
               <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
             </select>
             @error('gender')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Religion -->
@@ -202,7 +203,7 @@
               class="select-input @error('religion') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('religion') }}">
             @error('religion')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Occupation -->
@@ -236,14 +237,14 @@
               </option>
             </select>
             @error('classification_status')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Residency Status -->
           <div class="md:space-y-2.5 space-y-1.5">
-            <label for="recidency-status" class="input-label">Recidency Status</label>
-            <input type="text" name="recidency-status" id="recidency-status" class="default-input"
-              value="{{ old('recidency-status') }}" disabled>
+            <label for="residency-status" class="input-label">Residency Status</label>
+            <input type="text" name="residency-status" id="residency-status"
+              class="default-input pointer-events-none" value="{{ Auth::user()->user_type }}">
           </div>
           <!-- Valid ID -->
           <div class="md:space-y-2.5 space-y-1.5">
@@ -256,7 +257,7 @@
               </option>
             </select>
             @error('valid_id')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- ID Number -->
@@ -273,7 +274,7 @@
               class="file-input file:text-blue-600 file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('picture_id') }}">
             @error('picture_id')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- Picture of Barangay ID while holding -->
@@ -284,7 +285,7 @@
               class="file-input file:text-blue-600 file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('picture_holding_id') !border-red-500 !bg-red-500/5 @enderror"
               value="{{ old('picture_holding_id') }}">
             @error('picture_holding_id')
-            <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
+              <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
           </div>
           <!-- End of Verification Details -->
@@ -362,6 +363,55 @@
           });
         });
       });
+    </script>
+
+    {{-- Script for Input Numbers --}}
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const numberFields = document.querySelectorAll('.number-input');
+
+        numberFields.forEach(field => {
+          field.addEventListener('input', function() {
+            // Remove non-numeric characters
+            this.value = this.value.replace(/[^0-9]/g, '');
+            // Limit to 11 numbers
+            if (this.value.length > 11) {
+              this.value = this.value.slice(0, 11);
+            }
+          });
+        });
+      });
+
+      // FOR UPPERCASE REQUIRED FIELDS (NOT ACCEPTING DIGITS)
+      document.addEventListener('DOMContentLoaded', function() {
+        const letterFields = document.querySelectorAll('input[type="text"]:not(.number-input)');
+
+        letterFields.forEach(field => {
+          field.addEventListener('input', function() {
+            this.value = this.value.replace(/[^a-zA-Z\s]/g, '').toUpperCase();
+          });
+        });
+      });
+
+      // FOR BIRTHDATE, SHOULD BE 16 YEARS OL AT LEAST
+      if (birthdateField) {
+        birthdateField.addEventListener('input', function() {
+          const date = new Date(this.value);
+          const today = new Date();
+          const age = today.getFullYear() - date.getFullYear();
+          const monthDiff = today.getMonth() - date.getMonth();
+          const dayDiff = today.getDate() - date.getDate();
+
+          if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
+            age--;
+          }
+
+          if (age < 16) {
+            alert('You must be at least 16 years old.');
+            this.value = '';
+          }
+        })
+      }
     </script>
   </body>
 
