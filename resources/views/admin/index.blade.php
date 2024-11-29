@@ -74,7 +74,11 @@
 
   <!-- Staff and Officials Modals -->
   <x-admin.modals.add-staff />
+  <x-admin.modals.edit-staff />
+  <x-admin.modals.delete-staff />
   <x-admin.modals.add-official />
+  <x-admin.modals.edit-official />
+  <x-admin.modals.delete-official />
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <section>
   <div class="tabs-2">
-    <button class="btn bg-blue-50/90 text-blue-600 border-blue-200 ring-transparent" id="tab-staffs" onclick="showTab2('staffs')">Staffs</button>
-    <button class="btn hover:bg-blue-50/50 ring-transparent" id="tab-officials" onclick="showTab2('officials')">Officials</button>
+    <button class="btn bg-blue-50/90 text-blue-600 border-blue-200 ring-transparent" id="tab-staffs" onclick="showTab2('staffs')">Staffs Management</button>
+    <button class="btn hover:bg-blue-50/50 ring-transparent" id="tab-officials" onclick="showTab2('officials')">Officials Management</button>
   </div>
 
   <!-- Staffs -->
@@ -154,10 +154,10 @@
         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.email}</td>
         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.department}</td>
         <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium flex justify-end gap-2.5">
-         <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out" onclick="()">
+         <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out" onclick="openEditStaffModal()">
             Edit
           </button>
-          <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:text-red-700 hover:bg-red-50/50 transition duration-300 ease-in-out" onclick="()">
+          <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:text-red-700 hover:bg-red-50/50 transition duration-300 ease-in-out" onclick="openDeleteStaffModal()">
             Delete
           </button>
         </td>
@@ -243,10 +243,10 @@
         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.dateAdded}</td>
         <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">${item.addedBy}</td>
         <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium flex justify-end gap-2.5">
-         <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out" onclick="()">
+         <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-700 hover:bg-blue-50/50 transition duration-300 ease-in-out" onclick="openEditOfficialModal()">
             Edit
           </button>
-          <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:text-red-700 hover:bg-red-50/50 transition duration-300 ease-in-out" onclick="()">
+          <button class="inline-flex items-center gap-x-2 px-1 text-sm font-semibold rounded-lg border border-transparent text-red-600 hover:text-red-700 hover:bg-red-50/50 transition duration-300 ease-in-out" onclick="openDeleteOfficialModal()">
             Delete
           </button>
         </td>
