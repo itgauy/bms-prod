@@ -7,8 +7,8 @@
   <!-- Staffs -->
   <div class="tab-content-2" id="content-staffs">
     <div class="mt-8 space-y-4">
-      <button class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="new-announcement-modalss"
-        data-hs-overlay="#new-announcement-modalss">Add Staff
+      <button class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="new-staff-modal"
+        data-hs-overlay="#new-staff-modal">Add Staff
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
         </svg>
@@ -56,8 +56,8 @@
   <!-- Officials -->
   <div class="tab-content-2 hidden" id="content-officials">
     <div class="mt-8 space-y-4">
-      <button class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="new-announcement-modalss"
-        data-hs-overlay="#new-announcement-modalss">Add official
+      <button class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="new-official-modal"
+        data-hs-overlay="#new-official-modal">Add official
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
         </svg>

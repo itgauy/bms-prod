@@ -71,6 +71,10 @@
   <x-admin.modals.archive-announcement />
   <x-admin.modals.unarchive-announcement />
   <x-admin.modals.delete-announcement />
+
+  <!-- Staff and Officials Modals -->
+  <x-admin.modals.add-staff />
+  <x-admin.modals.add-official />
 </body>
 
 </html>
