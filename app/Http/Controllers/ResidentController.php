@@ -31,16 +31,22 @@ class ResidentController extends Controller
                   ->orWhere('last_name', 'like', '%' . $request->input('search') . '%');
         }
 
-        // Pagination
-        $residents = $query->paginate(10); // Adjust the number of items per page as needed
+        // Eager load the user relationship and select the user type
+        $residents = $query->with(['user' => function($query) {
+            $query->select('id', 'user_type'); // Adjust the fields as necessary
+        }])->paginate(10); // Adjust the number of items per page as needed
 
         return response()->json($residents);
     }
 
     public function fetchAll()
-{
-    $residents = Resident::all();
-    return response()->json($residents);
+    {
+        // Eager load the user relationship when fetching all residents
+        $residents = Resident::with(['user' => function($query) {
+            $query->select('id', 'user_type'); // Adjust the fields as necessary
+        }])->get();
+
+        return response()->json($residents);
     }
 
     /**
@@ -53,7 +59,6 @@ class ResidentController extends Controller
 
         // Return the created resident with a 201 status code
         return response()->json($resident, 201);
-
     }
 
     /**
@@ -61,9 +66,13 @@ class ResidentController extends Controller
      */
     public function show(Resident $resident)
     {
-        // Return the specified resident
-        return response()->json($resident);
-        //
+        // Eager load the user relationship when showing a specific resident
+        $residentWithUser  = $resident->load(['user' => function($query) {
+            $query->select('id', 'user_type'); // Adjust the fields as necessary
+        }]);
+
+        // Return the specified resident with user type
+        return response()->json($residentWithUser );
     }
 
     /**
@@ -84,7 +93,6 @@ class ResidentController extends Controller
 
         // Return the updated resident
         return response()->json($resident);
-        //
     }
 
     /**
