@@ -2,7 +2,9 @@
   <div class="space-y-12">
     <!-- Logo/Home -->
     <a href="{{ route('home') }}" class="flex items-center gap-4">
-      <span class="block rounded-full size-7 bg-blue-300 ring-2 ring-blue-400"></span>
+      <div class="relative size-8">
+        <img src="{{ asset('images/bnn-logo.png') }}" class="object-cover w-full h-full rounded-full ring-[1.5px] ring-blue-400" alt="Barangay Nagkaisang Nayon Logo">
+      </div>
       <h5>BNNMS</h5>
     </a>
 

@@ -9,6 +9,7 @@
   @vite('resources/css/app.css')
   @vite('resources/js/app.js')
   @vite('resources/js/sidebarNav.js')
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body class="bg-blue-50/30">
@@ -45,6 +46,9 @@
         <div id="staff-management" class="hidden" role="tabpanel" aria-labelledby="staff-management-item">
           @include('admin.staff-management')
         </div>
+        <div id="service-request" class="hidden" role="tabpanel" aria-labelledby="service-request-item">
+          @include('admin.service-request')
+        </div>
         <div id="activity-log" class="hidden" role="tabpanel" aria-labelledby="activity-log-item">
           @include('admin.activity-log')
         </div>
@@ -67,6 +71,14 @@
   <x-admin.modals.archive-announcement />
   <x-admin.modals.unarchive-announcement />
   <x-admin.modals.delete-announcement />
+
+  <!-- Staff and Officials Modals -->
+  <x-admin.modals.add-staff />
+  <x-admin.modals.edit-staff />
+  <x-admin.modals.delete-staff />
+  <x-admin.modals.add-official />
+  <x-admin.modals.edit-official />
+  <x-admin.modals.delete-official />
 </body>
 
 </html>
