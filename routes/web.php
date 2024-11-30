@@ -9,7 +9,7 @@ use App\Http\Controllers\TempBrgyCertController;
 use Illuminate\Support\Facades\Route;
 
 // Existing web routes
-Route::view('/', 'landing.index')->name('home');
+Route::get('/', [DashboardController::class, 'homeIndex'])->name('home');
 
 Route::middleware('guest')->group(function () {
     Route::view('/register', 'auth.register')->name('register');

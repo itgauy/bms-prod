@@ -21,8 +21,8 @@
               <label for="home-owner"
                 class="grouped-radio {{ $errors->has('user_type') ? '!border-red-500 !bg-red-500/5' : '' }}">
                 <div class="flex items-center gap-3">
-                  <input id="home-owner" type="radio" name="user_type" value="HOME OWNER" class="radio-input"
-                    {{ old('user_type') == 'HOME OWNER' ? 'checked' : '' }} />
+                  <input id="home-owner" type="radio" name="user_type" value="HOMEOWNER" class="radio-input"
+                    {{ old('user_type') == 'HOMEOWNER' ? 'checked' : '' }} />
                   <span class="font-medium">Home Owner</span>
                 </div>
               </label>
@@ -30,7 +30,7 @@
                 class="grouped-radio {{ $errors->has('user_type') ? '!border-red-500 !bg-red-500/5' : '' }}">
                 <div class="flex items-center gap-3">
                   <input id="renter-tenant-input" type="radio" name="user_type" value="RENTER/TENANT"
-                    class="radio-input" {{ old('user_type') == 'RENTER-TENANT' ? 'checked' : '' }} />
+                    class="radio-input" {{ old('user_type') == 'RENTER/TENANT' ? 'checked' : '' }} />
                   <span class="font-medium">Renter/Tenant</span>
                 </div>
               </label>
