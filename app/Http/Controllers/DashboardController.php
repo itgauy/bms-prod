@@ -15,6 +15,9 @@ class DashboardController extends Controller
     }
 
     public function adminIndex() {
+        if (Auth::check() && Auth::user()->user_type !== 'super_admin') {
+            return redirect()->route('resident');
+        }
         return view('admin.index');
     }
 

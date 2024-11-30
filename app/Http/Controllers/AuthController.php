@@ -81,7 +81,7 @@ class AuthController extends Controller
                 return redirect()->route('profile-register');
             }
             if ($user->user_type == 'super_admin') {
-                return redirect('/admin');
+                return redirect()->route('admin');
             }
             return redirect()->intended('dashboard');
         } else {
