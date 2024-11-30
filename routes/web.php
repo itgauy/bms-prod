@@ -9,7 +9,7 @@ use App\Http\Controllers\TempBrgyCertController;
 use Illuminate\Support\Facades\Route;
 
 // Existing web routes
-Route::view('/', 'landing.index')->name('home');
+Route::get('/', [DashboardController::class, 'homeIndex'])->name('home');
 
 Route::middleware('guest')->group(function () {
     Route::view('/register', 'auth.register')->name('register');
@@ -22,6 +22,7 @@ Route::middleware('guest')->group(function () {
 // ------ Authentication Pages ------
 Route::middleware('auth', 'check.status')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('resident');
+    Route::get('/admin', [DashboardController::class, 'adminIndex'])->name('admin');
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
     // Tama ba tooooo
     Route::view('/my-profile', 'resident.user-profile')->name('user-profile');
@@ -40,11 +41,6 @@ Route::middleware('auth', 'check.status')->group(function () {
 
 // ------ Clear session on register page ------
 Route::post('/clear-session', [AuthController::class, 'clearSession'])->name('clear-session');
-
-// ------ Admin Pages ------
-Route::get('/admin', function () {
-    return view('admin.index');
-})->name('admin');
 
 // ------ API Routes ------
 Route::prefix('api')->group(function () {

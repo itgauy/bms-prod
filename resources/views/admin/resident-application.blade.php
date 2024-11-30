@@ -2,7 +2,8 @@
   <div class="flex flex-col">
     <div class="-m-1.5 overflow-x-auto">
       <div class="p-1.5 min-w-full inline-block align-middle">
-        <div class="border border-blue-600/10 bg-white shadow-md shadow-blue-500/5 rounded-lg divide-y divide-blue-100/70">
+        <div
+          class="border border-blue-600/10 bg-white shadow-md shadow-blue-500/5 rounded-lg divide-y divide-blue-100/70">
           <div class="py-3 px-4 flex gap-3 items-center">
             <div class="relative max-w-xs">
               <label class="sr-only">Search</label>
@@ -84,12 +85,18 @@
             <table id="resident-table" class="min-w-full divide-y divide-blue-100/70">
               <thead class="bg-blue-50/50">
                 <tr>
-                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">User  ID</th>
-                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
-                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Residency Status</th>
-                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Created At</th>
-                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Application Status</th>
-                  <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action</th>
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">User ID
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name
+                  </th>
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                    Residency Status</th>
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Created
+                    At</th>
+                  <th scope="col" class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                    Application Status</th>
+                  <th scope="col" class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action
+                  </th>
                 </tr>
               </thead>
               <tbody id="table-body" class="divide-y divide-blue-100/70">
@@ -118,7 +125,8 @@
 <script>
   async function fetchData() {
     try {
-      const response = await fetch('http://127.0.0.1:8001/api/residents');
+      const response = await fetch(
+        `http://${window.location.hostname}:${window.location.port === '8000' ? '8000' : '8001'}/api/residents`);
       if (!response.ok) {
         throw new Error('Network response was not ok: ' + response.statusText);
       }
@@ -139,14 +147,14 @@
   async function updateTable(page) {
     const residents = await fetchData(); // Fetch the resident data
     const filteredResidents = residents.filter(item => {
-        const residencyMatch = selectedResidencyStatus === 'All' || 
-            (selectedResidencyStatus === 'Homeowner' && item.user.user_type === 'home-owner') || 
-            (selectedResidencyStatus === 'Renter/Tenant' && item.user.user_type === 'renter-tenant');
+      const residencyMatch = selectedResidencyStatus === 'All' ||
+        (selectedResidencyStatus === 'Homeowner' && item.user.user_type === 'home-owner') ||
+        (selectedResidencyStatus === 'Renter/Tenant' && item.user.user_type === 'renter-tenant');
 
-        const applicationMatch = selectedApplicationStatus === 'All' || 
-            (item.application_status || 'Pending') === selectedApplicationStatus; // Default to 'Pending' if undefined
+      const applicationMatch = selectedApplicationStatus === 'All' ||
+        (item.application_status || 'Pending') === selectedApplicationStatus; // Default to 'Pending' if undefined
 
-        return residencyMatch && applicationMatch;
+      return residencyMatch && applicationMatch;
     });
 
     const startIndex = (page - 1) * rowsPerPage;
@@ -156,9 +164,9 @@
     const tableBody = document.getElementById('table-body');
     tableBody.innerHTML = '';
     pageData.forEach(item => {
-        const fullName = `${item.first_name} ${item.middle_name || ''} ${item.last_name}`;
-        const applicationStatus = item.application_status || 'Pending'; // Default to 'Pending' if undefined
-        const row = `
+      const fullName = `${item.first_name} ${item.middle_name || ''} ${item.last_name}`;
+      const applicationStatus = item.application_status || 'Pending'; // Default to 'Pending' if undefined
+      const row = `
             <tr>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${item.user_id}</td>
                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">${fullName.trim()}</td>
@@ -172,14 +180,14 @@
                 </td>
             </tr>
         `;
-        tableBody.insertAdjacentHTML('beforeend', row);
+      tableBody.insertAdjacentHTML('beforeend', row);
     });
 
     document.getElementById('showing-text').textContent =
-        `Showing ${startIndex + 1} to ${Math.min(endIndex, filteredResidents.length)} of ${filteredResidents.length}`;
+      `Showing ${startIndex + 1} to ${Math.min(endIndex, filteredResidents.length)} of ${filteredResidents.length}`;
     document.getElementById('prev-btn').disabled = page === 1;
     document.getElementById('next-btn').disabled = endIndex >= filteredResidents.length;
-}
+  }
 
   document.getElementById('prev-btn').addEventListener('click', () => {
     if (currentPage > 1) {
@@ -252,5 +260,4 @@
 
   // Initial render
   updateTable(currentPage);
-  
 </script>

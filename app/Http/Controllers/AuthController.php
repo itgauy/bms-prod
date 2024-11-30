@@ -16,7 +16,7 @@ class AuthController extends Controller
         $validationRules = [
             // User fields
             'username' => ['required', 'min:5', 'max:255', 'regex:/^[A-Za-z0-9]+$/', 'unique:users'],
-            'user_type' => ['required', 'in:home-owner,renter-tenant'],
+            'user_type' => ['required', 'in:HOMEOWNER,RENTER/TENANT'],
             'email' => ['required', 'max:255', 'email', 'unique:users'],
             'password' => ['required', 'min:8', 'confirmed'],
             'status' => ['in:0,1'],
@@ -76,8 +76,12 @@ class AuthController extends Controller
 
         // Try to login the user
         if(Auth::attempt($fields, $request->remember)) {
-            if (Auth::user()->status == 0) {
+            $user = Auth::user();
+            if ($user->status == 0) {
                 return redirect()->route('profile-register');
+            }
+            if ($user->user_type == 'super_admin') {
+                return redirect()->route('admin');
             }
             return redirect()->intended('dashboard');
         } else {
