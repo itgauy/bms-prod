@@ -148,8 +148,8 @@
     const residents = await fetchData(); // Fetch the resident data
     const filteredResidents = residents.filter(item => {
       const residencyMatch = selectedResidencyStatus === 'All' ||
-        (selectedResidencyStatus === 'Homeowner' && item.user.user_type === 'home-owner') ||
-        (selectedResidencyStatus === 'Renter/Tenant' && item.user.user_type === 'renter-tenant');
+        (selectedResidencyStatus === 'Homeowner' && item.user.user_type === 'HOMEOWNER') ||
+        (selectedResidencyStatus === 'Renter/Tenant' && item.user.user_type === 'RENTER/TENANT');
 
       const applicationMatch = selectedApplicationStatus === 'All' ||
         (item.application_status || 'Pending') === selectedApplicationStatus; // Default to 'Pending' if undefined
