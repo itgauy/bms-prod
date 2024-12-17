@@ -17,8 +17,8 @@
         <!-- Announcement Container -->
         <div class="border p-6 rounded-2xl space-y-4 border-blue-600/10 bg-white shadow-lg shadow-blue-500/5">
           <div>
-            <h5>Sample Title</h5>
-            <p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident dignissimos explicabo tenetur exercitationem placeat maiores, minima tempore.</p>
+            <h5>Introducing the New Barangay Management System</h5>
+            <p class="text-sm">We are pleased to introduce our Barangay Management System, designed to provide a more organized and efficient way of delivering services to the community. </p>
           </div>
           <div class="flex items-center justify-between">
             <div>
@@ -27,11 +27,11 @@
             </div>
             <div>
               <p class="text-sm">Added on:</p>
-              <span class="text-blue-600">2024-11-15</span>
+              <span class="text-blue-600">12-15-2024</span>
             </div>
           </div>
           <div class="w-full h-64">
-            <img src="https://placehold.co/50x50" alt="" class="object-cover rounded-lg h-full w-full">
+            <img src="{{ asset('images/sample-announcement-img.png') }}" alt="" class="object-cover rounded-lg h-full w-full">
           </div>
           <div class="flex justify-end items-center gap-3">
             <button class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="edit-announcement-modal"
@@ -43,8 +43,8 @@
         <!--  -->
         <div class="border border-blue-600/10 p-6 rounded-2xl space-y-4 bg-white shadow-lg shadow-blue-500/5">
           <div>
-            <h5>Sample Title</h5>
-            <p class="text-sm">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident dignissimos explicabo tenetur exercitationem placeat maiores, minima tempore.</p>
+            <h5>Barangay Management System Launch</h5>
+            <p class="text-sm">We are excited to announce the launch of our new Barangay Management System! This system aims to streamline barangay operations, making it easier to manage resident records, issue clearances.</p>
           </div>
           <div class="flex items-center justify-between">
             <div>
@@ -53,11 +53,11 @@
             </div>
             <div>
               <p class="text-sm">Added on:</p>
-              <span class="text-blue-600">2024-11-15</span>
+              <span class="text-blue-600">12-15-2024</span>
             </div>
           </div>
           <div class="w-full h-64">
-            <img src="https://placehold.co/50x50" alt="" class="object-cover rounded-lg h-full w-full">
+            <img src="{{ asset('images/sample-announcement-img.png') }}" alt="" class="object-cover rounded-lg h-full w-full">
           </div>
           <div class="flex justify-end items-center gap-3">
             <button class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="edit-announcement-modal"
@@ -125,23 +125,23 @@
   }
 
   const archiveAnnouncement = [{
-      title: "Sample Title",
+      title: "Barangay Assembly Schedule Announcement",
       addedBy: "Admin",
-      dateAdded: "2024-05-18",
-      dateExpired: "2024-05-18",
+      dateAdded: "12-10-2024",
+      dateExpired: "12-20-2024",
     },
     {
-      title: "Sample Title",
+      title: "Free Health Checkup for Residents",
       addedBy: "Admin",
-      dateAdded: "2024-05-18",
-      dateExpired: "2024-05-18",
+      dateAdded: "12-15-2024",
+      dateExpired: "12-30-2024",
     },
     {
-      title: "Sample Title",
+      title: "Community Clean-Up Drive Details",
       addedBy: "Admin",
-      dateAdded: "2024-05-18",
-      dateExpired: "2024-05-18",
-    }
+      dateAdded: "12-25-2024",
+      dateExpired: "12-05-2024",
+    },
   ];
 
   let currentPage1 = 1;
