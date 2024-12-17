@@ -23,7 +23,7 @@
                 <option value="treasurer" {{ old('staff_department') == 'treasurer' ? 'selected' : '' }}>Treasurer</option>
                 <option value="it-department" {{ old('staff_department') == 'it-department' ? 'selected' : '' }}>IT Department</option>
                 <option value="sk-chairman" {{ old('staff_department') == 'sk-chairman' ? 'selected' : '' }}>SK Chairman</option>
-                <option value="kagawad" {{ old('staff_department') == 'kagawad' ? 'selected' : '' }}>Kagawad</option>
+                <option value="kagawad" {{ old('staff_department') == 'kagawad' ? 'selected' : '' }} selected>Kagawad</option>
               </select>
               @error('staff_department')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
@@ -35,7 +35,7 @@
                   class="text-red-500">*</span></label>
               <input type="text" name="staff_username" id="staff_username" required
                 class="default-input @error('staff_username') !border-red-500 !bg-red-500/5 @enderror"
-                placeholder="E.g. JuanDC12" value="{{ old('staff_username') }}">
+                placeholder="E.g. JuanDC12" value="criseldamambayaw">
               @error('staff_username')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
@@ -46,7 +46,7 @@
                   class="text-red-500">*</span></label>
               <input type="text" name="staff_email" id="staff_email" required
                 class="default-input @error('staff_email') !border-red-500 !bg-red-500/5 @enderror"
-                placeholder="E.g. juan.dela.cruz@email.com" value="{{ old('staff_email') }}">
+                placeholder="E.g. juan.dela.cruz@email.com" value="mambayaw.criselda@email.com">
               @error('staff_email')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
@@ -57,7 +57,7 @@
                   class="text-red-500">*</span></label>
               <input type="password" name="staff_pass" id="staff_pass" required
                 class="default-input @error('staff_pass') !border-red-500 !bg-red-500/5 @enderror"
-                placeholder="Your password" value="{{ old('staff_pass') }}">
+                placeholder="Your password" value="123123123">
               @error('staff_pass')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror

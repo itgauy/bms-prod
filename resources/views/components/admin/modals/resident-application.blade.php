@@ -23,19 +23,19 @@
             <h5 class="col-span-full font-medium">Complete Name</h5>
             <div>
               <p class="text-gray-500/80 text-sm">First name</p>
-              <p>Juan</p>
+              <p>FREDERICK</p>
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Middle name</p>
-              <p>Santos</p>
+              <p>CAPIRAL</p>
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Last name</p>
-              <p>Dela Cruz</p>
+              <p>MORENO</p>
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Suffix</p>
-              <p>Jr.</p>
+              <p></p>
             </div>
           </div>
           <!-- Address -->
@@ -43,7 +43,7 @@
             <h5 class="border-t col-span-full pt-2 mt-4 font-medium">Address</h5>
             <div>
               <p class="text-gray-500/80 text-sm">Street</p>
-              <p>Pedro Street</p>
+              <p>PEDRO STREET</p>
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Sitio</p>
@@ -63,7 +63,7 @@
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Emergency contact's name</p>
-              <p>Antonio Dela Cruz</p>
+              <p>PATIRICA MORENO</p>
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Emergency contact's number</p>
@@ -79,7 +79,7 @@
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Birth place</p>
-              <p>Quezon City</p>
+              <p>MANILA CITY</p>
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Civil Status</p>
@@ -91,7 +91,7 @@
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Religion</p>
-              <p>Catholic</p>
+              <p>CATHOLIC</p>
             </div>
             <div>
               <p class="text-gray-500/80 text-sm">Ocupation</p>
@@ -118,14 +118,14 @@
               <div class="w-full space-y-1.5">
                 <p class="text-gray-500/80 text-sm">Picture of Barangay ID</p>
                 <div class="h-48 w-full relative">
-                  <img src="https://placehold.co/50x50" alt="Sample Image" class="object-cover absolute w-full h-full rounded-md">
+                  <img src="{{ asset('images/sample-id.jpg') }}" alt="Sample Image" class="object-cover absolute w-full h-full rounded-md">
                 </div>
               </div>
               <!-- Picture of Barangay ID while holding -->
               <div class="w-full space-y-1.5">
                 <p class="text-gray-500/80 text-sm">Picture of Barangay ID while holding</p>
                 <div class="h-48 w-full relative">
-                  <img src="https://placehold.co/50x50" alt="Sample Image" class="object-cover absolute w-full h-full rounded-md">
+                  <img src="{{ asset('images/id-hold.jpg') }}" alt="Sample Image" class="object-cover absolute w-full h-full rounded-md">
                 </div>
               </div>
             </div>
