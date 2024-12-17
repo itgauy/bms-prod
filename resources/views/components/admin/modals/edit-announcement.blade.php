@@ -28,7 +28,7 @@
             <label for="announcement_title" class="input-label">Announcement title <span class="text-red-500">*</span></label>
             <input type="text" name="announcement_title" id="announcement_title"
               class="default-input @error('announcement_title') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. Juan Dela Cruz" value="{{ old('announcement_title') }}">
+              placeholder="E.g. Juan Dela Cruz" value="Introducing the New Barangay Management System">
             @error('announcement_title')
             <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror
@@ -38,7 +38,7 @@
             <label for="announcement_description" class="input-label">Announcement description <span class="text-red-500">*</span></label>
             <textarea name="announcement_description" id="announcement_description"
               class="default-input @error('announcement_description') !border-red-500 !bg-red-500/5 @enderror"
-              placeholder="E.g. Juan Dela Cruz" value="{{ old('announcement_description') }}"></textarea>
+              placeholder="E.g. Juan Dela Cruz" value="asdfasdf"></textarea>
             @error('announcement_description')
             <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
             @enderror

@@ -19,7 +19,7 @@
                   class="text-red-500">*</span></label>
               <input type="text" name="official_name" id="official_name" required
                 class="default-input @error('official_name') !border-red-500 !bg-red-500/5 @enderror"
-                placeholder="E.g. Juan Dela Cruz" value="{{ old('official_name') }}">
+                placeholder="E.g. Juan Dela Cruz" value="Matilda Mendoza">
               @error('official_name')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
@@ -34,7 +34,7 @@
                 <option value="secretary" {{ old('staff_department') == 'secretary' ? 'selected' : '' }}>Secretary</option>
                 <option value="treasurer" {{ old('staff_department') == 'treasurer' ? 'selected' : '' }}>Treasurer</option>
                 <option value="brgy-admin" {{ old('staff_department') == 'brgy-admin' ? 'selected' : '' }}>Barangay Administrator</option>
-                <option value="focal-person" {{ old('staff_department') == 'focal-person' ? 'selected' : '' }}>Focal Person</option>
+                <option value="focal-person" {{ old('staff_department') == 'focal-person' ? 'selected' : '' }} selected>Focal Person</option>
                 <option value="lupong-tagapamayapa" {{ old('staff_department') == 'lupong-tagapamayapa' ? 'selected' : '' }}>Lupong Tagapamayapa</option>
                 <option value="brgy-pso" {{ old('staff_department') == 'brgy-pso' ? 'selected' : '' }}>Barangay Public Safety Officer</option>
                 <option value="gender-development" {{ old('staff_department') == 'gender-development' ? 'selected' : '' }}>Gender and Development</option>
@@ -57,7 +57,7 @@
                   class="text-red-500">*</span></label>
               <input type="text" name="official_addedBy" id="official_addedBy" required
                 class="default-input @error('official_addedBy') !border-red-500 !bg-red-500/5 @enderror"
-                placeholder="E.g. Josephin Dela Santos" value="{{ old('official_addedBy') }}">
+                placeholder="E.g. Josephin Dela Santos" value="Monique Dela Cruz">
               @error('official_addedBy')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
@@ -67,7 +67,7 @@
               <label for="term_date" class="input-label">Starting term date <span class="text-red-500">*</span></label>
               <input type="date" name="term_date" id="term_date"
                 class="default-input @error('term_date') !border-red-500 !bg-red-500/5 @enderror"
-                placeholder="E.g. 09123456789" value="{{ old('term_date') }}">
+                placeholder="E.g. 09123456789" value="12/12/2024">
               @error('term_date')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror
@@ -78,7 +78,7 @@
               <label for="official_photo" class="sr-only">Choose file</label>
               <input type="file" name="official_photo" id="official_photo"
                 class="file-input file:text-blue-600 file:bg-white file:border-0 file:me-4 file:py-2.5 file:px-4 @error('official_photo') !border-red-500 !bg-red-500/5 @enderror"
-                value="{{ old('official_photo') }}">
+                value="official-photo.jpg">
               @error('official_photo')
               <p style="color:red;font-size:0.8rem;margin-top:0.1px;">{{ $message }}</p>
               @enderror

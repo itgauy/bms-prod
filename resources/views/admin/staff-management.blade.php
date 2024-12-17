@@ -201,28 +201,28 @@
   // ------------------ Officials Table ------------------
 
   const officialsData = [{
-      name: 1,
-      department: "Treasurer Department",
-      dateAdded: "02-29-24",
-      addedBy: "Juan Dela Cruz",
+      name: 'Matilda Mendoza',
+      department: "Focal Person",
+      dateAdded: "12/12/2024",
+      addedBy: "Monique Dela Cruz",
     },
     {
-      name: 1,
-      department: "Treasurer Department",
-      dateAdded: "02-29-24",
-      addedBy: "Juan Dela Cruz",
+      name: 'Johnny Barado',
+      department: "Lupong Tagapamayapa",
+      dateAdded: "12/14/2024",
+      addedBy: "Jules Guiang",
     },
     {
-      name: 1,
-      department: "Treasurer Department",
-      dateAdded: "02-29-24",
-      addedBy: "Juan Dela Cruz",
+      name: 'Liza Santillan',
+      department: "Clean and Green",
+      dateAdded: "12/17/2024",
+      addedBy: "Marcy Bernal",
     },
     {
-      name: 1,
-      department: "Treasurer Department",
-      dateAdded: "02-29-24",
-      addedBy: "Juan Dela Cruz",
+      name: 'Arnold Reyes',
+      department: "Barangay Administrator",
+      dateAdded: "12/17/2024",
+      addedBy: "Jean Cabyang",
     },
   ];
 
