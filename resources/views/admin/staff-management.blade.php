@@ -119,21 +119,21 @@
 
   const staffsData = [{
       staffID: 1,
-      username: "treasurer12",
-      email: "treasurer@email.com",
-      department: "Treasurer Department",
+      username: "criseldamambayaw",
+      email: "mambayaw.criselda@email.com",
+      department: "Kagawad",
     },
     {
-      staffID: 1,
-      username: "treasurer12",
-      email: "treasurer@email.com",
-      department: "Treasurer Department",
+      staffID: 2,
+      username: "jersonamuto",
+      email: "amuto.jerson@email.com",
+      department: "Treasurer",
     },
     {
-      staffID: 1,
-      username: "treasurer12",
-      email: "treasurer@email.com",
-      department: "Treasurer Department",
+      staffID: 3,
+      username: "JohnDalisay",
+      email: "dalisay.john@email.com",
+      department: "Secretary",
     },
   ];
 
